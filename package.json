@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edinnen/reactEmbed.git"
+    "url": "git+https://github.com/edinnen/education.git"
   },
   "author": "Ethan Dinnen <ethan.dinnen@ocean.org>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/edinnen/reactEmbed/issues"
+    "url": "https://github.com/edinnen/education/issues"
   },
-  "homepage": "https://github.com/edinnen/reactEmbed#readme",
+  "homepage": "https://github.com/edinnen/education#readme",
   "dependencies": {
     "axios": "^0.17.1",
     "babel-cli": "^6.5.0",

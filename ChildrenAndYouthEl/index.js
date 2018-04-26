@@ -76,7 +76,7 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
     let exitRight;
     if (this.state.mobile) {
       Nav = (
-        <nav style={{ position: 'absolute', right: 10, top: 10 }}>
+        <nav style={{ position: 'absolute', right: 10, top: 10, zIndex: 10 }}>
           <IconButton style={{ padding: 0 }} onClick={() => this.toggleDrawer()}>
             <Menu style={{ height: 34, width: 34 }} color="#fff" />
           </IconButton>
@@ -87,7 +87,7 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
       exitRight = 10;
     } else {
       Nav = (
-        <nav style={{ position: 'absolute', right: 15, top: 30 }}>
+        <nav style={{ position: 'absolute', right: 15, top: 30, zIndex: 10 }}>
           <NavItem href="https://ocean.org/initiatives/">Initiatives</NavItem>
           <NavItem href="https://ocean.org/take-action/">Take Action</NavItem>
           <NavItem href="https://ocean.org/about/">About</NavItem>
@@ -101,7 +101,7 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
       exitRight = 15;
     }
 
-    const containerHeight = document.getElementById('hero-image') === null ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500);
+    const containerHeight = document.getElementById('hero-image') === null ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500) === 0 ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500);
 
     return (
       <MuiThemeProvider>
