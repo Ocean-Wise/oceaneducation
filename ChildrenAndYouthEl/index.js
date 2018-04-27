@@ -13,6 +13,7 @@ import Menu from 'material-ui/svg-icons/navigation/menu';
 import grey50 from 'material-ui/styles/colors';
 
 import Header from './Header';
+import MenuHeader from './MenuHeader';
 import H1 from './H1';
 import IconButton from './IconButton';
 import MenuItem from './MenuItem';
@@ -143,6 +144,55 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
             >
               About
             </MenuItem>
+
+            <MenuHeader>Follow Us</MenuHeader>
+            <ul class="social-icons" style={{ display: 'inline-flex', flexDirection: 'row' }} role="menu">
+              <li class="social-icons__icon social-icons__icon--facebook">
+                <a href="http://www.facebook.com/pages/Ocean-Wise/110729392295180">
+                  <img src="https://ocean.org/wp-content/uploads/facebook.svg" alt="Facebook" />
+                </a>
+              </li>
+              <li class="social-icons__icon social-icons__icon--twitter">
+                <a href="https://twitter.com/Oceanwise">
+                  <img src="https://ocean.org/wp-content/uploads/twitter.svg" alt="Twitter" />
+                </a>
+              </li>
+              <li class="social-icons__icon social-icons__icon--instagram">
+                <a href="https://www.instagram.com/oceanwise/">
+                  <img src="https://ocean.org/wp-content/uploads/instagram.svg" alt="Instagram" />
+                </a>
+              </li>
+              <li class="social-icons__icon social-icons__icon--youtube">
+                <a href="https://www.youtube.com/channel/UC0hLWXESQRctgaVPT-8N7Rw">
+                  <img src="https://ocean.org/wp-content/uploads/youtube.svg" alt="Youtube" />
+                </a>
+              </li>
+              <li class="social-icons__icon social-icons__icon--snapchat">
+                <a href="https://www.snapchat.com/add/oceanwise">
+                  <img src="https://ocean.org/wp-content/uploads/snapchat.svg" alt="Snapchat" />
+                </a>
+              </li>
+            </ul>
+            <div class="navbar-primary__label">Get Newsletter</div>
+              <form action="https://vanaqua.createsend.com/t/r/s/urxdtd/" method="post" class="form form--newsletter" novalidate="">
+                <label><span class="acc-helper">Enter your email</span>
+                <input class="form__input" type="email" placeholder="Enter your email" name="cm-urxdtd-urxdtd" required="" /></label>
+                <button class="form__label js-subscribe">Subscribe</button>
+              </form>
+            <div class="navbar-primary__footer">
+              <cite class="navbar-primary__label">
+                © 2017 Ocean Wise
+              </cite>
+              <div class="widget nav_menu-2 widget_nav_menu">
+                <div class="menu-footer-container">
+                  <ul id="menu-footer" class="menu">
+                    <li id="menu-item-1017" class="menu-item menu-item-type-post_type_archive menu-item-object-ocean_pr menu-item-1017"><a href="https://ocean.org/media-releases/">Media</a></li>
+                    <li id="menu-item-178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><a href="https://ocean.org/terms-conditions/">Terms</a></li>
+                    <li id="menu-item-179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a href="https://ocean.org/privacy-policy/">Privacy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </Drawer>
         </div>
       </MuiThemeProvider>

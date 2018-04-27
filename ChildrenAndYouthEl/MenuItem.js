@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import NormalMenuItem from 'material-ui/MenuItem';
 
-const Img = styled(NormalMenuItem)`
+const MenuItem = styled(NormalMenuItem)`
   margin-top: 100px !important;
   font-size: 72px !important;
   font-weight: 700 !important;
@@ -18,4 +18,4 @@ const Img = styled(NormalMenuItem)`
   }
 `;
 
-export default Img;
+export default MenuItem;
