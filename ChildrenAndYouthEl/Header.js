@@ -12,6 +12,7 @@ const Header = styled.div`
   @media all and (max-width: 468px) {
     left: calc(50% - 228.69px/2);
   }
+  z-index: 5;
 `;
 
 export default Header;
