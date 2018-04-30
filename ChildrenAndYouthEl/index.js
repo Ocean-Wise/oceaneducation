@@ -28,6 +28,12 @@ import NavItem from './NavItem';
 import Img from './Img';
 import Logo from './Logo';
 
+const HEROIMG = 'https://ocean.org/wp-content/uploads/CAMP-1.jpg';
+const IMG1 = 'https://ocean.org/wp-content/uploads/CY-01.jpg';
+const IMG2 = 'https://ocean.org/wp-content/uploads/CY-02.jpg';
+const IMG3 = 'https://ocean.org/wp-content/uploads/CY-03.jpg';
+const POSTER = 'https://ocean.org/wp-content/uploads/CY-Poster.jpg';
+
 class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
@@ -114,7 +120,7 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
       <MuiThemeProvider>
         <div>
           <Container height={containerHeight}>
-            <Img id="hero-image" src="https://ocean.org/wp-content/uploads/1earth20140730-640_1_2800x.jpg" alt="Ocean wise" />
+            <Img id="hero-image" src={HEROIMG} alt="Ocean wise" />
             <Logo src={source} alt="Logo" />
             {Nav}
             <Header>
@@ -181,8 +187,8 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
             </Ul>
 
             <MenuHeader>Get Newsletter</MenuHeader>
-            <form action="https://vanaqua.createsend.com/t/r/s/urxdtd/" method="post" class="form form--newsletter" novalidate="">
-              <label><span class="acc-helper">Enter your email</span>
+            <form action="https://vanaqua.createsend.com/t/r/s/urxdtd/" method="post">
+              <label><span>Enter your email</span>
               <Input type="email" placeholder="Enter your email" name="cm-urxdtd-urxdtd" required="" /></label>
               <Button>Subscribe</Button>
             </form>

@@ -57,44 +57,44 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
     const secondStyle = this.state.mobile ? { paddingLeft: 20, marginTop: 50 } : { paddingLeft: 20, width: 440 };
 
     return (
-      <footer class="content-info" style={{ fontFamily: '\'Helvetica Neue\', helvetica, sans-serif' }}>
+      <footer style={{ fontFamily: '\'Helvetica Neue\', helvetica, sans-serif' }}>
         <Social>
           <div style={{ paddingTop: 60, width: theWidth, height: 120, textAlign: 'center', zIndex: 5 }}>
-            <Button donate href="http://support.ocean.org/makeadonation" target="_blank" class="button button--white">Donate</Button>
+            <Button donate href="http://support.ocean.org/makeadonation" target="_blank">Donate</Button>
           </div>
           {divider}
           <div style={{ textAlign: 'center', width: theWidth, height: 120, paddingTop: 35, zIndex: 5 }}>
             <p style={{ color: 'white', marginTop: '1.5rem', marginBottom: '0.5rem', fontSize: 20, fontWeight: 700 }}>Follow Us</p>
-            <Ul class="social-icons" role="menu">
-              <Li class="social-icons__icon social-icons__icon--facebook"><a href="http://www.facebook.com/pages/Ocean-Wise/110729392295180"><img height={30} src="https://ocean.org/wp-content/uploads/facebook-white.svg" alt="Facebook" data-pagespeed-url-hash="809399021" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" /></a></Li>
-              <Li class="social-icons__icon social-icons__icon--twitter"><a href="https://twitter.com/Oceanwise"><img height={30} src="https://ocean.org/wp-content/uploads/twitter-white.svg" alt="Twitter" data-pagespeed-url-hash="3763457700" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" /></a></Li>
-              <Li class="social-icons__icon social-icons__icon--instagram"><a href="https://www.instagram.com/oceanwise/"><img height={30} src="https://ocean.org/wp-content/uploads/instagram-white.svg" alt="Instagram" data-pagespeed-url-hash="415834971" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" /></a></Li>
-              <Li class="social-icons__icon social-icons__icon--youtube"><a href="https://www.youtube.com/channel/UC0hLWXESQRctgaVPT-8N7Rw"><img height={30} src="https://ocean.org/wp-content/uploads/youtube-white.svg" alt="Youtube" data-pagespeed-url-hash="108786984" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" /></a></Li>
-              <Li class="social-icons__icon social-icons__icon--snapchat"><a href="https://www.snapchat.com/add/oceanwise"><img height={30} src="https://ocean.org/wp-content/uploads/snapchat-white.svg" alt="Snapchat" data-pagespeed-url-hash="1149850353" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" /></a></Li>
+            <Ul role="menu">
+              <Li><a href="http://www.facebook.com/pages/Ocean-Wise/110729392295180"><img height={30} src="https://ocean.org/wp-content/uploads/facebook-white.svg" alt="Facebook" /></a></Li>
+              <Li><a href="https://twitter.com/Oceanwise"><img height={30} src="https://ocean.org/wp-content/uploads/twitter-white.svg" alt="Twitter" /></a></Li>
+              <Li><a href="https://www.instagram.com/oceanwise/"><img height={30} src="https://ocean.org/wp-content/uploads/instagram-white.svg" alt="Instagram" /></a></Li>
+              <Li><a href="https://www.youtube.com/channel/UC0hLWXESQRctgaVPT-8N7Rw"><img height={30} src="https://ocean.org/wp-content/uploads/youtube-white.svg" alt="Youtube" /></a></Li>
+              <Li><a href="https://www.snapchat.com/add/oceanwise"><img height={30} src="https://ocean.org/wp-content/uploads/snapchat-white.svg" alt="Snapchat" /></a></Li>
             </Ul>
           </div>
           <Animate1 />
           <Animate2 />
         </Social>
         <div style={{ backgroundColor: 'black', width: '100%' }}>
-          <div class="container" style={{ textAlign: 'center', paddingTop: 145, paddingBottom: 145 }}>
-            <div class="row" style={{ display: 'inline-flex', flexDirection: flexDir }}>
-              <div class="footer-form col-5" style={{ paddingRight: 20 }}>
+          <div style={{ textAlign: 'center', paddingTop: 145, paddingBottom: 145 }}>
+            <div style={{ display: 'inline-flex', flexDirection: flexDir }}>
+              <div style={{ paddingRight: 20 }}>
                 <div style={{ color: 'white', float: 'left', marginLeft: 15, marginBottom: 5 }}>Get Newsletter</div>
-                <form action="https://vanaqua.createsend.com/t/r/s/urxdtd/" method="post" class="form form--newsletter" novalidate="">
-                  <label><span class="acc-helper">Enter your email</span>
-                  <Input class="form__input" type="email" placeholder="Enter your email" name="cm-urxdtd-urxdtd" required="" /></label>
+                <form action="https://vanaqua.createsend.com/t/r/s/urxdtd/" method="post">
+                  <label><span>Enter your email</span>
+                  <Input type="email" placeholder="Enter your email" name="cm-urxdtd-urxdtd" required="" /></label>
                   <Button style={{ float: 'left' }}>Subscribe</Button>
                 </form>
               </div>
-              <div class="footer-menu col-5 col-med-push-2" style={secondStyle}>
+              <div style={secondStyle}>
                 <div style={{ color: 'white' }}>© 2017 Ocean Wise</div>
-                <div class="widget nav_menu-2 widget_nav_menu">
-                  <div class="menu-footer-container">
-                    <Ul id="menu-footer-1" class="menu">
-                      <Li class="menu-item menu-item-type-post_type_archive menu-item-object-ocean_pr menu-item-1017"><A href="https://ocean.org/media-releases/">Media</A></Li>
-                      <Li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><A href="https://ocean.org/terms-conditions/">Terms</A></Li>
-                      <Li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><A href="https://ocean.org/privacy-policy/">Privacy</A></Li>
+                <div>
+                  <div>
+                    <Ul id="menu-footer-1">
+                      <Li><A href="https://ocean.org/media-releases/">Media</A></Li>
+                      <Li><A href="https://ocean.org/terms-conditions/">Terms</A></Li>
+                      <Li><A href="https://ocean.org/privacy-policy/">Privacy</A></Li>
                     </Ul>
                   </div>
                 </div>

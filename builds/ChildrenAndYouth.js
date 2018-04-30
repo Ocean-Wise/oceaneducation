@@ -179,6 +179,8 @@ var ChildrenAndYouth =
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
 
+	var HEROIMG = 'https://ocean.org/wp-content/uploads/CAMP-1.jpg';
+
 	var ChildrenAndYouthEl = function (_React$Component) {
 	  _inherits(ChildrenAndYouthEl, _React$Component);
 
@@ -310,7 +312,7 @@ var ChildrenAndYouth =
 	          _react2.default.createElement(
 	            _Container2.default,
 	            { height: containerHeight },
-	            _react2.default.createElement(_Img2.default, { id: 'hero-image', src: 'https://ocean.org/wp-content/uploads/1earth20140730-640_1_2800x.jpg', alt: 'Ocean wise' }),
+	            _react2.default.createElement(_Img2.default, { id: 'hero-image', src: HEROIMG, alt: 'Ocean wise' }),
 	            _react2.default.createElement(_Logo2.default, { src: source, alt: 'Logo' }),
 	            Nav,
 	            _react2.default.createElement(
@@ -433,13 +435,13 @@ var ChildrenAndYouth =
 	            ),
 	            _react2.default.createElement(
 	              'form',
-	              { action: 'https://vanaqua.createsend.com/t/r/s/urxdtd/', method: 'post', 'class': 'form form--newsletter', novalidate: '' },
+	              { action: 'https://vanaqua.createsend.com/t/r/s/urxdtd/', method: 'post' },
 	              _react2.default.createElement(
 	                'label',
 	                null,
 	                _react2.default.createElement(
 	                  'span',
-	                  { 'class': 'acc-helper' },
+	                  null,
 	                  'Enter your email'
 	                ),
 	                _react2.default.createElement(_Input2.default, { type: 'email', placeholder: 'Enter your email', name: 'cm-urxdtd-urxdtd', required: '' })
@@ -36296,7 +36298,7 @@ var ChildrenAndYouth =
 
 	      return _react2.default.createElement(
 	        'footer',
-	        { 'class': 'content-info', style: { fontFamily: '\'Helvetica Neue\', helvetica, sans-serif' } },
+	        { style: { fontFamily: '\'Helvetica Neue\', helvetica, sans-serif' } },
 	        _react2.default.createElement(
 	          _Social2.default,
 	          null,
@@ -36305,7 +36307,7 @@ var ChildrenAndYouth =
 	            { style: { paddingTop: 60, width: theWidth, height: 120, textAlign: 'center', zIndex: 5 } },
 	            _react2.default.createElement(
 	              _Button2.default,
-	              { donate: true, href: 'http://support.ocean.org/makeadonation', target: '_blank', 'class': 'button button--white' },
+	              { donate: true, href: 'http://support.ocean.org/makeadonation', target: '_blank' },
 	              'Donate'
 	            )
 	          ),
@@ -36320,50 +36322,50 @@ var ChildrenAndYouth =
 	            ),
 	            _react2.default.createElement(
 	              _Ul2.default,
-	              { 'class': 'social-icons', role: 'menu' },
+	              { role: 'menu' },
 	              _react2.default.createElement(
 	                _Li2.default,
-	                { 'class': 'social-icons__icon social-icons__icon--facebook' },
+	                null,
 	                _react2.default.createElement(
 	                  'a',
 	                  { href: 'http://www.facebook.com/pages/Ocean-Wise/110729392295180' },
-	                  _react2.default.createElement('img', { height: 30, src: 'https://ocean.org/wp-content/uploads/facebook-white.svg', alt: 'Facebook', 'data-pagespeed-url-hash': '809399021', onload: 'pagespeed.CriticalImages.checkImageForCriticality(this);' })
+	                  _react2.default.createElement('img', { height: 30, src: 'https://ocean.org/wp-content/uploads/facebook-white.svg', alt: 'Facebook' })
 	                )
 	              ),
 	              _react2.default.createElement(
 	                _Li2.default,
-	                { 'class': 'social-icons__icon social-icons__icon--twitter' },
+	                null,
 	                _react2.default.createElement(
 	                  'a',
 	                  { href: 'https://twitter.com/Oceanwise' },
-	                  _react2.default.createElement('img', { height: 30, src: 'https://ocean.org/wp-content/uploads/twitter-white.svg', alt: 'Twitter', 'data-pagespeed-url-hash': '3763457700', onload: 'pagespeed.CriticalImages.checkImageForCriticality(this);' })
+	                  _react2.default.createElement('img', { height: 30, src: 'https://ocean.org/wp-content/uploads/twitter-white.svg', alt: 'Twitter' })
 	                )
 	              ),
 	              _react2.default.createElement(
 	                _Li2.default,
-	                { 'class': 'social-icons__icon social-icons__icon--instagram' },
+	                null,
 	                _react2.default.createElement(
 	                  'a',
 	                  { href: 'https://www.instagram.com/oceanwise/' },
-	                  _react2.default.createElement('img', { height: 30, src: 'https://ocean.org/wp-content/uploads/instagram-white.svg', alt: 'Instagram', 'data-pagespeed-url-hash': '415834971', onload: 'pagespeed.CriticalImages.checkImageForCriticality(this);' })
+	                  _react2.default.createElement('img', { height: 30, src: 'https://ocean.org/wp-content/uploads/instagram-white.svg', alt: 'Instagram' })
 	                )
 	              ),
 	              _react2.default.createElement(
 	                _Li2.default,
-	                { 'class': 'social-icons__icon social-icons__icon--youtube' },
+	                null,
 	                _react2.default.createElement(
 	                  'a',
 	                  { href: 'https://www.youtube.com/channel/UC0hLWXESQRctgaVPT-8N7Rw' },
-	                  _react2.default.createElement('img', { height: 30, src: 'https://ocean.org/wp-content/uploads/youtube-white.svg', alt: 'Youtube', 'data-pagespeed-url-hash': '108786984', onload: 'pagespeed.CriticalImages.checkImageForCriticality(this);' })
+	                  _react2.default.createElement('img', { height: 30, src: 'https://ocean.org/wp-content/uploads/youtube-white.svg', alt: 'Youtube' })
 	                )
 	              ),
 	              _react2.default.createElement(
 	                _Li2.default,
-	                { 'class': 'social-icons__icon social-icons__icon--snapchat' },
+	                null,
 	                _react2.default.createElement(
 	                  'a',
 	                  { href: 'https://www.snapchat.com/add/oceanwise' },
-	                  _react2.default.createElement('img', { height: 30, src: 'https://ocean.org/wp-content/uploads/snapchat-white.svg', alt: 'Snapchat', 'data-pagespeed-url-hash': '1149850353', onload: 'pagespeed.CriticalImages.checkImageForCriticality(this);' })
+	                  _react2.default.createElement('img', { height: 30, src: 'https://ocean.org/wp-content/uploads/snapchat-white.svg', alt: 'Snapchat' })
 	                )
 	              )
 	            )
@@ -36376,13 +36378,13 @@ var ChildrenAndYouth =
 	          { style: { backgroundColor: 'black', width: '100%' } },
 	          _react2.default.createElement(
 	            'div',
-	            { 'class': 'container', style: { textAlign: 'center', paddingTop: 145, paddingBottom: 145 } },
+	            { style: { textAlign: 'center', paddingTop: 145, paddingBottom: 145 } },
 	            _react2.default.createElement(
 	              'div',
-	              { 'class': 'row', style: { display: 'inline-flex', flexDirection: flexDir } },
+	              { style: { display: 'inline-flex', flexDirection: flexDir } },
 	              _react2.default.createElement(
 	                'div',
-	                { 'class': 'footer-form col-5', style: { paddingRight: 20 } },
+	                { style: { paddingRight: 20 } },
 	                _react2.default.createElement(
 	                  'div',
 	                  { style: { color: 'white', float: 'left', marginLeft: 15, marginBottom: 5 } },
@@ -36390,16 +36392,16 @@ var ChildrenAndYouth =
 	                ),
 	                _react2.default.createElement(
 	                  'form',
-	                  { action: 'https://vanaqua.createsend.com/t/r/s/urxdtd/', method: 'post', 'class': 'form form--newsletter', novalidate: '' },
+	                  { action: 'https://vanaqua.createsend.com/t/r/s/urxdtd/', method: 'post' },
 	                  _react2.default.createElement(
 	                    'label',
 	                    null,
 	                    _react2.default.createElement(
 	                      'span',
-	                      { 'class': 'acc-helper' },
+	                      null,
 	                      'Enter your email'
 	                    ),
-	                    _react2.default.createElement(_Input2.default, { 'class': 'form__input', type: 'email', placeholder: 'Enter your email', name: 'cm-urxdtd-urxdtd', required: '' })
+	                    _react2.default.createElement(_Input2.default, { type: 'email', placeholder: 'Enter your email', name: 'cm-urxdtd-urxdtd', required: '' })
 	                  ),
 	                  _react2.default.createElement(
 	                    _Button2.default,
@@ -36410,7 +36412,7 @@ var ChildrenAndYouth =
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { 'class': 'footer-menu col-5 col-med-push-2', style: secondStyle },
+	                { style: secondStyle },
 	                _react2.default.createElement(
 	                  'div',
 	                  { style: { color: 'white' } },
@@ -36418,16 +36420,16 @@ var ChildrenAndYouth =
 	                ),
 	                _react2.default.createElement(
 	                  'div',
-	                  { 'class': 'widget nav_menu-2 widget_nav_menu' },
+	                  null,
 	                  _react2.default.createElement(
 	                    'div',
-	                    { 'class': 'menu-footer-container' },
+	                    null,
 	                    _react2.default.createElement(
 	                      _Ul2.default,
-	                      { id: 'menu-footer-1', 'class': 'menu' },
+	                      { id: 'menu-footer-1' },
 	                      _react2.default.createElement(
 	                        _Li2.default,
-	                        { 'class': 'menu-item menu-item-type-post_type_archive menu-item-object-ocean_pr menu-item-1017' },
+	                        null,
 	                        _react2.default.createElement(
 	                          _A2.default,
 	                          { href: 'https://ocean.org/media-releases/' },
@@ -36436,7 +36438,7 @@ var ChildrenAndYouth =
 	                      ),
 	                      _react2.default.createElement(
 	                        _Li2.default,
-	                        { 'class': 'menu-item menu-item-type-post_type menu-item-object-page menu-item-178' },
+	                        null,
 	                        _react2.default.createElement(
 	                          _A2.default,
 	                          { href: 'https://ocean.org/terms-conditions/' },
@@ -36445,7 +36447,7 @@ var ChildrenAndYouth =
 	                      ),
 	                      _react2.default.createElement(
 	                        _Li2.default,
-	                        { 'class': 'menu-item menu-item-type-post_type menu-item-object-page menu-item-179' },
+	                        null,
 	                        _react2.default.createElement(
 	                          _A2.default,
 	                          { href: 'https://ocean.org/privacy-policy/' },
@@ -43408,7 +43410,7 @@ var ChildrenAndYouth =
 	  value: true
 	});
 
-	var _templateObject = _taggedTemplateLiteral(['\n  height: ', 'px;\n  overflow-y: hidden;\n  display: inline-block;\n  width: 100%;\n  &::after {\n    content: \'\';\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: ', 'px;\n    display: inline-block;\n    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);\n    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.35)), color-stop(100%, rgba(0,0,0,0)));\n    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);\n    background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);\n    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);\n    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#a6000000\', endColorstr="#00000000", GradientType=0 );\n  }\n'], ['\n  height: ', 'px;\n  overflow-y: hidden;\n  display: inline-block;\n  width: 100%;\n  &::after {\n    content: \'\';\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: ', 'px;\n    display: inline-block;\n    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);\n    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.35)), color-stop(100%, rgba(0,0,0,0)));\n    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);\n    background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);\n    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);\n    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#a6000000\', endColorstr="#00000000", GradientType=0 );\n  }\n']);
+	var _templateObject = _taggedTemplateLiteral(['\n  height: ', 'px;\n  overflow-y: hidden;\n  display: inline-block;\n  width: 100%;\n  &::after {\n    content: \'\';\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: ', 'px;\n    display: inline-block;\n    background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.35)), color-stop(100%, rgba(0,0,0,0.1)));\n    background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#a6000000\', endColorstr="#00000000", GradientType=0 );\n  }\n'], ['\n  height: ', 'px;\n  overflow-y: hidden;\n  display: inline-block;\n  width: 100%;\n  &::after {\n    content: \'\';\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: ', 'px;\n    display: inline-block;\n    background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.35)), color-stop(100%, rgba(0,0,0,0.1)));\n    background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#a6000000\', endColorstr="#00000000", GradientType=0 );\n  }\n']);
 
 	var _styledComponents = __webpack_require__(362);
 
