@@ -183,6 +183,7 @@ var ChildrenAndYouth =
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
 
+	var TITLE = 'Children and Youth';
 	var HEROIMG = 'https://ocean.org/wp-content/uploads/CAMP-1.jpg';
 	var IMG1 = 'https://ocean.org/wp-content/uploads/CY-01.jpg';
 	var IMG2 = 'https://ocean.org/wp-content/uploads/CY-02.jpg';
@@ -323,7 +324,11 @@ var ChildrenAndYouth =
 	          _react2.default.createElement(
 	            _Container2.default,
 	            { height: containerHeight },
-	            _react2.default.createElement(_Img2.default, { id: 'hero-image', src: HEROIMG, alt: 'Ocean wise' }),
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'https://ocean.org/', target: '__blank' },
+	              _react2.default.createElement(_Img2.default, { id: 'hero-image', src: HEROIMG, alt: 'Ocean wise' })
+	            ),
 	            _react2.default.createElement(_Logo2.default, { src: source, alt: 'Logo' }),
 	            Nav,
 	            _react2.default.createElement(
@@ -332,7 +337,7 @@ var ChildrenAndYouth =
 	              _react2.default.createElement(
 	                _H2.default,
 	                null,
-	                'Children and Youth'
+	                TITLE
 	              )
 	            )
 	          ),
@@ -554,7 +559,7 @@ var ChildrenAndYouth =
 	              _react2.default.createElement(
 	                _Blockquote2.default,
 	                null,
-	                '"AquaCamps are the best because we learn all about marine life and how to take care of the ocean. I learned that the sea turtle only eats green good like broccoli, spinach and kale. The camp leaders always have exciting games like sea star tag and camouflage. AquaCamps are a lot of fun!"',
+	                'AquaCamps are the best because we learn all about marine life and how to take care of the ocean. I learned that the sea turtle only eats green good like broccoli, spinach and kale. The camp leaders always have exciting games like sea star tag and camouflage. AquaCamps are a lot of fun!',
 	                _react2.default.createElement(
 	                  'span',
 	                  null,

@@ -29,6 +29,7 @@ import Img from './Img';
 import Logo from './Logo';
 import Blockquote from './Blockquote';
 
+const TITLE = 'Children and Youth';
 const HEROIMG = 'https://ocean.org/wp-content/uploads/CAMP-1.jpg';
 const IMG1 = 'https://ocean.org/wp-content/uploads/CY-01.jpg';
 const IMG2 = 'https://ocean.org/wp-content/uploads/CY-02.jpg';
@@ -124,11 +125,11 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
       <MuiThemeProvider>
         <div>
           <Container height={containerHeight}>
-            <Img id="hero-image" src={HEROIMG} alt="Ocean wise" />
+            <a href="https://ocean.org/" target="__blank"><Img id="hero-image" src={HEROIMG} alt="Ocean wise" /></a>
             <Logo src={source} alt="Logo" />
             {Nav}
             <Header>
-              <H1>Children and Youth</H1>
+              <H1>{TITLE}</H1>
             </Header>
           </Container>
           <Drawer
@@ -220,7 +221,7 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Youth Leadership</span> | Participants are immersed in conservation and sustainability workshops led by our educators, experts and scientists. We alse mentor the next generation of ocean champions through work experience volunteer placements each year.
               </p>
               <Blockquote>
-                "AquaCamps are the best because we learn all about marine life and how to take care of the ocean. I learned that the sea turtle only eats green good like broccoli, spinach and kale. The camp leaders always have exciting games like sea star tag and camouflage. AquaCamps are a lot of fun!"
+                AquaCamps are the best because we learn all about marine life and how to take care of the ocean. I learned that the sea turtle only eats green good like broccoli, spinach and kale. The camp leaders always have exciting games like sea star tag and camouflage. AquaCamps are a lot of fun!
                 <span>Cole, Age 6 - Aquacamper since 2013</span>
               </Blockquote>
             </div>
