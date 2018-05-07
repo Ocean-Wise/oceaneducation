@@ -510,7 +510,13 @@ var Mobile =
 	              _react2.default.createElement(
 	                'p',
 	                null,
-	                'Mobile Programs is the traveling education stream of Ocean Wise\xAE. We bring ocean education to schools, youth groups, and communities coast to coast. To date we have engaged over 625,000 students, youth and community members.'
+	                'Mobile Programs is the traveling education stream of Ocean Wise',
+	                _react2.default.createElement(
+	                  'sup',
+	                  null,
+	                  '\xAE'
+	                ),
+	                '. We bring ocean education to schools, youth groups, and communities coast to coast. To date we have engaged over 625,000 students, youth and community members.'
 	              ),
 	              _react2.default.createElement(
 	                'p',
@@ -555,7 +561,7 @@ var Mobile =
 	                _react2.default.createElement(
 	                  'b',
 	                  null,
-	                  'We bring te ocean to you'
+	                  'We bring the ocean to you'
 	                ),
 	                ' with logistical ease and provide a memorable, unique and engaging experience for all ages.'
 	              ),
@@ -589,7 +595,7 @@ var Mobile =
 	              'div',
 	              { style: { display: 'flex', flexDirection: 'column' } },
 	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG1, alt: 'Learning' }),
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG2, height: 260, alt: 'Seeing' }),
+	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG2, alt: 'Seeing' }),
 	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG3, alt: 'Community' })
 	            )
 	          ),
@@ -43557,8 +43563,9 @@ var Mobile =
 	  value: true
 	});
 
-	var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  margin: 0 auto;\n  display: block;\n  ', '\n'], ['\n  width: 100%;\n  margin: 0 auto;\n  display: block;\n  ', '\n']),
-	    _templateObject2 = _taggedTemplateLiteral(['\n    position: relative;\n    bottom: 800px;\n  '], ['\n    position: relative;\n    bottom: 800px;\n  ']);
+	var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  margin: 0 auto;\n  display: block;\n  ', '\n  ', '\n'], ['\n  width: 100%;\n  margin: 0 auto;\n  display: block;\n  ', '\n  ', '\n']),
+	    _templateObject2 = _taggedTemplateLiteral(['\n    position: relative;\n    bottom: 387px;\n  '], ['\n    position: relative;\n    bottom: 387px;\n  ']),
+	    _templateObject3 = _taggedTemplateLiteral(['\n    position: relative;\n    bottom: 800px;\n  '], ['\n    position: relative;\n    bottom: 800px;\n  ']);
 
 	var _styledComponents = __webpack_require__(362);
 
@@ -43574,7 +43581,7 @@ var Mobile =
 
 	function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-	var Img = _styledComponents2.default.img(_templateObject, mixins.bp.md.min(_templateObject2));
+	var Img = _styledComponents2.default.img(_templateObject, mixins.bp.lg.min(_templateObject2), mixins.bp.xl.min(_templateObject3));
 
 	exports.default = Img;
 

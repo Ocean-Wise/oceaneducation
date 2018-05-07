@@ -209,7 +209,7 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
           <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
             <div>
               <p>Curriculum Programs deliver multi-sensory workshops to students of all ages. We engage over 20.000 students per year in inquiry-based learning, led by a group of professional educators and biologists.</p>
-              <p>Our content connects to the Ocean Wise&reg; direct action and research initiatives and advance participants along the conservation continuum. Our programs are aligned with the British Columbia provincial curriculum.</p>
+              <p>Our content connects to the Ocean Wise<sup>&reg;</sup> direct action and research initiatives and advance participants along the conservation continuum. Our programs are aligned with the British Columbia provincial curriculum.</p>
               <h4 style={{ textTransform: 'uppercase', color: '#39395a' }}>They include:</h4>
               <p>
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Aquaquest Learning Labs and Classrooms</span> | These workshops advance ocean literacy with students. They create an appreciation of ocean health, as well as personal connections with marine life and their ecosystems.
@@ -227,7 +227,7 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Exploring" />
-              <img style={{ margin: 5, width: imageWidth }} src={IMG2} height={260} alt="Learning" />
+              <img style={{ margin: 5, width: imageWidth }} src={IMG2} alt="Learning" />
               <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Investigating" />
             </div>
           </div>

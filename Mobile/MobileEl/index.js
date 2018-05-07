@@ -208,7 +208,7 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
           </Drawer>
           <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
             <div>
-              <p>Mobile Programs is the traveling education stream of Ocean Wise&reg;. We bring ocean education to schools, youth groups, and communities coast to coast. To date we have engaged over 625,000 students, youth and community members.</p>
+              <p>Mobile Programs is the traveling education stream of Ocean Wise<sup>&reg;</sup>. We bring ocean education to schools, youth groups, and communities coast to coast. To date we have engaged over 625,000 students, youth and community members.</p>
               <p>Programs feature live animals, marine artifacts and hands-on interactive activities designed to encourage stewardshup of our oceans and waterways.<br />Our educators deliver expert level, multi-sensory aquatic programs, based on the Ocean Literacy Framework.</p>
               <p>
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Schools</span> | Programs for K-12, satisfy a wido range of learning outcomes. We strive to create a lasting connection to our oceans and aquatic habitats by encouraging direct conservation action.
@@ -219,7 +219,7 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
               <p>
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Community Events</span> | We provide a memorable, unique and captivating experience at festivals and events through highly interactive, direct conversations.
               </p>
-              <p><b>We bring te ocean to you</b> with logistical ease and provide a memorable, unique and engaging experience for all ages.</p>
+              <p><b>We bring the ocean to you</b> with logistical ease and provide a memorable, unique and engaging experience for all ages.</p>
               <p><b>For information on how to get involved email</b> <a href="mailto:mobile@ocean.org">mobile@ocean.org</a></p>
               <Blockquote>
                 Small groups and well-trained, positive, passionate staff make this an amazing, in-school field trip.
@@ -228,7 +228,7 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Learning" />
-              <img style={{ margin: 5, width: imageWidth }} src={IMG2} height={260} alt="Seeing" />
+              <img style={{ margin: 5, width: imageWidth }} src={IMG2} alt="Seeing" />
               <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Community" />
             </div>
           </div>
