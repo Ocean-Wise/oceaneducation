@@ -324,11 +324,7 @@ var Curriculum =
 	          _react2.default.createElement(
 	            _Container2.default,
 	            { height: containerHeight },
-	            _react2.default.createElement(
-	              'a',
-	              { href: 'https://ocean.org/', target: '__blank' },
-	              _react2.default.createElement(_Img2.default, { id: 'hero-image', src: HEROIMG, alt: 'Ocean wise' })
-	            ),
+	            _react2.default.createElement(_Img2.default, { id: 'hero-image', src: HEROIMG, alt: 'Ocean wise' }),
 	            _react2.default.createElement(_Logo2.default, { src: source, alt: 'Logo' }),
 	            Nav,
 	            _react2.default.createElement(

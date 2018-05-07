@@ -125,7 +125,7 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
       <MuiThemeProvider>
         <div>
           <Container height={containerHeight}>
-            <a href="https://ocean.org/" target="__blank"><Img id="hero-image" src={HEROIMG} alt="Ocean wise" /></a>
+            <Img id="hero-image" src={HEROIMG} alt="Ocean wise" />
             <Logo src={source} alt="Logo" />
             {Nav}
             <Header>

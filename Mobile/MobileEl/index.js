@@ -125,7 +125,7 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
       <MuiThemeProvider>
         <div>
           <Container height={containerHeight}>
-            <a href="https://ocean.org/" target="__blank"><Img id="hero-image" src={HEROIMG} alt="Ocean wise" /></a>
+            <Img id="hero-image" src={HEROIMG} alt="Ocean wise" />
             <Logo src={source} alt="Logo" />
             {Nav}
             <Header>
@@ -208,27 +208,28 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
           </Drawer>
           <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
             <div>
-              <p>Curriculum Programs deliver multi-sensory workshops to students of all ages. We engage over 20.000 students per year in inquiry-based learning, led by a group of professional educators and biologists.</p>
-              <p>Our content connects to the Ocean Wise&reg; direct action and research initiatives and advance participants along the conservation continuum. Our programs are aligned with the British Columbia provincial curriculum.</p>
-              <h4 style={{ textTransform: 'uppercase', color: '#39395a' }}>They include:</h4>
+              <p>Mobile Programs is the traveling education stream of Ocean Wise&reg;. We bring ocean education to schools, youth groups, and communities coast to coast. To date we have engaged over 625,000 students, youth and community members.</p>
+              <p>Programs feature live animals, marine artifacts and hands-on interactive activities designed to encourage stewardshup of our oceans and waterways.<br />Our educators deliver expert level, multi-sensory aquatic programs, based on the Ocean Literacy Framework.</p>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Aquaquest Learning Labs and Classrooms</span> | These workshops advance ocean literacy with students. They create an appreciation of ocean health, as well as personal connections with marine life and their ecosystems.
+                <span style={{ fontWeight: 700, color: '#39395a' }}>Schools</span> | Programs for K-12, satisfy a wido range of learning outcomes. We strive to create a lasting connection to our oceans and aquatic habitats by encouraging direct conservation action.
               </p>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Vancouver Aquarium Experience</span> | Guided tours through the aquarium connect students to global ecosystems and establish a sense of place in their communities.
+                <span style={{ fontWeight: 700, color: '#39395a' }}>Youth Camps</span> | Delivered at your location, these programs are designed to inspire future generations of ocean champions who understand more about our oceans and how to protect its precious life.
               </p>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Coastal Ecosystems</span> | These are outdoor, hands-on introduction to the skills and tools that marine scientists use on a daily basis. Students explore how scientific investigation can play a major role in preserving marine life, and how our actions have an impact on the world around us.
+                <span style={{ fontWeight: 700, color: '#39395a' }}>Community Events</span> | We provide a memorable, unique and captivating experience at festivals and events through highly interactive, direct conversations.
               </p>
+              <p><b>We bring te ocean to you</b> with logistical ease and provide a memorable, unique and engaging experience for all ages.</p>
+              <p><b>For information on how to get involved email</b> <a href="mailto:mobile@ocean.org">mobile@ocean.org</a></p>
               <Blockquote>
-                We are starting inquire projects next week that study our global impact... particularly the ocean. And it all started from that field trip to the Aquarium!
-                <span>Teacher, Maillard Middle School</span>
+                Small groups and well-trained, positive, passionate staff make this an amazing, in-school field trip.
+                <span>Teacher, New Westminster</span>
               </Blockquote>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Exploring" />
-              <img style={{ margin: 5, width: imageWidth }} src={IMG2} height={260} alt="Learning" />
-              <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Investigating" />
+              <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Learning" />
+              <img style={{ margin: 5, width: imageWidth }} src={IMG2} height={260} alt="Seeing" />
+              <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Community" />
             </div>
           </div>
           <Footer />

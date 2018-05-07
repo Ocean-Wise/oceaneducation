@@ -163,11 +163,11 @@ var Mobile =
 
 	var _Img2 = _interopRequireDefault(_Img);
 
-	var _Logo = __webpack_require__(428);
+	var _Logo = __webpack_require__(430);
 
 	var _Logo2 = _interopRequireDefault(_Logo);
 
-	var _Blockquote = __webpack_require__(429);
+	var _Blockquote = __webpack_require__(431);
 
 	var _Blockquote2 = _interopRequireDefault(_Blockquote);
 
@@ -324,11 +324,7 @@ var Mobile =
 	          _react2.default.createElement(
 	            _Container2.default,
 	            { height: containerHeight },
-	            _react2.default.createElement(
-	              'a',
-	              { href: 'https://ocean.org/', target: '__blank' },
-	              _react2.default.createElement(_Img2.default, { id: 'hero-image', src: HEROIMG, alt: 'Ocean wise' })
-	            ),
+	            _react2.default.createElement(_Img2.default, { id: 'hero-image', src: HEROIMG, alt: 'Ocean wise' }),
 	            _react2.default.createElement(_Logo2.default, { src: source, alt: 'Logo' }),
 	            Nav,
 	            _react2.default.createElement(
@@ -514,17 +510,14 @@ var Mobile =
 	              _react2.default.createElement(
 	                'p',
 	                null,
-	                'Curriculum Programs deliver multi-sensory workshops to students of all ages. We engage over 20.000 students per year in inquiry-based learning, led by a group of professional educators and biologists.'
+	                'Mobile Programs is the traveling education stream of Ocean Wise\xAE. We bring ocean education to schools, youth groups, and communities coast to coast. To date we have engaged over 625,000 students, youth and community members.'
 	              ),
 	              _react2.default.createElement(
 	                'p',
 	                null,
-	                'Our content connects to the Ocean Wise\xAE direct action and research initiatives and advance participants along the conservation continuum. Our programs are aligned with the British Columbia provincial curriculum.'
-	              ),
-	              _react2.default.createElement(
-	                'h4',
-	                { style: { textTransform: 'uppercase', color: '#39395a' } },
-	                'They include:'
+	                'Programs feature live animals, marine artifacts and hands-on interactive activities designed to encourage stewardshup of our oceans and waterways.',
+	                _react2.default.createElement('br', null),
+	                'Our educators deliver expert level, multi-sensory aquatic programs, based on the Ocean Literacy Framework.'
 	              ),
 	              _react2.default.createElement(
 	                'p',
@@ -532,9 +525,9 @@ var Mobile =
 	                _react2.default.createElement(
 	                  'span',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
-	                  'Aquaquest Learning Labs and Classrooms'
+	                  'Schools'
 	                ),
-	                ' | These workshops advance ocean literacy with students. They create an appreciation of ocean health, as well as personal connections with marine life and their ecosystems.'
+	                ' | Programs for K-12, satisfy a wido range of learning outcomes. We strive to create a lasting connection to our oceans and aquatic habitats by encouraging direct conservation action.'
 	              ),
 	              _react2.default.createElement(
 	                'p',
@@ -542,9 +535,9 @@ var Mobile =
 	                _react2.default.createElement(
 	                  'span',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
-	                  'Vancouver Aquarium Experience'
+	                  'Youth Camps'
 	                ),
-	                ' | Guided tours through the aquarium connect students to global ecosystems and establish a sense of place in their communities.'
+	                ' | Delivered at your location, these programs are designed to inspire future generations of ocean champions who understand more about our oceans and how to protect its precious life.'
 	              ),
 	              _react2.default.createElement(
 	                'p',
@@ -552,27 +545,52 @@ var Mobile =
 	                _react2.default.createElement(
 	                  'span',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
-	                  'Coastal Ecosystems'
+	                  'Community Events'
 	                ),
-	                ' | These are outdoor, hands-on introduction to the skills and tools that marine scientists use on a daily basis. Students explore how scientific investigation can play a major role in preserving marine life, and how our actions have an impact on the world around us.'
+	                ' | We provide a memorable, unique and captivating experience at festivals and events through highly interactive, direct conversations.'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                  'b',
+	                  null,
+	                  'We bring te ocean to you'
+	                ),
+	                ' with logistical ease and provide a memorable, unique and engaging experience for all ages.'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                  'b',
+	                  null,
+	                  'For information on how to get involved email'
+	                ),
+	                ' ',
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'mailto:mobile@ocean.org' },
+	                  'mobile@ocean.org'
+	                )
 	              ),
 	              _react2.default.createElement(
 	                _Blockquote2.default,
 	                null,
-	                'We are starting inquire projects next week that study our global impact... particularly the ocean. And it all started from that field trip to the Aquarium!',
+	                'Small groups and well-trained, positive, passionate staff make this an amazing, in-school field trip.',
 	                _react2.default.createElement(
 	                  'span',
 	                  null,
-	                  'Teacher, Maillard Middle School'
+	                  'Teacher, New Westminster'
 	                )
 	              )
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { style: { display: 'flex', flexDirection: 'column' } },
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG1, alt: 'Exploring' }),
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG2, height: 260, alt: 'Learning' }),
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG3, alt: 'Investigating' })
+	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG1, alt: 'Learning' }),
+	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG2, height: 260, alt: 'Seeing' }),
+	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG3, alt: 'Community' })
 	            )
 	          ),
 	          _react2.default.createElement(_Footer2.default, null)
@@ -43539,22 +43557,170 @@ var Mobile =
 	  value: true
 	});
 
-	var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  margin: 0 auto;\n  display: block;\n  // position: absolute;\n  // bottom: 125px;\n'], ['\n  width: 100%;\n  margin: 0 auto;\n  display: block;\n  // position: absolute;\n  // bottom: 125px;\n']);
+	var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  margin: 0 auto;\n  display: block;\n  ', '\n'], ['\n  width: 100%;\n  margin: 0 auto;\n  display: block;\n  ', '\n']),
+	    _templateObject2 = _taggedTemplateLiteral(['\n    position: relative;\n    bottom: 800px;\n  '], ['\n    position: relative;\n    bottom: 800px;\n  ']);
 
 	var _styledComponents = __webpack_require__(362);
 
 	var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
+	var _mixins = __webpack_require__(428);
+
+	var mixins = _interopRequireWildcard(_mixins);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-	var Img = _styledComponents2.default.img(_templateObject);
+	var Img = _styledComponents2.default.img(_templateObject, mixins.bp.md.min(_templateObject2));
 
 	exports.default = Img;
 
 /***/ }),
 /* 428 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.textShadow = exports.boxShadow = exports.bpEither = exports.bpEach = exports.lg = exports.md = exports.sm = exports.xs = exports.bp = undefined;
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; // Mixins by Josh Dronsfield @dronz_
+
+	var _templateObject = _taggedTemplateLiteral(['\n    @media (min-width: ', 'px) {\n      ', '\n    }\n  '], ['\n    @media (min-width: ', 'px) {\n      ', '\n    }\n  ']),
+	    _templateObject2 = _taggedTemplateLiteral(['\n    @media (max-width: ', 'px) {\n      ', '\n    }\n  '], ['\n    @media (max-width: ', 'px) {\n      ', '\n    }\n  ']),
+	    _templateObject3 = _taggedTemplateLiteral(['\n    @media (min-width: ', 'px) and (max-width: ', 'px) {\n      ', '\n    }\n  '], ['\n    @media (min-width: ', 'px) and (max-width: ', 'px) {\n      ', '\n    }\n  ']),
+	    _templateObject4 = _taggedTemplateLiteral(['\n  ', '\n'], ['\n  ', '\n']),
+	    _templateObject5 = _taggedTemplateLiteral(['', ': ', ';'], ['', ': ', ';']),
+	    _templateObject6 = _taggedTemplateLiteral(['\n  ', '\n  ', '\n'], ['\n  ', '\n  ', '\n']);
+
+	var _styledComponents = __webpack_require__(362);
+
+	var _theme = __webpack_require__(429);
+
+	var _theme2 = _interopRequireDefault(_theme);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	// --------------------------------------------------
+
+	var objMap = function objMap(obj, cb) {
+	  return Object.keys(obj).reduce(function (acc, key) {
+	    return _extends({}, acc, _defineProperty({}, key, cb(key, obj[key])));
+	  }, {});
+	};
+
+	// --------------------------------------------------
+	// Breakpoints
+
+	var bp = exports.bp = objMap(_theme2.default.bps, function (key, val) {
+	  return {
+	    min: function min() {
+	      return (0, _styledComponents.css)(_templateObject, val.min, _styledComponents.css.apply(undefined, arguments));
+	    },
+	    max: function max() {
+	      return (0, _styledComponents.css)(_templateObject2, val.max, _styledComponents.css.apply(undefined, arguments));
+	    },
+	    only: function only() {
+	      return (0, _styledComponents.css)(_templateObject3, val.min, val.max, _styledComponents.css.apply(undefined, arguments));
+	    }
+	  };
+	});
+
+	var xs = exports.xs = bp.xs.only;
+	var sm = exports.sm = bp.sm.only;
+	var md = exports.md = bp.md.only;
+	var lg = exports.lg = bp.lg.only;
+
+	var bpEach = exports.bpEach = function bpEach(prop, vals) {
+	  return (0, _styledComponents.css)(_templateObject4, Object.keys(vals).map(function (key) {
+	    return bp[key].only(_templateObject5, prop, vals[key]);
+	  }));
+	};
+
+	var bpEither = exports.bpEither = function bpEither(prop, vals) {
+	  return (0, _styledComponents.css)(_templateObject6, xs(_templateObject5, prop, vals.xs), bp.sm.min(_templateObject5, prop, vals.other));
+	};
+
+	// --------------------------------------------------
+	var boxShadow = exports.boxShadow = function boxShadow() {
+	  var elevation = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+	  return {
+	    1: 'box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);',
+	    2: 'box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);',
+	    3: 'box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);',
+	    4: 'box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);',
+	    5: 'box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);',
+	    '-1': 'box-shadow: inset 0 -1px 3px rgba(0,0,0,0.12), inset 0 -1px 2px rgba(0,0,0,0.24);'
+	  }[elevation];
+	};
+
+	var textShadow = exports.textShadow = function textShadow() {
+	  var elevation = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+	  return {
+	    1: 'text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);',
+	    2: 'text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);',
+	    3: 'text-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);',
+	    4: 'text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);',
+	    5: 'text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);',
+	    '-1': 'text-shadow: inset 0 -1px 3px rgba(0,0,0,0.12), inset 0 -1px 2px rgba(0,0,0,0.24);'
+	  }[elevation];
+	};
+
+/***/ }),
+/* 429 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var sm = 768;
+
+	var md = 992;
+
+	var lg = 1200;
+
+	var xl = 1730;
+
+	var breakpoints = {
+	  xs: { min: 0, max: sm - 1 },
+	  sm: { min: sm, max: md - 1 },
+	  md: { min: md, max: lg - 1 },
+	  lg: { min: lg, max: xl - 1 },
+	  xl: { min: xl, max: 100000 }
+	};
+
+	exports.default = {
+	  primaryBlue: '#005EB8',
+	  lightBlue: '#64A5C3',
+	  blueGrey: '#6A7B83',
+	  seaGreen: '#00B398',
+	  orange: '#F59F4F',
+	  rescueRed: '#D44E4E',
+	  apple: '#8FBA60',
+	  lilac: '#7E57C1',
+	  lightBlueGrey: '#B2BEC4',
+	  iceBlue: '#E9EEF6',
+	  paleBlueGrey: '#FAFBFD',
+	  grey: '#4D4D4D',
+	  lightGrey: '#8D8D8D',
+
+	  breakpoints: breakpoints,
+	  bps: breakpoints
+	};
+
+/***/ }),
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43578,7 +43744,7 @@ var Mobile =
 	exports.default = Logo;
 
 /***/ }),
-/* 429 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
