@@ -184,11 +184,11 @@ var Ocean =
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
 
 	var TITLE = 'Ocean Bridge';
-	var HEROIMG = 'https://ocean.org/wp-content/uploads/CP-00.jpg';
-	var IMG1 = 'https://ocean.org/wp-content/uploads/CP-01.jpg';
-	var IMG2 = 'https://ocean.org/wp-content/uploads/CP-02.jpg';
-	var IMG3 = 'https://ocean.org/wp-content/uploads/CP-03.jpg';
-	var POSTER = 'https://ocean.org/wp-content/uploads/CP-Poster.jpg';
+	var HEROIMG = 'https://ocean.org/wp-content/uploads/OB-00.jpg';
+	var IMG1 = 'https://ocean.org/wp-content/uploads/OB-01.jpg';
+	var IMG2 = 'https://ocean.org/wp-content/uploads/OB-02.jpg';
+	var IMG3 = 'https://ocean.org/wp-content/uploads/OB-03.jpg';
+	// const POSTER = 'https://ocean.org/wp-content/uploads/OB-Poster.jpg';
 
 	var OceanEl = function (_React$Component) {
 	  _inherits(OceanEl, _React$Component);
@@ -43520,9 +43520,7 @@ var Ocean =
 	  value: true
 	});
 
-	var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  margin: 0 auto;\n  display: block;\n  ', '\n  ', '\n'], ['\n  width: 100%;\n  margin: 0 auto;\n  display: block;\n  ', '\n  ', '\n']),
-	    _templateObject2 = _taggedTemplateLiteral(['\n    position: relative;\n    bottom: 200px;\n  '], ['\n    position: relative;\n    bottom: 200px;\n  ']),
-	    _templateObject3 = _taggedTemplateLiteral(['\n    position: relative;\n    bottom: 430px;\n  '], ['\n    position: relative;\n    bottom: 430px;\n  ']);
+	var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  margin: 0 auto;\n  display: block;\n  ', '\n'], ['\n  width: 100%;\n  margin: 0 auto;\n  display: block;\n  ', '\n']);
 
 	var _styledComponents = __webpack_require__(362);
 
@@ -43538,7 +43536,14 @@ var Ocean =
 
 	function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-	var Img = _styledComponents2.default.img(_templateObject, mixins.bp.lg.min(_templateObject2), mixins.bp.xl.min(_templateObject3));
+	var Img = _styledComponents2.default.img(_templateObject, '' /* ${mixins.bp.lg.min`
+	                                                             position: relative;
+	                                                             bottom: 200px;
+	                                                             `}
+	                                                             ${mixins.bp.xl.min`
+	                                                             position: relative;
+	                                                             bottom: 430px;
+	                                                             `} */);
 
 	exports.default = Img;
 

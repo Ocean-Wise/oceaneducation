@@ -30,11 +30,11 @@ import Logo from './Logo';
 import Blockquote from './Blockquote';
 
 const TITLE = 'Ocean Bridge';
-const HEROIMG = 'https://ocean.org/wp-content/uploads/CP-00.jpg';
-const IMG1 = 'https://ocean.org/wp-content/uploads/CP-01.jpg';
-const IMG2 = 'https://ocean.org/wp-content/uploads/CP-02.jpg';
-const IMG3 = 'https://ocean.org/wp-content/uploads/CP-03.jpg';
-const POSTER = 'https://ocean.org/wp-content/uploads/CP-Poster.jpg';
+const HEROIMG = 'https://ocean.org/wp-content/uploads/OB-00.jpg';
+const IMG1 = 'https://ocean.org/wp-content/uploads/OB-01.jpg';
+const IMG2 = 'https://ocean.org/wp-content/uploads/OB-02.jpg';
+const IMG3 = 'https://ocean.org/wp-content/uploads/OB-03.jpg';
+// const POSTER = 'https://ocean.org/wp-content/uploads/OB-Poster.jpg';
 
 class OceanEl extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
