@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Button = styled.a`
+const Button = styled.button`
   ${(props) => props.donate ? 'padding: 20px 10px 20px 10px' : 'padding: 10px'};
   font-weight: 700;
   border: 1px solid ${(props) => props.donate ? '#fff' : '#7b7e8a'};

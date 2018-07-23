@@ -212,13 +212,13 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
               <p>Our team of educators are passionate about inspiring the next generation of young leaders. Our approach is supported by the accepted social science assertios that adults develop concern for the environment based on experiences of awe and wonder as a child.</p>
               <h4 style={{ textTransform: 'uppercase', color: '#39395a' }}>The program comprises:</h4>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Camps & Clubs</span> | Programs embrace nature play, science, art and hands-on experiences to foster a love of our natural world.
+                <h4 style={{ fontWeight: 700, color: '#39395a' }}>Camps & Clubs</h4> <br /> Programs embrace nature play, science, art and hands-on experiences to foster a love of our natural world.
               </p>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Sleepovers & Birthday Parties</span> | Participants tour the Aquarium with an experienced educator and engage in a multisensory exploration of the BC intertidal zone in our Wet Lab.
+                <h4 style={{ fontWeight: 700, color: '#39395a' }}>Sleepovers & Birthday Parties</h4> <br /> Participants tour the Aquarium with an experienced educator and engage in a multisensory exploration of the BC intertidal zone in our Wet Lab.
               </p>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Youth Leadership</span> | Participants are immersed in conservation and sustainability workshops led by our educators, experts and scientists. We alse mentor the next generation of ocean champions through work experience volunteer placements each year.
+                <h4 style={{ fontWeight: 700, color: '#39395a' }}>Youth Leadership</h4> <br /> Participants are immersed in conservation and sustainability workshops led by our educators, experts and scientists. We alse mentor the next generation of ocean champions through work experience volunteer placements each year.
               </p>
               <Blockquote>
                 AquaCamps are the best because we learn all about marine life and how to take care of the ocean. I learned that the sea turtle only eats green good like broccoli, spinach and kale. The camp leaders always have exciting games like sea star tag and camouflage. AquaCamps are a lot of fun!

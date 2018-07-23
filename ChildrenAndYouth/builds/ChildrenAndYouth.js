@@ -526,31 +526,37 @@ var ChildrenAndYouth =
 	                'p',
 	                null,
 	                _react2.default.createElement(
-	                  'span',
+	                  'h4',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
 	                  'Camps & Clubs'
 	                ),
-	                ' | Programs embrace nature play, science, art and hands-on experiences to foster a love of our natural world.'
+	                ' ',
+	                _react2.default.createElement('br', null),
+	                ' Programs embrace nature play, science, art and hands-on experiences to foster a love of our natural world.'
 	              ),
 	              _react2.default.createElement(
 	                'p',
 	                null,
 	                _react2.default.createElement(
-	                  'span',
+	                  'h4',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
 	                  'Sleepovers & Birthday Parties'
 	                ),
-	                ' | Participants tour the Aquarium with an experienced educator and engage in a multisensory exploration of the BC intertidal zone in our Wet Lab.'
+	                ' ',
+	                _react2.default.createElement('br', null),
+	                ' Participants tour the Aquarium with an experienced educator and engage in a multisensory exploration of the BC intertidal zone in our Wet Lab.'
 	              ),
 	              _react2.default.createElement(
 	                'p',
 	                null,
 	                _react2.default.createElement(
-	                  'span',
+	                  'h4',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
 	                  'Youth Leadership'
 	                ),
-	                ' | Participants are immersed in conservation and sustainability workshops led by our educators, experts and scientists. We alse mentor the next generation of ocean champions through work experience volunteer placements each year.'
+	                ' ',
+	                _react2.default.createElement('br', null),
+	                ' Participants are immersed in conservation and sustainability workshops led by our educators, experts and scientists. We alse mentor the next generation of ocean champions through work experience volunteer placements each year.'
 	              ),
 	              _react2.default.createElement(
 	                _Blockquote2.default,
@@ -36637,7 +36643,7 @@ var ChildrenAndYouth =
 
 	function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-	var Button = _styledComponents2.default.a(_templateObject, function (props) {
+	var Button = _styledComponents2.default.button(_templateObject, function (props) {
 	  return props.donate ? 'padding: 20px 10px 20px 10px' : 'padding: 10px';
 	}, function (props) {
 	  return props.donate ? '#fff' : '#7b7e8a';
