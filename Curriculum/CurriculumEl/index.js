@@ -239,22 +239,21 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
               <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Investigating" />
             </div>
           </div>
-          {/* CHANGE THESE SIZES */}
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
               <img src={STUDENT} alt="Students" style={{ width: '410px', height: '150px' }} />
             </div>
             <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <img src={CONNECTED} alt="Camps" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-              <img src={PROGRAMS} alt="Clubs" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+              <img src={CONNECTED} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+              <img src={PROGRAMS} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
             </div>
             <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <img src={EXP} alt="Education" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-              <img src={SUPPORTING} alt="Sleepovers" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+              <img src={EXP} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+              <img src={SUPPORTING} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
             </div>
             <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <img src={BENNET} alt="Parties" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-              <img src={FRENCH} alt="Placements" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+              <img src={BENNET} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+              <img src={FRENCH} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
             </div>
           </div>
           <Footer />

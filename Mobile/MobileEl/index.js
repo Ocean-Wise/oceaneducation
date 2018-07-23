@@ -29,6 +29,14 @@ import Img from './Img';
 import Logo from './Logo';
 import Blockquote from './Blockquote';
 
+import G1 from './graphics/1.png';
+import G2 from './graphics/2.png';
+import G3 from './graphics/3.png';
+import G4 from './graphics/4.png';
+import G5 from './graphics/5.png';
+import G6 from './graphics/6.png';
+import G7 from './graphics/7.png';
+
 const TITLE = 'Mobile Programs';
 const HEROIMG = 'https://ocean.org/wp-content/uploads/MP-00.jpg';
 const IMG1 = 'https://ocean.org/wp-content/uploads/MP-01.jpg';
@@ -230,6 +238,23 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
               <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Learning" />
               <img style={{ margin: 5, width: imageWidth }} src={IMG2} alt="Seeing" />
               <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Community" />
+            </div>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <img src={G1} alt="Students" style={{ width: '410px', height: '150px', marginTop: 10 }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <img src={G2} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+              <img src={G3} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <img src={G4} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+              <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <img src={G6} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+              <img src={G7} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
             </div>
           </div>
           <Footer />
