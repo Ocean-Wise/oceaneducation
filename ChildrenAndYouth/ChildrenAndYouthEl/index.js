@@ -29,6 +29,14 @@ import Img from './Img';
 import Logo from './Logo';
 import Blockquote from './Blockquote';
 
+import STUDENT from './graphics/1.png';
+import CLUB from './graphics/2.png';
+import CAMP from './graphics/3.png';
+import SLEEP from './graphics/4.png';
+import EDU from './graphics/5.png';
+import EXP from './graphics/6.png';
+import PARTY from './graphics/7.png';
+
 const TITLE = 'Children and Youth';
 const HEROIMG = 'https://ocean.org/wp-content/uploads/CAMP-1.jpg';
 const IMG1 = 'https://ocean.org/wp-content/uploads/CY-01.jpg';
@@ -229,6 +237,23 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
               <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Beachcombing" />
               <img style={{ margin: 5, width: imageWidth }} src={IMG2} height={260} alt="Sleepovers" />
               <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Canoeing" />
+            </div>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <img src={STUDENT} alt="Students" style={{ width: '370px', height: '150px' }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <img src={CAMP} alt="Camps" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+              <img src={CLUB} alt="Clubs" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <img src={EDU} alt="Education" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+              <img src={SLEEP} alt="Sleepovers" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <img src={PARTY} alt="Parties" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+              <img src={EXP} alt="Placements" style={{ width: '370px', height: '150px', marginTop: 20 }} />
             </div>
           </div>
           <Footer />

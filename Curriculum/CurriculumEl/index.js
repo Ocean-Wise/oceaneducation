@@ -29,6 +29,14 @@ import Img from './Img';
 import Logo from './Logo';
 import Blockquote from './Blockquote';
 
+import STUDENT from './graphics/1.png';
+import PROGRAMS from './graphics/2.png';
+import CONNECTED from './graphics/3.png';
+import SUPPORTING from './graphics/4.png';
+import EXP from './graphics/5.png';
+import BENNET from './graphics/6.png';
+import FRENCH from './graphics/7.png';
+
 const TITLE = 'Curriculum Programs';
 const HEROIMG = 'https://ocean.org/wp-content/uploads/CP-00.jpg';
 const IMG1 = 'https://ocean.org/wp-content/uploads/CP-01.jpg';
@@ -229,6 +237,24 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
               <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Exploring" />
               <img style={{ margin: 5, width: imageWidth }} src={IMG2} alt="Learning" />
               <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Investigating" />
+            </div>
+          </div>
+          {/* CHANGE THESE SIZES */}
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <img src={STUDENT} alt="Students" style={{ width: '410px', height: '150px' }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <img src={CONNECTED} alt="Camps" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+              <img src={PROGRAMS} alt="Clubs" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <img src={EXP} alt="Education" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+              <img src={SUPPORTING} alt="Sleepovers" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <img src={BENNET} alt="Parties" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+              <img src={FRENCH} alt="Placements" style={{ width: '370px', height: '150px', marginTop: 20 }} />
             </div>
           </div>
           <Footer />
