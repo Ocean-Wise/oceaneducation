@@ -620,7 +620,11 @@ var Curriculum =
 	                _react2.default.createElement(
 	                  'span',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
-	                  'Aquaquest Learning Labs and Classrooms'
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'http://www.vanaqua.org/learn/schools/programs/4-7/wetlab-community', target: '_blank' },
+	                    'Aquaquest Learning Labs and Classrooms'
+	                  )
 	                ),
 	                ' | These workshops advance ocean literacy with students. They create an appreciation of ocean health, as well as personal connections with marine life and their ecosystems.'
 	              ),
@@ -630,7 +634,11 @@ var Curriculum =
 	                _react2.default.createElement(
 	                  'span',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
-	                  'Vancouver Aquarium Experience'
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'http://www.vanaqua.org/learn/schools', target: '_blank' },
+	                    'Vancouver Aquarium Experience'
+	                  )
 	                ),
 	                ' | Guided tours through the aquarium connect students to global ecosystems and establish a sense of place in their communities.'
 	              ),
@@ -640,7 +648,11 @@ var Curriculum =
 	                _react2.default.createElement(
 	                  'span',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
-	                  'Coastal Ecosystems'
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'http://www.vanaqua.org/learn/summer-programs/coastal-connections', target: '_blank' },
+	                    'Coastal Ecosystems'
+	                  )
 	                ),
 	                ' | These are outdoor, hands-on introduction to the skills and tools that marine scientists use on a daily basis. Students explore how scientific investigation can play a major role in preserving marine life, and how our actions have an impact on the world around us.'
 	              ),

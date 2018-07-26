@@ -264,13 +264,13 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
               <p>Our content connects to the Ocean Wise<sup>&reg;</sup> direct action and research initiatives and advance participants along the conservation continuum. Our programs are aligned with the British Columbia provincial curriculum.</p>
               <h4 style={{ textTransform: 'uppercase', color: '#39395a' }}>They include:</h4>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Aquaquest Learning Labs and Classrooms</span> | These workshops advance ocean literacy with students. They create an appreciation of ocean health, as well as personal connections with marine life and their ecosystems.
+                <span style={{ fontWeight: 700, color: '#39395a' }}><a href="http://www.vanaqua.org/learn/schools/programs/4-7/wetlab-community" target="_blank">Aquaquest Learning Labs and Classrooms</a></span> | These workshops advance ocean literacy with students. They create an appreciation of ocean health, as well as personal connections with marine life and their ecosystems.
               </p>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Vancouver Aquarium Experience</span> | Guided tours through the aquarium connect students to global ecosystems and establish a sense of place in their communities.
+                <span style={{ fontWeight: 700, color: '#39395a' }}><a href="http://www.vanaqua.org/learn/schools" target="_blank">Vancouver Aquarium Experience</a></span> | Guided tours through the aquarium connect students to global ecosystems and establish a sense of place in their communities.
               </p>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Coastal Ecosystems</span> | These are outdoor, hands-on introduction to the skills and tools that marine scientists use on a daily basis. Students explore how scientific investigation can play a major role in preserving marine life, and how our actions have an impact on the world around us.
+                <span style={{ fontWeight: 700, color: '#39395a' }}><a href="http://www.vanaqua.org/learn/summer-programs/coastal-connections" target="_blank">Coastal Ecosystems</a></span> | These are outdoor, hands-on introduction to the skills and tools that marine scientists use on a daily basis. Students explore how scientific investigation can play a major role in preserving marine life, and how our actions have an impact on the world around us.
               </p>
               <Blockquote>
                 We are starting inquire projects next week that study our global impact... particularly the ocean. And it all started from that field trip to the Aquarium!

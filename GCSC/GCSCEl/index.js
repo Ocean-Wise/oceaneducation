@@ -11,6 +11,7 @@ import Drawer from 'material-ui/Drawer';
 import Clear from 'material-ui/svg-icons/content/clear';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import grey50 from 'material-ui/styles/colors';
+import ModalVideo from 'react-modal-video';
 
 import Header from './Header';
 import Footer from '../Footer';
@@ -28,6 +29,9 @@ import NavItem from './NavItem';
 import Img from './Img';
 import Logo from './Logo';
 import Blockquote from './Blockquote';
+import Thumbnail from './Thumbnail';
+import VidButton from './VidButton';
+import playIcon from './play.svg';
 
 import G1 from './graphics/1.png';
 import G2 from './graphics/2.png';
@@ -44,6 +48,8 @@ const IMG2 = 'https://ocean.org/wp-content/uploads/GCSC-02.jpg';
 const IMG3 = 'https://ocean.org/wp-content/uploads/GCSC-03.jpg';
 const POSTER = 'https://ocean.org/wp-content/uploads/GCSC-Poster.jpg';
 
+import '../styles/modal-video.css';
+
 class GCSCEl extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
@@ -55,6 +61,7 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
       tablet: false,
       desk: false,
       open: false,
+      vidOpen: false,
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
@@ -70,6 +77,10 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
 
   toggleDrawer = () => {
     this.setState({ open: !this.state.open });
+  }
+
+  toggleModal = () => {
+    this.setState({ vidOpen: !this.state.vidOpen });
   }
 
   updateWindowDimensions() {
@@ -280,7 +291,13 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
               {graphics}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Garbage" />
+              <ModalVideo channel="youtube" isOpen={this.state.vidOpen} videoId="7ykQq_KwwcI" onClose={this.toggleModal} />
+              <Thumbnail onClick={this.toggleModal}>
+                <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Garbage" />
+                <VidButton>
+                  <img src={playIcon} alt="Play" width={18} style={{ marginLeft: 5 }} />
+                </VidButton>
+              </Thumbnail>
               <img style={{ margin: 5, width: imageWidth }} src={IMG2} alt="Plastic" />
               <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Teamwork" />
             </div>

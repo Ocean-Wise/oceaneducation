@@ -269,9 +269,9 @@ var ChildrenAndYouth =
 	        this.setState({ mobile: false, tablet: false, desk: true });
 	      }
 	      if (this.state.width < 1300) {
-	        this.setState({ graphicsMobile: true });
+	        this.setState({ mobileGraphics: true });
 	      } else {
-	        this.setState({ graphicsMobile: false });
+	        this.setState({ mobileGraphics: false });
 	      }
 	    }
 
@@ -356,17 +356,13 @@ var ChildrenAndYouth =
 	          'div',
 	          { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
 	          _react2.default.createElement('img', { src: _6.default, alt: 'Camps', style: { width: '370px', height: '150px', marginTop: 20 } }),
-	          _react2.default.createElement('img', { src: _4.default, alt: 'Clubs', style: { width: '370px', height: '150px', marginTop: 20 } })
+	          _react2.default.createElement('img', { src: _4.default, alt: 'Clubs', style: { width: '370px', height: '150px', marginTop: 20 } }),
+	          _react2.default.createElement('img', { src: _10.default, alt: 'Education', style: { width: '370px', height: '150px', marginTop: 20 } })
 	        ),
 	        _react2.default.createElement(
 	          'div',
 	          { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
-	          _react2.default.createElement('img', { src: _10.default, alt: 'Education', style: { width: '370px', height: '150px', marginTop: 20 } }),
-	          _react2.default.createElement('img', { src: _8.default, alt: 'Sleepovers', style: { width: '370px', height: '150px', marginTop: 20 } })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
+	          _react2.default.createElement('img', { src: _8.default, alt: 'Sleepovers', style: { width: '370px', height: '150px', marginTop: 20 } }),
 	          _react2.default.createElement('img', { src: _14.default, alt: 'Parties', style: { width: '370px', height: '150px', marginTop: 20 } }),
 	          _react2.default.createElement('img', { src: _12.default, alt: 'Placements', style: { width: '370px', height: '150px', marginTop: 20 } })
 	        )
@@ -618,7 +614,11 @@ var ChildrenAndYouth =
 	                _react2.default.createElement(
 	                  'h4',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
-	                  'Camps & Clubs'
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'http://www.vanaqua.org/learn/camps', target: '_blank' },
+	                    'Camps & Clubs'
+	                  )
 	                ),
 	                ' ',
 	                _react2.default.createElement('br', null),
@@ -630,7 +630,27 @@ var ChildrenAndYouth =
 	                _react2.default.createElement(
 	                  'h4',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
-	                  'Sleepovers & Birthday Parties'
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'http://www.vanaqua.org/experience/activities/sleepovers', target: '_blank' },
+	                    'Sleepovers'
+	                  )
+	                ),
+	                ' ',
+	                _react2.default.createElement('br', null),
+	                ' Participants spend the night at the Vancouver Aquarium and visit the Wet Lab to explore the three corners of the world.'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                  'h4',
+	                  { style: { fontWeight: 700, color: '#39395a' } },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'http://www.vanaqua.org/plan/birthdays', target: '_blank' },
+	                    'Birthday Parties'
+	                  )
 	                ),
 	                ' ',
 	                _react2.default.createElement('br', null),
@@ -642,7 +662,11 @@ var ChildrenAndYouth =
 	                _react2.default.createElement(
 	                  'h4',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
-	                  'Youth Leadership'
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'http://www.vanaqua.org/join/hands-on/work-experience', target: '_blank' },
+	                    'Youth Leadership'
+	                  )
 	                ),
 	                ' ',
 	                _react2.default.createElement('br', null),
