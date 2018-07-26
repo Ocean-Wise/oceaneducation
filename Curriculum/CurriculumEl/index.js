@@ -52,6 +52,7 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
       height: window.innerWidth,
       mobile: false,
       tablet: false,
+      mobileGraphics: false,
       desk: false,
       open: false,
     };
@@ -77,6 +78,11 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
       this.setState({ mobile: true });
     } else {
       this.setState({ mobile: false, tablet: false, desk: true });
+    }
+    if (this.state.width < 1300) {
+      this.setState({ mobileGraphics: true });
+    } else {
+      this.setState({ mobileGraphics: false });
     }
   }
 
@@ -123,6 +129,44 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
       exitTop = 40;
       exitRight = 15;
     }
+
+    const graphics = this.state.mobileGraphics ? '' : (
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={STUDENT} alt="Students" style={{ width: '410px', height: '150px' }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={CONNECTED} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+          <img src={PROGRAMS} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+          <img src={EXP} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={SUPPORTING} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+          <img src={BENNET} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+          <img src={FRENCH} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+        </div>
+      </div>
+    );
+
+    const mobileGraphics = this.state.mobileGraphics ? (
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={STUDENT} alt="Students" style={{ width: '410px', height: '150px' }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={CONNECTED} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+          <img src={PROGRAMS} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={EXP} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+          <img src={SUPPORTING} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={BENNET} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+          <img src={FRENCH} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+        </div>
+      </div>
+    ) : '';
 
     const containerHeight = document.getElementById('hero-image') === null ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500) === 0 ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500);
 
@@ -232,6 +276,7 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
                 We are starting inquire projects next week that study our global impact... particularly the ocean. And it all started from that field trip to the Aquarium!
                 <span>Teacher, Maillard Middle School</span>
               </Blockquote>
+              {graphics}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Exploring" />
@@ -239,23 +284,7 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
               <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Investigating" />
             </div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <img src={STUDENT} alt="Students" style={{ width: '410px', height: '150px' }} />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <img src={CONNECTED} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-              <img src={PROGRAMS} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <img src={EXP} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-              <img src={SUPPORTING} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <img src={BENNET} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-              <img src={FRENCH} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-            </div>
-          </div>
+          {mobileGraphics}
           <Footer />
         </div>
       </MuiThemeProvider>

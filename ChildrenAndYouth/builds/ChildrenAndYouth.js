@@ -239,6 +239,7 @@ var ChildrenAndYouth =
 	      width: window.innerWidth,
 	      height: window.innerWidth,
 	      mobile: false,
+	      mobileGraphics: false,
 	      tablet: false,
 	      desk: false,
 	      open: false
@@ -266,6 +267,11 @@ var ChildrenAndYouth =
 	        this.setState({ mobile: true });
 	      } else {
 	        this.setState({ mobile: false, tablet: false, desk: true });
+	      }
+	      if (this.state.width < 1300) {
+	        this.setState({ graphicsMobile: true });
+	      } else {
+	        this.setState({ graphicsMobile: false });
 	      }
 	    }
 
@@ -337,6 +343,62 @@ var ChildrenAndYouth =
 	        exitTop = 40;
 	        exitRight = 15;
 	      }
+
+	      var graphics = this.state.mobileGraphics ? '' : _react2.default.createElement(
+	        'div',
+	        { style: { display: 'flex', flexDirection: 'column', justifyContent: 'center' } },
+	        _react2.default.createElement(
+	          'div',
+	          { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
+	          _react2.default.createElement('img', { src: _2.default, alt: 'Students', style: { width: '370px', height: '150px' } })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
+	          _react2.default.createElement('img', { src: _6.default, alt: 'Camps', style: { width: '370px', height: '150px', marginTop: 20 } }),
+	          _react2.default.createElement('img', { src: _4.default, alt: 'Clubs', style: { width: '370px', height: '150px', marginTop: 20 } })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
+	          _react2.default.createElement('img', { src: _10.default, alt: 'Education', style: { width: '370px', height: '150px', marginTop: 20 } }),
+	          _react2.default.createElement('img', { src: _8.default, alt: 'Sleepovers', style: { width: '370px', height: '150px', marginTop: 20 } })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
+	          _react2.default.createElement('img', { src: _14.default, alt: 'Parties', style: { width: '370px', height: '150px', marginTop: 20 } }),
+	          _react2.default.createElement('img', { src: _12.default, alt: 'Placements', style: { width: '370px', height: '150px', marginTop: 20 } })
+	        )
+	      );
+
+	      var mobileGraphics = this.state.mobileGraphics ? _react2.default.createElement(
+	        'div',
+	        { style: { display: 'flex', flexDirection: 'column', justifyContent: 'center' } },
+	        _react2.default.createElement(
+	          'div',
+	          { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
+	          _react2.default.createElement('img', { src: _2.default, alt: 'Students', style: { width: '370px', height: '150px' } })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
+	          _react2.default.createElement('img', { src: _6.default, alt: 'Camps', style: { width: '370px', height: '150px', marginTop: 20 } }),
+	          _react2.default.createElement('img', { src: _4.default, alt: 'Clubs', style: { width: '370px', height: '150px', marginTop: 20 } })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
+	          _react2.default.createElement('img', { src: _10.default, alt: 'Education', style: { width: '370px', height: '150px', marginTop: 20 } }),
+	          _react2.default.createElement('img', { src: _8.default, alt: 'Sleepovers', style: { width: '370px', height: '150px', marginTop: 20 } })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
+	          _react2.default.createElement('img', { src: _14.default, alt: 'Parties', style: { width: '370px', height: '150px', marginTop: 20 } }),
+	          _react2.default.createElement('img', { src: _12.default, alt: 'Placements', style: { width: '370px', height: '150px', marginTop: 20 } })
+	        )
+	      ) : '';
 
 	      var containerHeight = document.getElementById('hero-image') === null ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500) === 0 ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500);
 
@@ -595,7 +657,8 @@ var ChildrenAndYouth =
 	                  null,
 	                  'Cole, Age 6 - Aquacamper since 2013'
 	                )
-	              )
+	              ),
+	              graphics
 	            ),
 	            _react2.default.createElement(
 	              'div',
@@ -605,33 +668,7 @@ var ChildrenAndYouth =
 	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG3, alt: 'Canoeing' })
 	            )
 	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { style: { display: 'flex', flexDirection: 'column', justifyContent: 'center' } },
-	            _react2.default.createElement(
-	              'div',
-	              { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
-	              _react2.default.createElement('img', { src: _2.default, alt: 'Students', style: { width: '370px', height: '150px' } })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
-	              _react2.default.createElement('img', { src: _6.default, alt: 'Camps', style: { width: '370px', height: '150px', marginTop: 20 } }),
-	              _react2.default.createElement('img', { src: _4.default, alt: 'Clubs', style: { width: '370px', height: '150px', marginTop: 20 } })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
-	              _react2.default.createElement('img', { src: _10.default, alt: 'Education', style: { width: '370px', height: '150px', marginTop: 20 } }),
-	              _react2.default.createElement('img', { src: _8.default, alt: 'Sleepovers', style: { width: '370px', height: '150px', marginTop: 20 } })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
-	              _react2.default.createElement('img', { src: _14.default, alt: 'Parties', style: { width: '370px', height: '150px', marginTop: 20 } }),
-	              _react2.default.createElement('img', { src: _12.default, alt: 'Placements', style: { width: '370px', height: '150px', marginTop: 20 } })
-	            )
-	          ),
+	          mobileGraphics,
 	          _react2.default.createElement(_Footer2.default, null)
 	        )
 	      );

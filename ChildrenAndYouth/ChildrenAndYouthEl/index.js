@@ -51,6 +51,7 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
       width: window.innerWidth,
       height: window.innerWidth,
       mobile: false,
+      mobileGraphics: false,
       tablet: false,
       desk: false,
       open: false,
@@ -77,6 +78,11 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
       this.setState({ mobile: true });
     } else {
       this.setState({ mobile: false, tablet: false, desk: true });
+    }
+    if (this.state.width < 1300) {
+      this.setState({ mobileGraphics: true });
+    } else {
+      this.setState({ mobileGraphics: false });
     }
   }
 
@@ -123,6 +129,44 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
       exitTop = 40;
       exitRight = 15;
     }
+
+    const graphics = this.state.mobileGraphics ? '' : (
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={STUDENT} alt="Students" style={{ width: '370px', height: '150px' }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={CAMP} alt="Camps" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+          <img src={CLUB} alt="Clubs" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+          <img src={EDU} alt="Education" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={SLEEP} alt="Sleepovers" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+          <img src={PARTY} alt="Parties" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+          <img src={EXP} alt="Placements" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+        </div>
+      </div>
+    );
+
+    const mobileGraphics = this.state.mobileGraphics ? (
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={STUDENT} alt="Students" style={{ width: '370px', height: '150px' }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={CAMP} alt="Camps" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+          <img src={CLUB} alt="Clubs" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={EDU} alt="Education" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+          <img src={SLEEP} alt="Sleepovers" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={PARTY} alt="Parties" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+          <img src={EXP} alt="Placements" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+        </div>
+      </div>
+    ) : '';
 
     const containerHeight = document.getElementById('hero-image') === null ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500) === 0 ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500);
 
@@ -232,6 +276,7 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
                 AquaCamps are the best because we learn all about marine life and how to take care of the ocean. I learned that the sea turtle only eats green good like broccoli, spinach and kale. The camp leaders always have exciting games like sea star tag and camouflage. AquaCamps are a lot of fun!
                 <span>Cole, Age 6 - Aquacamper since 2013</span>
               </Blockquote>
+              {graphics}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Beachcombing" />
@@ -239,23 +284,7 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
               <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Canoeing" />
             </div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <img src={STUDENT} alt="Students" style={{ width: '370px', height: '150px' }} />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <img src={CAMP} alt="Camps" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-              <img src={CLUB} alt="Clubs" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <img src={EDU} alt="Education" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-              <img src={SLEEP} alt="Sleepovers" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <img src={PARTY} alt="Parties" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-              <img src={EXP} alt="Placements" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-            </div>
-          </div>
+          {mobileGraphics}
           <Footer />
         </div>
       </MuiThemeProvider>

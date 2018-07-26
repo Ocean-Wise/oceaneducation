@@ -51,6 +51,7 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
       width: window.innerWidth,
       height: window.innerWidth,
       mobile: false,
+      mobileGraphics: false,
       tablet: false,
       desk: false,
       open: false,
@@ -77,6 +78,11 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
       this.setState({ mobile: true });
     } else {
       this.setState({ mobile: false, tablet: false, desk: true });
+    }
+    if (this.state.width < 1300) {
+      this.setState({ mobileGraphics: true });
+    } else {
+      this.setState({ mobileGraphics: false });
     }
   }
 
@@ -123,6 +129,46 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
       exitTop = 40;
       exitRight = 15;
     }
+
+    const graphics = this.state.mobileGraphics ? '' : (
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={G1} alt="Students" style={{ width: '410px', height: '150px', marginTop: 10 }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={G2} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+          <img src={G3} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={G4} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={G6} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+          <img src={G7} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+        </div>
+      </div>
+    );
+
+    const mobileGraphics = this.state.mobileGraphics ? (
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={G1} alt="Students" style={{ width: '410px', height: '150px', marginTop: 10 }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={G2} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+          <img src={G3} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={G4} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={G6} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+          <img src={G7} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
+        </div>
+      </div>
+    ) : '';
 
     const containerHeight = document.getElementById('hero-image') === null ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500) === 0 ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500);
 
@@ -231,6 +277,7 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
                 It was sech an fun and innovative way to do a park cleanup while participating in a citizen science project and learning about pollution in our water ways.
                 <span>Holly, Site Coordinator, St. John's Newfoundland and Labrador</span>
               </Blockquote>
+              {graphics}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Garbage" />
@@ -238,23 +285,7 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
               <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Teamwork" />
             </div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <img src={G1} alt="Students" style={{ width: '410px', height: '150px', marginTop: 10 }} />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <img src={G2} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-              <img src={G3} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <img src={G4} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-              <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <img src={G6} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-              <img src={G7} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-            </div>
-          </div>
+          {mobileGraphics}
           <Footer />
         </div>
       </MuiThemeProvider>
