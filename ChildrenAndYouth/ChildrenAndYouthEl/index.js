@@ -19,6 +19,7 @@ import H1 from './H1';
 import Ul from './Ul';
 import Li from './Li';
 import Button from './Button';
+import ButtonLink from './ButtonLink';
 import Input from './Input';
 import A from './A';
 import IconButton from './IconButton';
@@ -264,16 +265,16 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
               <p>Our team of educators are passionate about inspiring the next generation of young leaders. Our approach is supported by the accepted social science assertios that adults develop concern for the environment based on experiences of awe and wonder as a child.</p>
               <h4 style={{ textTransform: 'uppercase', color: '#39395a' }}>The program comprises:</h4>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}><a href="http://www.vanaqua.org/learn/camps" target="_blank">Camps & Clubs</a></span> | Programs embrace nature play, science, art and hands-on experiences to foster a love of our natural world.
+                <ButtonLink href="http://www.vanaqua.org/learn/camps" target="_blank">Camps & Clubs</ButtonLink> <br /> Programs embrace nature play, science, art and hands-on experiences to foster a love of our natural world.
               </p>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}><a href="http://www.vanaqua.org/experience/activities/sleepovers" target="_blank">Sleepovers</a></span> | Participants spend the night at the Vancouver Aquarium and visit the Wet Lab to explore the three corners of the world.
+                <ButtonLink href="http://www.vanaqua.org/experience/activities/sleepovers" target="_blank">Sleepovers</ButtonLink> <br /> Participants spend the night at the Vancouver Aquarium and visit the Wet Lab to explore the three corners of the world.
               </p>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}><a href="http://www.vanaqua.org/plan/birthdays" target="_blank">Birthday Parties</a></span> | Participants tour the Aquarium with an experienced educator and engage in a multisensory exploration of the BC intertidal zone in our Wet Lab.
+                <ButtonLink href="http://www.vanaqua.org/plan/birthdays" target="_blank">Birthday Parties</ButtonLink> <br /> Participants tour the Aquarium with an experienced educator and engage in a multisensory exploration of the BC intertidal zone in our Wet Lab.
               </p>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}><a href="http://www.vanaqua.org/join/hands-on/work-experience" target="_blank">Youth Leadership</a></span> | Participants are immersed in conservation and sustainability workshops led by our educators, experts and scientists. We alse mentor the next generation of ocean champions through work experience volunteer placements each year.
+                <ButtonLink href="http://www.vanaqua.org/join/hands-on/work-experience" target="_blank">Youth Leadership</ButtonLink> <br /> Participants are immersed in conservation and sustainability workshops led by our educators, experts and scientists. We alse mentor the next generation of ocean champions through work experience volunteer placements each year.
               </p>
               <Blockquote>
                 AquaCamps are the best because we learn all about marine life and how to take care of the ocean. I learned that the sea turtle only eats green good like broccoli, spinach and kale. The camp leaders always have exciting games like sea star tag and camouflage. AquaCamps are a lot of fun!

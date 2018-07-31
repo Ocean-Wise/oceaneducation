@@ -11,6 +11,7 @@ import Drawer from 'material-ui/Drawer';
 import Clear from 'material-ui/svg-icons/content/clear';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import grey50 from 'material-ui/styles/colors';
+import ModalVideo from 'react-modal-video';
 
 import Header from './Header';
 import Footer from '../Footer';
@@ -19,6 +20,7 @@ import H1 from './H1';
 import Ul from './Ul';
 import Li from './Li';
 import Button from './Button';
+import ButtonLink from './ButtonLink';
 import Input from './Input';
 import A from './A';
 import IconButton from './IconButton';
@@ -28,6 +30,9 @@ import NavItem from './NavItem';
 import Img from './Img';
 import Logo from './Logo';
 import Blockquote from './Blockquote';
+import Thumbnail from './Thumbnail';
+import VidButton from './VidButton';
+import playIcon from './play.svg';
 
 const TITLE = 'Ocean Bridge';
 const HEROIMG = 'https://ocean.org/wp-content/uploads/OB-00.jpg';
@@ -35,6 +40,8 @@ const IMG1 = 'https://ocean.org/wp-content/uploads/OB-01.jpg';
 const IMG2 = 'https://ocean.org/wp-content/uploads/OB-02.jpg';
 const IMG3 = 'https://ocean.org/wp-content/uploads/OB-03.jpg';
 // const POSTER = 'https://ocean.org/wp-content/uploads/OB-Poster.jpg';
+
+import '../styles/modal-video.css';
 
 class OceanEl extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
@@ -46,6 +53,7 @@ class OceanEl extends React.Component { // eslint-disable-line react/prefer-stat
       tablet: false,
       desk: false,
       open: false,
+      vidOpen: false,
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
@@ -61,6 +69,10 @@ class OceanEl extends React.Component { // eslint-disable-line react/prefer-stat
 
   toggleDrawer = () => {
     this.setState({ open: !this.state.open });
+  }
+
+  toggleModal = () => {
+    this.setState({ vidOpen: !this.state.open });
   }
 
   updateWindowDimensions() {
@@ -209,7 +221,7 @@ class OceanEl extends React.Component { // eslint-disable-line react/prefer-stat
           <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
             <div>
               <center>
-                <a href="https://education.ocean.org/oceanbridge">Enter the Community</a>
+                <ButtonLink href="https://education.ocean.org/oceanbridge" target="_blank">Enter the Community</ButtonLink>
               </center>
               <p>Ocean Bridge connects Canadian youth from coast to coast to coast empowering them to make a difference towards ocean conservation. Each year a national team of 40 youth (ages 18-30) engage in co-creating and delivering service projects addressing Ocean Health and Ocean Literacy.</p>
               <p>Ocean Bridge is comprised of 3 key elements to support youth as they adopt a culture of service for our oceans:</p>
@@ -224,8 +236,13 @@ class OceanEl extends React.Component { // eslint-disable-line react/prefer-stat
               </p>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              {/* TODO: Make the first image the video from http://bridge.ocean.org */}
-              <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Connecting" />
+              <ModalVideo channel="youtube" isOpen={this.state.vidOpen} videoId="mVAnUPvWQLs" onClose={this.toggleModal} />
+              <Thumbnail onClick={this.toggleModal}>
+                <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Connecting" />
+                <VidButton>
+                  <img src={playIcon} alt="Play" width={18} style={{ marginLeft: 5 }} />
+                </VidButton>
+              </Thumbnail>
               <img style={{ margin: 5, width: imageWidth }} src={IMG2} alt="Working" />
               <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Cleaning" />
             </div>

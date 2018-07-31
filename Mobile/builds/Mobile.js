@@ -643,7 +643,7 @@ var Mobile =
 	                  { style: { fontWeight: 700, color: '#39395a' } },
 	                  _react2.default.createElement(
 	                    'a',
-	                    { href: 'http://www.vanaqua.org/learn/outreach' },
+	                    { href: 'https://education.ocean.org/mobile' },
 	                    'Community Events'
 	                  )
 	                ),
