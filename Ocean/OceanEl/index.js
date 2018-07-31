@@ -208,6 +208,9 @@ class OceanEl extends React.Component { // eslint-disable-line react/prefer-stat
           </Drawer>
           <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
             <div>
+              <center>
+                <a href="https://education.ocean.org/oceanbridge">Enter the Community</a>
+              </center>
               <p>Ocean Bridge connects Canadian youth from coast to coast to coast empowering them to make a difference towards ocean conservation. Each year a national team of 40 youth (ages 18-30) engage in co-creating and delivering service projects addressing Ocean Health and Ocean Literacy.</p>
               <p>Ocean Bridge is comprised of 3 key elements to support youth as they adopt a culture of service for our oceans:</p>
               <p>
@@ -221,6 +224,7 @@ class OceanEl extends React.Component { // eslint-disable-line react/prefer-stat
               </p>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
+              {/* TODO: Make the first image the video from http://bridge.ocean.org */}
               <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Connecting" />
               <img style={{ margin: 5, width: imageWidth }} src={IMG2} alt="Working" />
               <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Cleaning" />
