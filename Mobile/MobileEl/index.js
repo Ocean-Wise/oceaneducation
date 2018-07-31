@@ -271,7 +271,7 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Youth Camps</span> | Delivered at your location, these programs are designed to inspire future generations of ocean champions who understand more about our oceans and how to protect its precious life.
               </p>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}><a href="http://www.vanaqua.org/learn/outreach">Community Events</a></span> | We provide a memorable, unique and captivating experience at festivals and events through highly interactive, direct conversations.
+                <span style={{ fontWeight: 700, color: '#39395a' }}><a href="https://education.ocean.org/mobile">Community Events</a></span> | We provide a memorable, unique and captivating experience at festivals and events through highly interactive, direct conversations.
               </p>
               <p><b>We bring the ocean to you</b> with logistical ease and provide a memorable, unique and engaging experience for all ages.</p>
               <p><b>For information on how to get involved email</b> <a href="mailto:mobile@ocean.org">mobile@ocean.org</a></p>
