@@ -612,7 +612,7 @@ var ChildrenAndYouth =
 	                'p',
 	                null,
 	                _react2.default.createElement(
-	                  'h4',
+	                  'span',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
 	                  _react2.default.createElement(
 	                    'a',
@@ -620,15 +620,13 @@ var ChildrenAndYouth =
 	                    'Camps & Clubs'
 	                  )
 	                ),
-	                ' ',
-	                _react2.default.createElement('br', null),
-	                ' Programs embrace nature play, science, art and hands-on experiences to foster a love of our natural world.'
+	                ' | Programs embrace nature play, science, art and hands-on experiences to foster a love of our natural world.'
 	              ),
 	              _react2.default.createElement(
 	                'p',
 	                null,
 	                _react2.default.createElement(
-	                  'h4',
+	                  'span',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
 	                  _react2.default.createElement(
 	                    'a',
@@ -636,15 +634,13 @@ var ChildrenAndYouth =
 	                    'Sleepovers'
 	                  )
 	                ),
-	                ' ',
-	                _react2.default.createElement('br', null),
-	                ' Participants spend the night at the Vancouver Aquarium and visit the Wet Lab to explore the three corners of the world.'
+	                ' | Participants spend the night at the Vancouver Aquarium and visit the Wet Lab to explore the three corners of the world.'
 	              ),
 	              _react2.default.createElement(
 	                'p',
 	                null,
 	                _react2.default.createElement(
-	                  'h4',
+	                  'span',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
 	                  _react2.default.createElement(
 	                    'a',
@@ -652,15 +648,13 @@ var ChildrenAndYouth =
 	                    'Birthday Parties'
 	                  )
 	                ),
-	                ' ',
-	                _react2.default.createElement('br', null),
-	                ' Participants tour the Aquarium with an experienced educator and engage in a multisensory exploration of the BC intertidal zone in our Wet Lab.'
+	                ' | Participants tour the Aquarium with an experienced educator and engage in a multisensory exploration of the BC intertidal zone in our Wet Lab.'
 	              ),
 	              _react2.default.createElement(
 	                'p',
 	                null,
 	                _react2.default.createElement(
-	                  'h4',
+	                  'span',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
 	                  _react2.default.createElement(
 	                    'a',
@@ -668,9 +662,7 @@ var ChildrenAndYouth =
 	                    'Youth Leadership'
 	                  )
 	                ),
-	                ' ',
-	                _react2.default.createElement('br', null),
-	                ' Participants are immersed in conservation and sustainability workshops led by our educators, experts and scientists. We alse mentor the next generation of ocean champions through work experience volunteer placements each year.'
+	                ' | Participants are immersed in conservation and sustainability workshops led by our educators, experts and scientists. We alse mentor the next generation of ocean champions through work experience volunteer placements each year.'
 	              ),
 	              _react2.default.createElement(
 	                _Blockquote2.default,
