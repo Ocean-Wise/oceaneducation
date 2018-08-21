@@ -301,13 +301,13 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <ModalVideo channel="youtube" isOpen={this.state.vidOpen} videoId="7ykQq_KwwcI" onClose={this.toggleModal} />
               <Thumbnail onClick={this.toggleModal}>
-                <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Garbage" />
+                <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Garbage" />
                 <VidButton>
                   <img src={playIcon} alt="Play" width={18} style={{ marginLeft: 5 }} />
                 </VidButton>
               </Thumbnail>
-              <img style={{ margin: 5, width: imageWidth }} src={IMG2} alt="Plastic" />
-              <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Teamwork" />
+              <img style={{ margin: '5px auto', width: 350 }} src={IMG2} alt="Plastic" />
+              <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Teamwork" />
             </div>
           </div>
           {mobileGraphics}

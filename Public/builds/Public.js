@@ -332,6 +332,11 @@ var Public =
 	            'About'
 	          ),
 	          _react2.default.createElement(
+	            _NavItem2.default,
+	            { href: 'https://education.ocean.org/oceanmatters' },
+	            'Join Community'
+	          ),
+	          _react2.default.createElement(
 	            _IconButton2.default,
 	            { style: { padding: 0, top: 9 }, onClick: function onClick() {
 	                return _this2.toggleDrawer();
@@ -471,6 +476,16 @@ var Public =
 	                style: { color: 'white' }
 	              },
 	              'About'
+	            ),
+	            _react2.default.createElement(
+	              _MenuItem2.default,
+	              {
+	                onClick: function onClick() {
+	                  _this2.toggleDrawer();window.location = 'https://education.ocean.org/oceanmatters';
+	                },
+	                style: { color: 'white' }
+	              },
+	              'Join Community'
 	            ),
 	            _react2.default.createElement(
 	              _MenuHeader2.default,
@@ -659,6 +674,15 @@ var Public =
 	                )
 	              ),
 	              _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                  ButtonLink,
+	                  { href: '#', target: '_blank' },
+	                  'Book Now'
+	                )
+	              ),
+	              _react2.default.createElement(
 	                _Blockquote2.default,
 	                null,
 	                'This event was excellent. I enjoyed the diversity of the experts and depth of their knowledge in their particular field of research and work',
@@ -673,9 +697,9 @@ var Public =
 	            _react2.default.createElement(
 	              'div',
 	              { style: { display: 'flex', flexDirection: 'column' } },
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG1, alt: 'Diving' }),
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG2, alt: 'Lecturing' }),
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG3, alt: 'Presenting' })
+	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG1, alt: 'Diving' }),
+	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG2, alt: 'Lecturing' }),
+	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG3, alt: 'Presenting' })
 	            )
 	          ),
 	          mobileGraphics,

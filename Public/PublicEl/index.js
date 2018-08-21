@@ -292,9 +292,9 @@ class PublicEl extends React.Component { // eslint-disable-line react/prefer-sta
               {graphics}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Diving" />
-              <img style={{ margin: 5, width: imageWidth }} src={IMG2} alt="Lecturing" />
-              <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Presenting" />
+              <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Diving" />
+              <img style={{ margin: '5px auto', width: 350 }} src={IMG2} alt="Lecturing" />
+              <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Presenting" />
             </div>
           </div>
           {mobileGraphics}

@@ -570,9 +570,9 @@ var Curriculum =
 	            _react2.default.createElement(
 	              'div',
 	              { style: { display: 'flex', flexDirection: 'column' } },
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG1, alt: 'Exploring' }),
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG2, height: 260, alt: 'Learning' }),
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG3, alt: 'Investigating' })
+	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG1, alt: 'Exploring' }),
+	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG2, height: 260, alt: 'Learning' }),
+	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG3, alt: 'Investigating' })
 	            )
 	          ),
 	          _react2.default.createElement(_Footer2.default, null)

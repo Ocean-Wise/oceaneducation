@@ -714,15 +714,15 @@ var GCSC =
 	              _react2.default.createElement(
 	                _Thumbnail2.default,
 	                { onClick: this.toggleModal },
-	                _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG1, alt: 'Garbage' }),
+	                _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG1, alt: 'Garbage' }),
 	                _react2.default.createElement(
 	                  _VidButton2.default,
 	                  null,
 	                  _react2.default.createElement('img', { src: _play2.default, alt: 'Play', width: 18, style: { marginLeft: 5 } })
 	                )
 	              ),
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG2, alt: 'Plastic' }),
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG3, alt: 'Teamwork' })
+	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG2, alt: 'Plastic' }),
+	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG3, alt: 'Teamwork' })
 	            )
 	          ),
 	          mobileGraphics,

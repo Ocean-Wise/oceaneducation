@@ -339,13 +339,13 @@ class OceanEl extends React.Component { // eslint-disable-line react/prefer-stat
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <ModalVideo channel="youtube" isOpen={this.state.vid2Open} videoId="crCMygsLYps" onClose={this.toggleModal2} />
               <Thumbnail onClick={this.toggleModal2}>
-                <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Cleaning" />
+                <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Cleaning" />
                 <VidButton>
                   <img src={playIcon} alt="Play" width={18} style={{ marginLeft: 5 }} />
                 </VidButton>
               </Thumbnail>
-              <img style={{ margin: 5, width: imageWidth }} src={IMG2} alt="Working" />
-              <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Connecting" />
+              <img style={{ margin: '5px auto', width: 350 }} src={IMG2} alt="Working" />
+              <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Connecting" />
             </div>
           </div>
           <Footer />

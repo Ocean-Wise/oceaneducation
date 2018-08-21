@@ -287,9 +287,9 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
               {graphics}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Exploring" />
-              <img style={{ margin: 5, width: imageWidth }} src={IMG2} alt="Learning" />
-              <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Investigating" />
+              <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Exploring" />
+              <img style={{ margin: '5px auto', width: 350 }} src={IMG2} alt="Learning" />
+              <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Investigating" />
             </div>
           </div>
           {mobileGraphics}

@@ -670,6 +670,15 @@ var Online =
 	                ' | These video conferences enable student-driven experiences with aquarium habitats, live animals, visual props and specimen dissections.'
 	              ),
 	              _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                  ButtonLink,
+	                  { href: '#', target: '_blank' },
+	                  'Book Now'
+	                )
+	              ),
+	              _react2.default.createElement(
 	                _Blockquote2.default,
 	                null,
 	                'It was fascinating and I could see that the kids were enthralled. I haven\'t seen a class yet so engaged and inquisitive.',
@@ -684,9 +693,9 @@ var Online =
 	            _react2.default.createElement(
 	              'div',
 	              { style: { display: 'flex', flexDirection: 'column' } },
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG1, alt: 'Conferencing' }),
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG2, alt: 'Streaming' }),
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG3, alt: 'Teaching' })
+	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG1, alt: 'Conferencing' }),
+	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG2, alt: 'Streaming' }),
+	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG3, alt: 'Teaching' })
 	            )
 	          ),
 	          mobileGraphics,

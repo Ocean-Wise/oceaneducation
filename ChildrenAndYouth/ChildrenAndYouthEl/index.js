@@ -291,9 +291,9 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
               {graphics}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Beachcombing" />
-              <img style={{ margin: 5, width: imageWidth }} src={IMG2} height={260} alt="Sleepovers" />
-              <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Canoeing" />
+              <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Beachcombing" />
+              <img style={{ margin: '5px auto', width: 350 }} src={IMG2} height={260} alt="Sleepovers" />
+              <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Canoeing" />
             </div>
           </div>
           {mobileGraphics}

@@ -266,7 +266,7 @@ var Ocean =
 	      out = en ? 'Ocean Bridge is comprised of 3 key elements to support youth as they adopt a culture of service for our oceans:' : 'Portail Océan comprend 3 éléments clés pour encourager les jeunes au services nos océans:';
 	      break;
 	    case 'community':
-	      out = en ? 'Community & Capacity Building' : 'Déeveloppement des communautés et des compétences';
+	      out = en ? 'Community & Capacity Building' : 'Développement des communautés et des compétences';
 	      break;
 	    case 'communityPara':
 	      out = en ? 'Regular video conference sessions and an interactive online environment connect youth as a national team and with the broader community of ocean conservation. As individuals, youth build capacity as ocean leaders through weekly mentorship and coaching sessions.' : 'Des rencontres régulières par vidéoconférence et une plateforme interactive en ligne permettront aux jeunes de se connecter à la communauté de conservation des océans. Chaque jeune développera sa capacité comme champion des océans avec des séances hebdomadaire de mentorat et de formation.';
@@ -421,7 +421,7 @@ var Ocean =
 	          ),
 	          _react2.default.createElement(
 	            _NavItem2.default,
-	            { href: 'http://literacy.ocean.org/' },
+	            { href: 'https://education.ocean.org/oceanbridge' },
 	            trans(en, 'joinCommunity')
 	          ),
 	          _react2.default.createElement(
@@ -459,7 +459,7 @@ var Ocean =
 	              null,
 	              _react2.default.createElement(
 	                _H2.default,
-	                null,
+	                { style: { textShadow: '1px 1px 1px black' } },
 	                TITLE
 	              )
 	            )
@@ -517,7 +517,7 @@ var Ocean =
 	              _MenuItem2.default,
 	              {
 	                onClick: function onClick() {
-	                  _this2.toggleDrawer();window.location = 'http://literacy.ocean.org';
+	                  _this2.toggleDrawer();window.location = 'https://education.ocean.org/oceanbridge';
 	                },
 	                style: { color: 'white' }
 	              },
@@ -727,15 +727,15 @@ var Ocean =
 	              _react2.default.createElement(
 	                _Thumbnail2.default,
 	                { onClick: this.toggleModal2 },
-	                _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG3, alt: 'Cleaning' }),
+	                _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG3, alt: 'Cleaning' }),
 	                _react2.default.createElement(
 	                  _VidButton2.default,
 	                  null,
 	                  _react2.default.createElement('img', { src: _play2.default, alt: 'Play', width: 18, style: { marginLeft: 5 } })
 	                )
 	              ),
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG2, alt: 'Working' }),
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG1, alt: 'Connecting' })
+	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG2, alt: 'Working' }),
+	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG1, alt: 'Connecting' })
 	            )
 	          ),
 	          _react2.default.createElement(_Footer2.default, null)

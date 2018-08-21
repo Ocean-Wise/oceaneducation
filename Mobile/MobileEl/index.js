@@ -302,13 +302,13 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <ModalVideo channel="youtube" isOpen={this.state.vidOpen} videoId="BktBaRylQfc" onClose={this.toggleModal} />
               <Thumbnail onClick={this.toggleModal}>
-                <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Learning" />
+                <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Learning" />
                 <VidButton>
                   <img src={playIcon} alt="Play" width={18} style={{ marginLeft: 5 }} />
                 </VidButton>
               </Thumbnail>
-              <img style={{ margin: 5, width: imageWidth }} src={IMG2} alt="Seeing" />
-              <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Community" />
+              <img style={{ margin: '5px auto', width: 350 }} src={IMG2} alt="Seeing" />
+              <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Community" />
             </div>
           </div>
           {mobileGraphics}
