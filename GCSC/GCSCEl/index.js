@@ -132,6 +132,7 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
           <NavItem href="https://ocean.org/initiatives/">Initiatives</NavItem>
           <NavItem href="https://ocean.org/take-action/">Take Action</NavItem>
           <NavItem href="https://ocean.org/about/">About</NavItem>
+          <NavItem href="https://education.ocean.org/shoreline">Join Community</NavItem>
           <IconButton style={{ padding: 0, top: 9 }} onClick={() => this.toggleDrawer()}>
             <Menu style={{ height: 34, width: 34 }} color="#fff" />
           </IconButton>
@@ -227,6 +228,12 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
             >
               About
             </MenuItem>
+            <MenuItem
+              onClick={() => { this.toggleDrawer(); window.location = 'https://education.ocean.org/shoreline'; }}
+              style={{ color: 'white' }}
+            >
+              Join Community
+            </MenuItem>
 
             <MenuHeader pad>Follow Us</MenuHeader>
             <Ul>
@@ -276,7 +283,7 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
             <div>
               <p>The Great Canadian Shoreline Cleanup<sup>&reg;</sup> is a joint program of Ocean Wise<sup>&reg;</sup> and WWF-Canada that aims to build an understanding of ocean literacy by engaging Canadians to care for their shorelines. As one of Canada's largest volunteer-powered conservation programs, we engage with tens of thousands of people including:</p>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Schools & Youth</span> | A service loarning opportunity for students of all ages, to build a connection to nature and play an important role in ocean health through citizen science. Resources to extend learning beyond the shoreline are provided to support teachers and group leaders.
+                <span style={{ fontWeight: 700, color: '#39395a' }}>Schools & Youth</span> | A service learning opportunity for students of all ages, to build a connection to nature and play an important role in ocean health through citizen science. Resources to extend learning beyond the shoreline are provided to support teachers and group leaders.
               </p>
               <p>
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Workplace</span> | This program supports corporate social responsibility (CSR) and employee engagement. Organizations looking for meaningful activities in their community can lead cleanups that their teams, customers and partners can participate in.

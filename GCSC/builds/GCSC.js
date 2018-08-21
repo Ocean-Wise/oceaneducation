@@ -359,6 +359,11 @@ var GCSC =
 	            'About'
 	          ),
 	          _react2.default.createElement(
+	            _NavItem2.default,
+	            { href: 'https://education.ocean.org/shoreline' },
+	            'Join Community'
+	          ),
+	          _react2.default.createElement(
 	            _IconButton2.default,
 	            { style: { padding: 0, top: 9 }, onClick: function onClick() {
 	                return _this2.toggleDrawer();
@@ -502,6 +507,16 @@ var GCSC =
 	                style: { color: 'white' }
 	              },
 	              'About'
+	            ),
+	            _react2.default.createElement(
+	              _MenuItem2.default,
+	              {
+	                onClick: function onClick() {
+	                  _this2.toggleDrawer();window.location = 'https://education.ocean.org/shoreline';
+	                },
+	                style: { color: 'white' }
+	              },
+	              'Join Community'
 	            ),
 	            _react2.default.createElement(
 	              _MenuHeader2.default,
@@ -649,7 +664,7 @@ var GCSC =
 	                  { style: { fontWeight: 700, color: '#39395a' } },
 	                  'Schools & Youth'
 	                ),
-	                ' | A service loarning opportunity for students of all ages, to build a connection to nature and play an important role in ocean health through citizen science. Resources to extend learning beyond the shoreline are provided to support teachers and group leaders.'
+	                ' | A service learning opportunity for students of all ages, to build a connection to nature and play an important role in ocean health through citizen science. Resources to extend learning beyond the shoreline are provided to support teachers and group leaders.'
 	              ),
 	              _react2.default.createElement(
 	                'p',

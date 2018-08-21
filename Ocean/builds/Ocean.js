@@ -212,6 +212,90 @@ var Ocean =
 	var IMG3 = 'https://ocean.org/wp-content/uploads/OB-03.jpg';
 	// const POSTER = 'https://ocean.org/wp-content/uploads/OB-Poster.jpg';
 
+	function trans() {
+	  var en = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+	  var val = arguments[1];
+
+	  var out = void 0;
+	  switch (val) {
+	    case 'initiatives':
+	      out = 'Initiatives';
+	      break;
+	    case 'takeAction':
+	      out = en ? 'Take Action' : 'Passer à L\'action';
+	      break;
+	    case 'about':
+	      out = en ? 'About' : 'Sur';
+	      break;
+	    case 'joinCommunity':
+	      out = en ? 'Join Community' : 'Rejoindre la Communauté';
+	      break;
+	    case 'follow':
+	      out = en ? 'Follow Us' : 'Suivez Nous';
+	      break;
+	    case 'newsletter':
+	      out = en ? 'Get Newsletter' : 'Recevoir la Newsletter';
+	      break;
+	    case 'enterEmail':
+	      out = en ? 'Enter your email' : 'Entrer votre Email';
+	      break;
+	    case 'subscribe':
+	      out = en ? 'Subscribe' : 'Souscrire';
+	    case 'copy':
+	      out = '© 2017 Ocean Wise';
+	      break;
+	    case 'media':
+	      out = en ? 'Media' : 'Médias';
+	      break;
+	    case 'terms':
+	      out = en ? 'Terms' : 'Termes';
+	      break;
+	    case 'privacy':
+	      out = en ? 'Privacy' : 'Politique de Confidentialité';
+	      break;
+	    case 'enter':
+	      out = en ? 'Enter the Community' : 'Entrer dans la Communauté';
+	      break;
+	    case 'intro':
+	      out = en ? 'Ocean Bridge connects Canadian youth from coast to coast to coast' : 'Portail Océan rapproche les jeunes canadiens d\'un océan à l\'autre';
+	      break;
+	    case 'para1':
+	      out = en ? 'empowering them to make a difference towards ocean conservation. Each year a national team of 40 youth (ages 18-30) engage in co-creating and delivering service projects addressing Ocean Health and Ocean Literacy.' : ' pour les mobiliser à avoir un impact positif sur nos océans. Chaque année, 40 jeunes (de 18 à 30 ans) formeront une équipe nationale qui réalisera des projets de service dans leurs communautés et participeront à deux expéditions immersives axées sur la santé et la connaissance des océans.';
+	      break;
+	    case 'para2':
+	      out = en ? 'Ocean Bridge is comprised of 3 key elements to support youth as they adopt a culture of service for our oceans:' : 'Portail Océan comprend 3 éléments clés pour encourager les jeunes au services nos océans:';
+	      break;
+	    case 'community':
+	      out = en ? 'Community & Capacity Building' : 'Déeveloppement des communautés et des compétences';
+	      break;
+	    case 'communityPara':
+	      out = en ? 'Regular video conference sessions and an interactive online environment connect youth as a national team and with the broader community of ocean conservation. As individuals, youth build capacity as ocean leaders through weekly mentorship and coaching sessions.' : 'Des rencontres régulières par vidéoconférence et une plateforme interactive en ligne permettront aux jeunes de se connecter à la communauté de conservation des océans. Chaque jeune développera sa capacité comme champion des océans avec des séances hebdomadaire de mentorat et de formation.';
+	      break;
+	    case 'oceanHealth':
+	      out = en ? 'Ocean Health Extended Service' : 'Service prolongé en santé des océans';
+	      break;
+	    case 'oceanHealthPara':
+	      out = en ? 'In spring, youth participate in a 10-day immersive wilderness expedition delivering a marine conservation service project of their design. The national team spends the months leading up to this extended service co-creating their project with the local community and each other. By living, working and reflecting as a team in an iconic natural setting, youth develop social capital, respoct for diversity and a heightened sense of responsibility and pride.' : 'Au printemps, les jeunes feront une expédition d\'immersion en nature de 10 jours. L\'équipe nationale préparera le projet de service en conservation avec la communauté locale avant l\'expédition. En vivant, travaillant et réfléchissant en tant qu\'équipe dans un milieu naturel emblématique, les jeunes développeront un capital social, un respect pour la diversité et un sens accru de responsabilité et de fierté.';
+	      break;
+	    case 'oceanLiteracy':
+	      out = en ? 'Ocean Literacy Extended Service' : 'Service prolongé sur la connaissance des océans';
+	      break;
+	    case 'oceanLiteracyPara':
+	      out = en ? 'This immersive element brings the national team together in the fall at a leading nature connection insitution in one of Canada\'s most populous urban centers. During this 5-day urban expedition, youth deliver education outreach activities created by them to engage their peers in ocean conservation. Youth will share their skills and stories in their words and in ways that are meaningful to them.' : 'En automne, l\'équipe nationale se réunira au coeur d\'un centre urbain canadien. Durant cette expédition urbaine de 5 jours, les jeunes mèneront les activités de sensibilisation pour encourager d\'autres jeunes à s\'engager en conservation des océans. Ils auront ainsi l\'occasion de parler de leurs aptitudes et leurs expériences dans leurs propres mots et d\'une mainère signifiante pour eux.';
+	      break;
+	    case 'leadersWanted':
+	      out = en ? 'Ocean Leaders Wanted!' : 'Les leaders de l\'océan voulaient';
+	      break;
+	    case 'trans':
+	      out = en ? 'Français' : 'English';
+	      break;
+	    default:
+	      out = '';
+	      break;
+	  }
+	  return out;
+	};
+
 	var OceanEl = function (_React$Component) {
 	  _inherits(OceanEl, _React$Component);
 
@@ -225,8 +309,16 @@ var Ocean =
 	      _this.setState({ open: !_this.state.open });
 	    };
 
-	    _this.toggleModal = function () {
-	      _this.setState({ vidOpen: !_this.state.open });
+	    _this.toggleModal1 = function () {
+	      _this.setState({ vid1Open: !_this.state.vid1Open });
+	    };
+
+	    _this.toggleModal2 = function () {
+	      _this.setState({ vid2Open: !_this.state.vid2Open });
+	    };
+
+	    _this.toggleLang = function () {
+	      _this.setState({ en: !_this.state.en });
 	    };
 
 	    _this.clamp = function (num, min, max) {
@@ -240,7 +332,9 @@ var Ocean =
 	      tablet: false,
 	      desk: false,
 	      open: false,
-	      vidOpen: false
+	      vid1Open: false,
+	      vid2Open: false,
+	      en: true
 	    };
 	    _this.updateWindowDimensions = _this.updateWindowDimensions.bind(_this);
 	    return _this;
@@ -282,7 +376,8 @@ var Ocean =
 	      var _state = this.state,
 	          mobile = _state.mobile,
 	          tablet = _state.tablet,
-	          desk = _state.desk;
+	          desk = _state.desk,
+	          en = _state.en;
 
 
 	      var source = this.state.mobile ? 'https://ocean.org/wp-content/uploads/af57071c6f37d38d5c97dbd861dffa68.svg' : 'https://ocean.org/wp-content/uploads/5429d577a15cbaa4c286951cd4e772ff.svg';
@@ -312,17 +407,22 @@ var Ocean =
 	          _react2.default.createElement(
 	            _NavItem2.default,
 	            { href: 'https://ocean.org/initiatives/' },
-	            'Initiatives'
+	            trans(en, 'initiatives')
 	          ),
 	          _react2.default.createElement(
 	            _NavItem2.default,
 	            { href: 'https://ocean.org/take-action/' },
-	            'Take Action'
+	            trans(en, 'takeAction')
 	          ),
 	          _react2.default.createElement(
 	            _NavItem2.default,
 	            { href: 'https://ocean.org/about/' },
-	            'About'
+	            trans(en, 'about')
+	          ),
+	          _react2.default.createElement(
+	            _NavItem2.default,
+	            { href: 'http://literacy.ocean.org/' },
+	            trans(en, 'joinCommunity')
 	          ),
 	          _react2.default.createElement(
 	            _IconButton2.default,
@@ -391,7 +491,7 @@ var Ocean =
 	                },
 	                style: { color: 'white' }
 	              },
-	              'Take Action'
+	              trans(en, 'takeAction')
 	            ),
 	            _react2.default.createElement(
 	              _MenuItem2.default,
@@ -401,7 +501,7 @@ var Ocean =
 	                },
 	                style: { color: 'white' }
 	              },
-	              'Initiatives'
+	              trans(en, 'initiatives')
 	            ),
 	            _react2.default.createElement(
 	              _MenuItem2.default,
@@ -411,12 +511,22 @@ var Ocean =
 	                },
 	                style: { color: 'white' }
 	              },
-	              'About'
+	              trans(en, 'about')
+	            ),
+	            _react2.default.createElement(
+	              _MenuItem2.default,
+	              {
+	                onClick: function onClick() {
+	                  _this2.toggleDrawer();window.location = 'http://literacy.ocean.org';
+	                },
+	                style: { color: 'white' }
+	              },
+	              trans(en, 'joinCommunity')
 	            ),
 	            _react2.default.createElement(
 	              _MenuHeader2.default,
 	              { pad: true },
-	              'Follow Us'
+	              trans(en, 'follow')
 	            ),
 	            _react2.default.createElement(
 	              _Ul2.default,
@@ -470,7 +580,7 @@ var Ocean =
 	            _react2.default.createElement(
 	              _MenuHeader2.default,
 	              null,
-	              'Get Newsletter'
+	              trans(en, 'newsletter')
 	            ),
 	            _react2.default.createElement(
 	              'form',
@@ -481,20 +591,20 @@ var Ocean =
 	                _react2.default.createElement(
 	                  'span',
 	                  null,
-	                  'Enter your email'
+	                  trans(en, 'enterEmail')
 	                ),
-	                _react2.default.createElement(_Input2.default, { type: 'email', placeholder: 'Enter your email', name: 'cm-urxdtd-urxdtd', required: '' })
+	                _react2.default.createElement(_Input2.default, { type: 'email', placeholder: trans(en, 'enterEmail'), name: 'cm-urxdtd-urxdtd', required: '' })
 	              ),
 	              _react2.default.createElement(
 	                _Button2.default,
 	                null,
-	                'Subscribe'
+	                trans(en, 'subscribe')
 	              )
 	            ),
 	            _react2.default.createElement(
 	              _MenuHeader2.default,
 	              { style: { marginTop: 25 } },
-	              '\xA9 2017 Ocean Wise'
+	              trans(en, 'copy')
 	            ),
 	            _react2.default.createElement(
 	              _Ul2.default,
@@ -505,7 +615,7 @@ var Ocean =
 	                _react2.default.createElement(
 	                  _A2.default,
 	                  { href: 'https://ocean.org/media-releases/' },
-	                  'Media'
+	                  trans(en, 'media')
 	                )
 	              ),
 	              _react2.default.createElement(
@@ -514,7 +624,7 @@ var Ocean =
 	                _react2.default.createElement(
 	                  _A2.default,
 	                  { href: 'https://ocean.org/terms-conditions/' },
-	                  'Terms'
+	                  trans(en, 'terms')
 	                )
 	              ),
 	              _react2.default.createElement(
@@ -523,7 +633,7 @@ var Ocean =
 	                _react2.default.createElement(
 	                  _A2.default,
 	                  { href: 'https://ocean.org/privacy-policy/' },
-	                  'Privacy'
+	                  trans(en, 'privacy')
 	                )
 	              )
 	            )
@@ -540,18 +650,32 @@ var Ocean =
 	                _react2.default.createElement(
 	                  _ButtonLink2.default,
 	                  { href: 'https://education.ocean.org/oceanbridge', target: '_blank' },
-	                  'Enter the Community'
+	                  trans(en, 'enter')
+	                ),
+	                _react2.default.createElement(
+	                  _ButtonLink2.default,
+	                  { onClick: this.toggleLang },
+	                  trans(en, 'trans')
 	                )
 	              ),
+	              _react2.default.createElement(_reactModalVideo2.default, { channel: 'youtube', isOpen: this.state.vid1Open, videoId: 'mVAnUPvWQLs', onClose: this.toggleModal1 }),
 	              _react2.default.createElement(
 	                'p',
 	                null,
-	                'Ocean Bridge connects Canadian youth from coast to coast to coast empowering them to make a difference towards ocean conservation. Each year a national team of 40 youth (ages 18-30) engage in co-creating and delivering service projects addressing Ocean Health and Ocean Literacy.'
+	                _react2.default.createElement(
+	                  'a',
+	                  { onClick: function onClick() {
+	                      return _this2.toggleModal1;
+	                    } },
+	                  trans(en, 'intro')
+	                ),
+	                ' ',
+	                trans(en, 'para1')
 	              ),
 	              _react2.default.createElement(
 	                'p',
 	                null,
-	                'Ocean Bridge is comprised of 3 key elements to support youth as they adopt a culture of service for our oceans:'
+	                trans(en, 'para2')
 	              ),
 	              _react2.default.createElement(
 	                'p',
@@ -559,9 +683,10 @@ var Ocean =
 	                _react2.default.createElement(
 	                  'span',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
-	                  'Community & Capacity Building'
+	                  trans(en, 'community')
 	                ),
-	                ' | Regular video conference sessions and an interactive online environment connect youth as a national team and with the broader community of ocean conservation. As individuals, youth build capacity as ocean leaders through weekly mentorship and coaching sessions.'
+	                ' | ',
+	                trans(en, 'communityPara')
 	              ),
 	              _react2.default.createElement(
 	                'p',
@@ -569,9 +694,10 @@ var Ocean =
 	                _react2.default.createElement(
 	                  'span',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
-	                  'Ocean Health Extended Service'
+	                  trans(en, 'oceanHealth')
 	                ),
-	                ' | In spring, youth participate in a 10-day immersive wilderness expedition delivering a marine conservation service project of their design. The national team spends the months leading up to this extended service co-creating their project with the local community and each other. By living, working and reflecting as a team in an iconic natural setting, youth develop social capital, respoct for diversity and a heightened sense of responsibility and pride.'
+	                ' | ',
+	                trans(en, 'oceanHealthPara')
 	              ),
 	              _react2.default.createElement(
 	                'p',
@@ -579,19 +705,29 @@ var Ocean =
 	                _react2.default.createElement(
 	                  'span',
 	                  { style: { fontWeight: 700, color: '#39395a' } },
-	                  'Ocean Literacy Extended Service'
+	                  trans(en, 'oceanLiteracy')
 	                ),
-	                ' | This immersive element brings the national team together in the fall at a leading nature connection insitution in one of Canada\'s most populous urban centers. During this 5-day urban expedition, youth deliver education outreach activities created by them to engage their peers in ocean conservation. Youth will share their skills and stories in their words and in ways that are meaningful to them.'
+	                ' | ',
+	                trans(en, 'oceanLiteracyPara')
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                  _ButtonLink2.default,
+	                  { onClick: this.toggleModal1 },
+	                  trans(en, 'leadersWanted')
+	                )
 	              )
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { style: { display: 'flex', flexDirection: 'column' } },
-	              _react2.default.createElement(_reactModalVideo2.default, { channel: 'youtube', isOpen: this.state.vidOpen, videoId: 'mVAnUPvWQLs', onClose: this.toggleModal }),
+	              _react2.default.createElement(_reactModalVideo2.default, { channel: 'youtube', isOpen: this.state.vid2Open, videoId: 'crCMygsLYps', onClose: this.toggleModal2 }),
 	              _react2.default.createElement(
 	                _Thumbnail2.default,
-	                { onClick: this.toggleModal },
-	                _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG1, alt: 'Connecting' }),
+	                { onClick: this.toggleModal2 },
+	                _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG3, alt: 'Cleaning' }),
 	                _react2.default.createElement(
 	                  _VidButton2.default,
 	                  null,
@@ -599,7 +735,7 @@ var Ocean =
 	                )
 	              ),
 	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG2, alt: 'Working' }),
-	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG3, alt: 'Cleaning' })
+	              _react2.default.createElement('img', { style: { margin: 5, width: imageWidth }, src: IMG1, alt: 'Connecting' })
 	            )
 	          ),
 	          _react2.default.createElement(_Footer2.default, null)
@@ -39162,7 +39298,7 @@ var Ocean =
 	  value: true
 	});
 
-	var _templateObject = _taggedTemplateLiteral(['\n  color: #005eb8;\n  padding: 20px 10px 20px 10px;\n  font-weight: 700;\n  border: 1px solid #005eb8;\n  text-align: center;\n  margin-left: 15px;\n  font-size: 22px;\n  line-height: 18px;\n  appearance: none;\n  font-family: \'Helvetica Neue\', Helvetica, Roboto, Arial, sans-serif;\n  letter-spacing: 0.6px;\n  text-decoration: none;\n  display: inline-block;\n  width: 300px;\n  margin-bottom: 25px;\n  transition: all 0.5s cubic-bezier(.61, .03, 1, .59);\n  &:hover {\n    color: #000;\n  }\n'], ['\n  color: #005eb8;\n  padding: 20px 10px 20px 10px;\n  font-weight: 700;\n  border: 1px solid #005eb8;\n  text-align: center;\n  margin-left: 15px;\n  font-size: 22px;\n  line-height: 18px;\n  appearance: none;\n  font-family: \'Helvetica Neue\', Helvetica, Roboto, Arial, sans-serif;\n  letter-spacing: 0.6px;\n  text-decoration: none;\n  display: inline-block;\n  width: 300px;\n  margin-bottom: 25px;\n  transition: all 0.5s cubic-bezier(.61, .03, 1, .59);\n  &:hover {\n    color: #000;\n  }\n']);
+	var _templateObject = _taggedTemplateLiteral(['\n  color: #005eb8;\n  cursor: pointer;\n  padding: 20px 10px 20px 10px;\n  font-weight: 700;\n  border: 1px solid #005eb8;\n  text-align: center;\n  margin-left: 15px;\n  font-size: 22px;\n  line-height: 18px;\n  appearance: none;\n  font-family: \'Helvetica Neue\', Helvetica, Roboto, Arial, sans-serif;\n  letter-spacing: 0.6px;\n  text-decoration: none;\n  display: inline-block;\n  width: 300px;\n  margin-bottom: 25px;\n  transition: all 0.5s cubic-bezier(.61, .03, 1, .59);\n  &:hover {\n    color: #000;\n  }\n  @media all and (max-width: 490px) {\n    width: 230px;\n  }\n'], ['\n  color: #005eb8;\n  cursor: pointer;\n  padding: 20px 10px 20px 10px;\n  font-weight: 700;\n  border: 1px solid #005eb8;\n  text-align: center;\n  margin-left: 15px;\n  font-size: 22px;\n  line-height: 18px;\n  appearance: none;\n  font-family: \'Helvetica Neue\', Helvetica, Roboto, Arial, sans-serif;\n  letter-spacing: 0.6px;\n  text-decoration: none;\n  display: inline-block;\n  width: 300px;\n  margin-bottom: 25px;\n  transition: all 0.5s cubic-bezier(.61, .03, 1, .59);\n  &:hover {\n    color: #000;\n  }\n  @media all and (max-width: 490px) {\n    width: 230px;\n  }\n']);
 
 	var _styledComponents = __webpack_require__(375);
 

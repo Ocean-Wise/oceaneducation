@@ -120,6 +120,7 @@ class OnlineEl extends React.Component { // eslint-disable-line react/prefer-sta
           <NavItem href="https://ocean.org/initiatives/">Initiatives</NavItem>
           <NavItem href="https://ocean.org/take-action/">Take Action</NavItem>
           <NavItem href="https://ocean.org/about/">About</NavItem>
+          <NavItem href="http://literacy.ocean.org/">Join Community</NavItem>
           <IconButton style={{ padding: 0, top: 9 }} onClick={() => this.toggleDrawer()}>
             <Menu style={{ height: 34, width: 34 }} color="#fff" />
           </IconButton>
@@ -215,6 +216,12 @@ class OnlineEl extends React.Component { // eslint-disable-line react/prefer-sta
             >
               About
             </MenuItem>
+            <MenuItem
+              onClick={() => { this.toggleDrawer(); window.location = 'http://literacy.ocean.org/' }}
+              style={{ color: 'white' }}
+            >
+              Join Community
+            </MenuItem>
 
             <MenuHeader pad>Follow Us</MenuHeader>
             <Ul>
@@ -273,6 +280,9 @@ class OnlineEl extends React.Component { // eslint-disable-line react/prefer-sta
               </p>
               <p>
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Virtual Visits</span> | These video conferences enable student-driven experiences with aquarium habitats, live animals, visual props and specimen dissections.
+              </p>
+              <p>
+                <ButtonLink href="#" target="_blank">Book Now</ButtonLink>
               </p>
               <Blockquote>
                 It was fascinating and I could see that the kids were enthralled. I haven't seen a class yet so engaged and inquisitive.

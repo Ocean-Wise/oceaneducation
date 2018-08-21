@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Button = styled.a`
   color: #005eb8;
+  cursor: pointer;
   padding: 20px 10px 20px 10px;
   font-weight: 700;
   border: 1px solid #005eb8;
@@ -19,6 +20,9 @@ const Button = styled.a`
   transition: all 0.5s cubic-bezier(.61, .03, 1, .59);
   &:hover {
     color: #000;
+  }
+  @media all and (max-width: 490px) {
+    width: 230px;
   }
 `;
 

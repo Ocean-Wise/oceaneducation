@@ -121,6 +121,7 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
           <NavItem href="https://ocean.org/initiatives/">Initiatives</NavItem>
           <NavItem href="https://ocean.org/take-action/">Take Action</NavItem>
           <NavItem href="https://ocean.org/about/">About</NavItem>
+          <NavItem href="https://education.ocean.org/members/login.html?pushpath=education.ocean.org/homelearners">Join Community</NavItem>
           <IconButton style={{ padding: 0, top: 9 }} onClick={() => this.toggleDrawer()}>
             <Menu style={{ height: 34, width: 34 }} color="#fff" />
           </IconButton>
@@ -213,6 +214,12 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
               style={{ color: 'white' }}
             >
               About
+            </MenuItem>
+            <MenuItem
+              onClick={() => { this.toggleDrawer(); window.location = 'https://education.ocean.org/members/login.html?pushpath=education.ocean.org/homelearners'; }}
+              style={{ color: 'white' }}
+            >
+              Join Community
             </MenuItem>
 
             <MenuHeader pad>Follow Us</MenuHeader>

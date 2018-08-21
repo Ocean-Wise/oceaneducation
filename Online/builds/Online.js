@@ -332,6 +332,11 @@ var Online =
 	            'About'
 	          ),
 	          _react2.default.createElement(
+	            _NavItem2.default,
+	            { href: 'http://literacy.ocean.org/' },
+	            'Join Community'
+	          ),
+	          _react2.default.createElement(
 	            _IconButton2.default,
 	            { style: { padding: 0, top: 9 }, onClick: function onClick() {
 	                return _this2.toggleDrawer();
@@ -475,6 +480,16 @@ var Online =
 	                style: { color: 'white' }
 	              },
 	              'About'
+	            ),
+	            _react2.default.createElement(
+	              _MenuItem2.default,
+	              {
+	                onClick: function onClick() {
+	                  _this2.toggleDrawer();window.location = 'http://literacy.ocean.org/';
+	                },
+	                style: { color: 'white' }
+	              },
+	              'Join Community'
 	            ),
 	            _react2.default.createElement(
 	              _MenuHeader2.default,

@@ -14,7 +14,7 @@ const Button = styled.a`
   letter-spacing: 0.6px;
   text-decoration: none;
   display: inline-block;
-  width: 300px;
+  width: 180px;
   margin-bottom: 25px;
   transition: all 0.5s cubic-bezier(.61, .03, 1, .59);
   &:hover {

@@ -11,6 +11,7 @@ import Drawer from 'material-ui/Drawer';
 import Clear from 'material-ui/svg-icons/content/clear';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import grey50 from 'material-ui/styles/colors';
+import ModalVideo from 'react-modal-video';
 
 import Header from './Header';
 import Footer from '../Footer';
@@ -28,6 +29,10 @@ import NavItem from './NavItem';
 import Img from './Img';
 import Logo from './Logo';
 import Blockquote from './Blockquote';
+import Thumbnail from './Thumbnail';
+import VidButton from './VidButton';
+import playIcon from './play.svg';
+import ButtonLink from './ButtonLink';
 
 import G1 from './graphics/1.png';
 import G2 from './graphics/2.png';
@@ -55,6 +60,7 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
       tablet: false,
       desk: false,
       open: false,
+      vidOpen: false,
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
@@ -70,6 +76,10 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
 
   toggleDrawer = () => {
     this.setState({ open: !this.state.open });
+  }
+
+  toggleModal = () => {
+    this.setState({ vidOpen: !this.state.open });
   }
 
   updateWindowDimensions() {
@@ -120,6 +130,7 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
           <NavItem href="https://ocean.org/initiatives/">Initiatives</NavItem>
           <NavItem href="https://ocean.org/take-action/">Take Action</NavItem>
           <NavItem href="https://ocean.org/about/">About</NavItem>
+          <NavItem href="https://education.ocean.org/mobile">Join Community</NavItem>
           <IconButton style={{ padding: 0, top: 9 }} onClick={() => this.toggleDrawer()}>
             <Menu style={{ height: 34, width: 34 }} color="#fff" />
           </IconButton>
@@ -215,6 +226,12 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
             >
               About
             </MenuItem>
+            <MenuItem
+              onClick={() => { this.toggleDrawer(); window.location = 'https://education.ocean.org/mobile'; }}
+              style={{ color: 'white' }}
+            >
+              Join Community
+            </MenuItem>
 
             <MenuHeader pad>Follow Us</MenuHeader>
             <Ul>
@@ -275,6 +292,7 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
               </p>
               <p><b>We bring the ocean to you</b> with logistical ease and provide a memorable, unique and engaging experience for all ages.</p>
               <p><b>For information on how to get involved email</b> <a href="mailto:mobile@ocean.org">mobile@ocean.org</a></p>
+              <p><ButtonLink href="http://www.vanaqua.org/learn/outreach/aquavan" target="_blank">Book Now</ButtonLink></p>
               <Blockquote>
                 Small groups and well-trained, positive, passionate staff make this an amazing, in-school field trip.
                 <span>Teacher, New Westminster</span>
@@ -282,7 +300,13 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
               {graphics}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Learning" />
+              <ModalVideo channel="youtube" isOpen={this.state.vidOpen} videoId="BktBaRylQfc" onClose={this.toggleModal} />
+              <Thumbnail onClick={this.toggleModal}>
+                <img style={{ margin: 5, width: imageWidth }} src={IMG1} alt="Learning" />
+                <VidButton>
+                  <img src={playIcon} alt="Play" width={18} style={{ marginLeft: 5 }} />
+                </VidButton>
+              </Thumbnail>
               <img style={{ margin: 5, width: imageWidth }} src={IMG2} alt="Seeing" />
               <img style={{ margin: 5, width: imageWidth }} src={IMG3} alt="Community" />
             </div>

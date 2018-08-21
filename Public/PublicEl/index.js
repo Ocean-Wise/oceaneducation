@@ -120,6 +120,7 @@ class PublicEl extends React.Component { // eslint-disable-line react/prefer-sta
           <NavItem href="https://ocean.org/initiatives/">Initiatives</NavItem>
           <NavItem href="https://ocean.org/take-action/">Take Action</NavItem>
           <NavItem href="https://ocean.org/about/">About</NavItem>
+          <NavItem href="https://education.ocean.org/oceanmatters">Join Community</NavItem>
           <IconButton style={{ padding: 0, top: 9 }} onClick={() => this.toggleDrawer()}>
             <Menu style={{ height: 34, width: 34 }} color="#fff" />
           </IconButton>
@@ -213,6 +214,12 @@ class PublicEl extends React.Component { // eslint-disable-line react/prefer-sta
             >
               About
             </MenuItem>
+            <MenuItem
+              onClick={() => { this.toggleDrawer(); window.location = 'https://education.ocean.org/oceanmatters'; }}
+              style={{ color: 'white' }}
+            >
+              Join Community
+            </MenuItem>
 
             <MenuHeader pad>Follow Us</MenuHeader>
             <Ul>
@@ -275,6 +282,9 @@ class PublicEl extends React.Component { // eslint-disable-line react/prefer-sta
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Science Socials</span> | These social occasions are fun, science-themed events such as trivia, discussion groups, or storytelling evenings.
               </p>
               <p><b>For information on how to get involved email</b> <a href="mailto:publicprograms@ocean.org">publicprograms@ocean.org</a></p>
+              <p>
+                <ButtonLink href="#" target="_blank">Book Now</ButtonLink>
+              </p>
               <Blockquote>
                 This event was excellent. I enjoyed the diversity of the experts and depth of their knowledge in their particular field of research and work
                 <span>Hazel, Student</span>

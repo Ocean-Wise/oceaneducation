@@ -37,9 +37,10 @@ import SLEEP from './graphics/4.png';
 import EDU from './graphics/5.png';
 import EXP from './graphics/6.png';
 import PARTY from './graphics/7.png';
+import HEROIMG from './graphics/hero.jpg';
 
 const TITLE = 'Children and Youth';
-const HEROIMG = 'https://ocean.org/wp-content/uploads/CAMP-1.jpg';
+// const HEROIMG = 'https://ocean.org/wp-content/uploads/CAMP-1.jpg';
 const IMG1 = 'https://ocean.org/wp-content/uploads/CY-01.jpg';
 const IMG2 = 'https://ocean.org/wp-content/uploads/CY-02.jpg';
 const IMG3 = 'https://ocean.org/wp-content/uploads/CY-03.jpg';
@@ -121,6 +122,7 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
           <NavItem href="https://ocean.org/initiatives/">Initiatives</NavItem>
           <NavItem href="https://ocean.org/take-action/">Take Action</NavItem>
           <NavItem href="https://ocean.org/about/">About</NavItem>
+          <NavItem href="https://education.ocean.org/aquacamp">Join Community</NavItem>
           <IconButton style={{ padding: 0, top: 9 }} onClick={() => this.toggleDrawer()}>
             <Menu style={{ height: 34, width: 34 }} color="#fff" />
           </IconButton>
@@ -214,6 +216,12 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
             >
               About
             </MenuItem>
+            <MenuItem
+              onClick={() => { this.toggleDrawer(); window.location = 'https://education.ocean.org/aquacamp'; }}
+              style={{ color: 'white' }}
+            >
+              Join Community
+            </MenuItem>
 
             <MenuHeader pad>Follow Us</MenuHeader>
             <Ul>
@@ -274,7 +282,7 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
                 <ButtonLink href="http://www.vanaqua.org/plan/birthdays" target="_blank">Birthday Parties</ButtonLink> <br /> Participants tour the Aquarium with an experienced educator and engage in a multisensory exploration of the BC intertidal zone in our Wet Lab.
               </p>
               <p>
-                <ButtonLink href="http://www.vanaqua.org/join/hands-on/work-experience" target="_blank">Youth Leadership</ButtonLink> <br /> Participants are immersed in conservation and sustainability workshops led by our educators, experts and scientists. We alse mentor the next generation of ocean champions through work experience volunteer placements each year.
+                <ButtonLink href="https://education.ocean.org/youth" target="_blank">Youth Leadership</ButtonLink> <br /> Participants are immersed in conservation and sustainability workshops led by our educators, experts and scientists. We alse mentor the next generation of ocean champions through work experience volunteer placements each year.
               </p>
               <Blockquote>
                 AquaCamps are the best because we learn all about marine life and how to take care of the ocean. I learned that the sea turtle only eats green good like broccoli, spinach and kale. The camp leaders always have exciting games like sea star tag and camouflage. AquaCamps are a lot of fun!

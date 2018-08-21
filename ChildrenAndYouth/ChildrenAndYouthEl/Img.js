@@ -4,8 +4,8 @@ const Img = styled.img`
   width: 100%;
   margin: 0 auto;
   display: block;
-  // position: absolute;
-  // bottom: 125px;
+  position: relative;
+  bottom: 170px;
 `;
 
 export default Img;

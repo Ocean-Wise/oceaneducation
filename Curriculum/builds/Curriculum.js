@@ -336,6 +336,11 @@ var Curriculum =
 	            'About'
 	          ),
 	          _react2.default.createElement(
+	            _NavItem2.default,
+	            { href: 'https://education.ocean.org/members/login.html?pushpath=education.ocean.org/homelearners' },
+	            'Join Community'
+	          ),
+	          _react2.default.createElement(
 	            _IconButton2.default,
 	            { style: { padding: 0, top: 9 }, onClick: function onClick() {
 	                return _this2.toggleDrawer();
@@ -475,6 +480,16 @@ var Curriculum =
 	                style: { color: 'white' }
 	              },
 	              'About'
+	            ),
+	            _react2.default.createElement(
+	              _MenuItem2.default,
+	              {
+	                onClick: function onClick() {
+	                  _this2.toggleDrawer();window.location = 'https://education.ocean.org/members/login.html?pushpath=education.ocean.org/homelearners';
+	                },
+	                style: { color: 'white' }
+	              },
+	              'Join Community'
 	            ),
 	            _react2.default.createElement(
 	              _MenuHeader2.default,
