@@ -293,7 +293,7 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
               </p>
               <p><ButtonLink href="https://shorelinecleanup.ca/" target="_blank">Visit Shoreline Cleanup</ButtonLink></p>
               <Blockquote>
-                It was sech an fun and innovative way to do a park cleanup while participating in a citizen science project and learning about pollution in our water ways.
+                It was such an fun and innovative way to do a park cleanup while participating in a citizen science project and learning about pollution in our water ways.
                 <span>Holly, Site Coordinator, St. John's Newfoundland and Labrador</span>
               </Blockquote>
               {graphics}
