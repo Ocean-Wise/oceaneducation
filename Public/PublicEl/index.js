@@ -28,6 +28,7 @@ import NavItem from './NavItem';
 import Img from './Img';
 import Logo from './Logo';
 import Blockquote from './Blockquote';
+import ButtonLink from './ButtonLink';
 
 import G1 from './graphics/1.png';
 import G2 from './graphics/2.png';
@@ -37,7 +38,7 @@ import G5 from './graphics/5.png';
 import G6 from './graphics/6.png';
 import G7 from './graphics/7.png';
 
-const TITLE = 'Public Programs';
+const TITLE = 'Community Education';
 const HEROIMG = 'https://ocean.org/wp-content/uploads/PP-00.jpg';
 const IMG1 = 'https://ocean.org/wp-content/uploads/PP-01.jpg';
 const IMG2 = 'https://ocean.org/wp-content/uploads/PP-02.jpg';
@@ -270,10 +271,10 @@ class PublicEl extends React.Component { // eslint-disable-line react/prefer-sta
               <p>Public Programs are gateways to the ocean conservation community. They enable interactive dialog and discovery. We offer individuals opportunities to further their knowledge and explore their curiosity of the ocean and science.</p>
               <h4 style={{ textTransform: 'uppercase', color: '#39395a' }}>These include:</h4>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Aquatic Café</span> | A Global Initiative: Each public event features an ocean-theme documentary movie, followed by a discussion with experts. These events take place at the Vancouver Aquarium and in partner institutions around the globe.
+                <span style={{ fontWeight: 700, color: '#39395a' }}>Film Forum</span> | A Global Initiative: Each public event features an ocean-theme documentary movie, followed by a discussion with experts. These events take place at the Vancouver Aquarium and in partner institutions around the globe.
               </p>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Ocean Matters</span> | This monthly lecture series delivers perspectives on our oceans and climate change. They explore how all fdacets of medern society are affected by our changing environment.
+                <span style={{ fontWeight: 700, color: '#39395a' }}>Monthly Lecture</span> | This monthly lecture series delivers perspectives on our oceans and climate change. They explore how all fdacets of medern society are affected by our changing environment.
               </p>
               <p>
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Nature Café</span> | These informal workshops and discussions explore anything and everything to do with our oceans, sustainability and the natural world.
@@ -281,10 +282,10 @@ class PublicEl extends React.Component { // eslint-disable-line react/prefer-sta
               <p>
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Science Socials</span> | These social occasions are fun, science-themed events such as trivia, discussion groups, or storytelling evenings.
               </p>
-              <p><b>For information on how to get involved email</b> <a href="mailto:publicprograms@ocean.org">publicprograms@ocean.org</a></p>
-              <p>
-                <ButtonLink href="#" target="_blank">Book Now</ButtonLink>
-              </p>
+              <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+                <ButtonLink href="https://education.ocean.org/oceanmatters/contact" target="_blank">Contact Us</ButtonLink>
+                <ButtonLink href="https://education.ocean.org/oceanmatters" target="_blank">Get Involved</ButtonLink>
+              </div>
               <Blockquote>
                 This event was excellent. I enjoyed the diversity of the experts and depth of their knowledge in their particular field of research and work
                 <span>Hazel, Student</span>

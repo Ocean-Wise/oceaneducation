@@ -291,7 +291,7 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
               <p>
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Community</span> | We support volunteers in every province and territory all year long and anywhere that land connects to water, with the goal of keeping Canadian shorelines healthy and clean.
               </p>
-              <p><ButtonLink href="https://shorelinecleanup.ca/" target="_blank">Visit Shoreline Cleanup</ButtonLink></p>
+              <p><ButtonLink href="https://education.ocean.org/shoreline" target="_blank">Visit Shoreline Cleanup Community</ButtonLink></p>
               <Blockquote>
                 It was such an fun and innovative way to do a park cleanup while participating in a citizen science project and learning about pollution in our water ways.
                 <span>Holly, Site Coordinator, St. John's Newfoundland and Labrador</span>

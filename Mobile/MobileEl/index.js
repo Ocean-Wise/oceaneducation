@@ -49,6 +49,8 @@ const IMG2 = 'https://ocean.org/wp-content/uploads/MP-02.jpg';
 const IMG3 = 'https://ocean.org/wp-content/uploads/MP-03.jpg';
 const POSTER = 'https://ocean.org/wp-content/uploads/MP-Poster.jpg';
 
+import '../styles/modal-video.css';
+
 class MobileEl extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
@@ -79,7 +81,7 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
   }
 
   toggleModal = () => {
-    this.setState({ vidOpen: !this.state.open });
+    this.setState({ vidOpen: !this.state.vidOpen });
   }
 
   updateWindowDimensions() {

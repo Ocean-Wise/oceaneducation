@@ -691,14 +691,14 @@ var GCSC =
 	                null,
 	                _react2.default.createElement(
 	                  _ButtonLink2.default,
-	                  { href: 'https://shorelinecleanup.ca/', target: '_blank' },
-	                  'Visit Shoreline Cleanup'
+	                  { href: 'https://education.ocean.org/shoreline', target: '_blank' },
+	                  'Visit Shoreline Cleanup Community'
 	                )
 	              ),
 	              _react2.default.createElement(
 	                _Blockquote2.default,
 	                null,
-	                'It was sech an fun and innovative way to do a park cleanup while participating in a citizen science project and learning about pollution in our water ways.',
+	                'It was such an fun and innovative way to do a park cleanup while participating in a citizen science project and learning about pollution in our water ways.',
 	                _react2.default.createElement(
 	                  'span',
 	                  null,
@@ -46157,9 +46157,8 @@ var GCSC =
 	  value: true
 	});
 
-	var _templateObject = _taggedTemplateLiteral(['\n  cursor: pointer;\n  position: relative;\n  button {\n    position: absolute;\n    top: 92px;\n    left: 155px;\n  }\n  ', '\n  ', '\n'], ['\n  cursor: pointer;\n  position: relative;\n  button {\n    position: absolute;\n    top: 92px;\n    left: 155px;\n  }\n  ', '\n  ', '\n']),
-	    _templateObject2 = _taggedTemplateLiteral(['\n    #thumb {\n      height: 128px;\n    }\n    button {\n      top: 42px;\n      left: 85px;\n    }\n  '], ['\n    #thumb {\n      height: 128px;\n    }\n    button {\n      top: 42px;\n      left: 85px;\n    }\n  ']),
-	    _templateObject3 = _taggedTemplateLiteral(['\n    #thumb {\n      height: unset;\n    }\n    button {\n      top: 80px;\n      left: 145px;\n    }\n  '], ['\n    #thumb {\n      height: unset;\n    }\n    button {\n      top: 80px;\n      left: 145px;\n    }\n  ']);
+	var _templateObject = _taggedTemplateLiteral(['\n  cursor: pointer;\n  position: relative;\n  margin: 0 auto;\n  button {\n    position: absolute;\n    top: 92px;\n    left: 155px;\n  }\n  ', '\n  ', '\n'], ['\n  cursor: pointer;\n  position: relative;\n  margin: 0 auto;\n  button {\n    position: absolute;\n    top: 92px;\n    left: 155px;\n  }\n  ', '\n  ', '\n']),
+	    _templateObject2 = _taggedTemplateLiteral(['\n    #thumb {\n      height: unset;\n    }\n    button {\n      top: 80px;\n      left: 145px;\n    }\n  '], ['\n    #thumb {\n      height: unset;\n    }\n    button {\n      top: 80px;\n      left: 145px;\n    }\n  ']);
 
 	var _styledComponents = __webpack_require__(375);
 
@@ -46175,7 +46174,15 @@ var GCSC =
 
 	function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-	var Thumbnail = _styledComponents2.default.div(_templateObject, mixins.bp.md.max(_templateObject2), mixins.bp.xs.max(_templateObject3));
+	var Thumbnail = _styledComponents2.default.div(_templateObject, '' /* ${mixins.bp.md.max`
+	                                                                   #thumb {
+	                                                                   height: 128px;
+	                                                                   }
+	                                                                   button {
+	                                                                   top: 42px;
+	                                                                   left: 85px;
+	                                                                   }
+	                                                                   `} */, mixins.bp.xs.max(_templateObject2));
 
 	exports.default = Thumbnail;
 

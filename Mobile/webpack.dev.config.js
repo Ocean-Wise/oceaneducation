@@ -14,12 +14,16 @@ module.exports = {
               include: __dirname,
           },
           {
-              test: /\.(eot|svg|otf|ttf|woff|woff2)$/,
+              test: /\.(eot|otf|ttf|woff|woff2)$/,
               loader: 'file-loader',
           },
           {
-            test: /\.(png|jpe?g|gif)$/,
+            test: /\.(png|jpe?g|gif|svg)$/,
             loader: 'url-loader',
+          },
+          {
+            test: /\.css$/,
+            loader: 'style-loader!css-loader',
           },
       ],
   },

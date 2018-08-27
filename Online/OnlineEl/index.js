@@ -28,6 +28,7 @@ import NavItem from './NavItem';
 import Img from './Img';
 import Logo from './Logo';
 import Blockquote from './Blockquote';
+import ButtonLink from './ButtonLink';
 
 import G1 from './graphics/1.png';
 import G2 from './graphics/2.png';
@@ -282,7 +283,7 @@ class OnlineEl extends React.Component { // eslint-disable-line react/prefer-sta
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Virtual Visits</span> | These video conferences enable student-driven experiences with aquarium habitats, live animals, visual props and specimen dissections.
               </p>
               <p>
-                <ButtonLink href="#" target="_blank">Book Now</ButtonLink>
+                <ButtonLink href="http://literacy.ocean.org" target="_blank">Book Now</ButtonLink>
               </p>
               <Blockquote>
                 It was fascinating and I could see that the kids were enthralled. I haven't seen a class yet so engaged and inquisitive.
