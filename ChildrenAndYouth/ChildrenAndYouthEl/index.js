@@ -139,14 +139,14 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
           <img src={STUDENT} alt="Students" style={{ width: '370px', height: '150px' }} />
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={CAMP} alt="Camps" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-          <img src={CLUB} alt="Clubs" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-          <img src={EDU} alt="Education" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+          <img src={CAMP} alt="Camps" style={{ width: '300px', height: '150px', marginTop: 20 }} />
+          <img src={CLUB} alt="Clubs" style={{ width: '300px', height: '150px', marginTop: 20 }} />
+          <img src={EDU} alt="Education" style={{ width: '300px', height: '150px', marginTop: 20 }} />
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={SLEEP} alt="Sleepovers" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-          <img src={PARTY} alt="Parties" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-          <img src={EXP} alt="Placements" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+          <img src={SLEEP} alt="Sleepovers" style={{ width: '300px', height: '150px', marginTop: 20 }} />
+          <img src={PARTY} alt="Parties" style={{ width: '300px', height: '150px', marginTop: 20 }} />
+          <img src={EXP} alt="Placements" style={{ width: '300px', height: '150px', marginTop: 20 }} />
         </div>
       </div>
     );
@@ -157,16 +157,16 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
           <img src={STUDENT} alt="Students" style={{ width: '370px', height: '150px' }} />
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={CAMP} alt="Camps" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-          <img src={CLUB} alt="Clubs" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+          <img src={CAMP} alt="Camps" style={{ width: '300px', height: '150px', marginTop: 20 }} />
+          <img src={CLUB} alt="Clubs" style={{ width: '300px', height: '150px', marginTop: 20 }} />
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={EDU} alt="Education" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-          <img src={SLEEP} alt="Sleepovers" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+          <img src={EDU} alt="Education" style={{ width: '300px', height: '150px', marginTop: 20 }} />
+          <img src={SLEEP} alt="Sleepovers" style={{ width: '300px', height: '150px', marginTop: 20 }} />
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={PARTY} alt="Parties" style={{ width: '370px', height: '150px', marginTop: 20 }} />
-          <img src={EXP} alt="Placements" style={{ width: '370px', height: '150px', marginTop: 20 }} />
+          <img src={PARTY} alt="Parties" style={{ width: '300px', height: '150px', marginTop: 20 }} />
+          <img src={EXP} alt="Placements" style={{ width: '300px', height: '150px', marginTop: 20 }} />
         </div>
       </div>
     ) : '';
