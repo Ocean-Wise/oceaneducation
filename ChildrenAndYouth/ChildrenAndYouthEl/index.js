@@ -179,9 +179,8 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
     return (
       <MuiThemeProvider>
         <div>
-          <Container height={containerHeight}>
-            <Img id="hero-image" src={HEROIMG} alt="Ocean wise" />
-            <Logo src={source} alt="Logo" />
+          <Container height={containerHeight} image={HEROIMG}>
+            <a href="https://ocean.org/" style={{ position: 'absolute', zIndex: 50, top: 15, left: window.innerWidth > 812 ? 20 : '-27px' }}><Logo src={source} alt="Logo" /></a>
             {Nav}
             <Header>
               <H1>{TITLE}</H1>
@@ -268,9 +267,9 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
 
           </Drawer>
           <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
-            <div>
+            <div style={{ marginRight: window.innerWidth > 768 ? 50 : 0 }}>
               <p>Children and Youth Programs are immersive ocean education experiences that foster love for our oceans through fun and interactive activities. The team engages over 9,000 children, youth and families in marine science annually.</p>
-              <p>Our team of educators are passionate about inspiring the next generation of young leaders. Our approach is supported by the accepted social science assertios that adults develop concern for the environment based on experiences of awe and wonder as a child.</p>
+            <p>Our team of educators are passionate about inspiring the next generation of young leaders. Our approach is supported by the accepted social science assertions that adults develop concern for the environment based on experiences of awe and wonder as a child.</p>
               <h4 style={{ textTransform: 'uppercase', color: '#39395a' }}>The program comprises:</h4>
               <p>
                 <ButtonLink href="http://www.vanaqua.org/learn/camps" target="_blank">Camps & Clubs</ButtonLink> <br /> Programs embrace nature play, science, art and hands-on experiences to foster a love of our natural world.
@@ -284,11 +283,6 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
               <p>
                 <ButtonLink href="https://education.ocean.org/youth" target="_blank">Youth Leadership</ButtonLink> <br /> Participants are immersed in conservation and sustainability workshops led by our educators, experts and scientists. We alse mentor the next generation of ocean champions through work experience volunteer placements each year.
               </p>
-              <Blockquote>
-                AquaCamps are the best because we learn all about marine life and how to take care of the ocean. I learned that the sea turtle only eats green good like broccoli, spinach and kale. The camp leaders always have exciting games like sea star tag and camouflage. AquaCamps are a lot of fun!
-                <span>Cole, Age 6 - Aquacamper since 2013</span>
-              </Blockquote>
-              {graphics}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Beachcombing" />
@@ -296,6 +290,13 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
               <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Canoeing" />
             </div>
           </div>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <Blockquote>
+              AquaCamps are the best because we learn all about marine life and how to take care of the ocean. I learned that the sea turtle only eats green food like broccoli, spinach and kale. The camp leaders always have exciting games like sea star tag and camouflage. AquaCamps are a lot of fun!
+              <span>Cole, Age 6 - AquaCamper since 2013</span>
+            </Blockquote>
+          </div>
+          {graphics}
           {mobileGraphics}
           <Footer />
         </div>

@@ -151,12 +151,10 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
           <img src={G2} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
           <img src={G3} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
           <img src={G4} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
           <img src={G6} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
           <img src={G7} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
         </div>
@@ -191,9 +189,8 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
     return (
       <MuiThemeProvider>
         <div>
-          <Container height={containerHeight}>
-            <Img id="hero-image" src={HEROIMG} alt="Ocean wise" />
-            <Logo src={source} alt="Logo" />
+          <Container height={containerHeight} image={HEROIMG}>
+            <a href="https://ocean.org/" style={{ position: 'absolute', zIndex: 50, top: 15, left: window.innerWidth > 812 ? 20 : '-27px' }}><Logo src={source} alt="Logo" /></a>
             {Nav}
             <Header>
               <H1>{TITLE}</H1>
@@ -280,7 +277,7 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
 
           </Drawer>
           <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
-            <div>
+            <div style={{ marginRight: window.innerWidth > 768 ? 50 : 0 }}>
               <p>Mobile Programs is the traveling education stream of Ocean Wise<sup>&reg;</sup>. We bring ocean education to schools, youth groups, and communities coast to coast. To date we have engaged over 625,000 students, youth and community members.</p>
               <p>Programs feature live animals, marine artifacts and hands-on interactive activities designed to encourage stewardshup of our oceans and waterways.<br />Our educators deliver expert level, multi-sensory aquatic programs, based on the Ocean Literacy Framework.</p>
               <p>
@@ -295,11 +292,6 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
               <p><b>We bring the ocean to you</b> with logistical ease and provide a memorable, unique and engaging experience for all ages.</p>
               <p><b>For information on how to get involved email</b> <a href="mailto:mobile@ocean.org">mobile@ocean.org</a></p>
               <p><ButtonLink href="http://www.vanaqua.org/learn/outreach/aquavan" target="_blank">Book Now</ButtonLink></p>
-              <Blockquote>
-                Small groups and well-trained, positive, passionate staff make this an amazing, in-school field trip.
-                <span>Teacher, New Westminster</span>
-              </Blockquote>
-              {graphics}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <ModalVideo channel="youtube" isOpen={this.state.vidOpen} videoId="BktBaRylQfc" onClose={this.toggleModal} />
@@ -313,6 +305,13 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
               <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Community" />
             </div>
           </div>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <Blockquote>
+              Small groups and well-trained, positive, passionate staff make this an amazing, in-school field trip.
+              <span>Teacher, New Westminster</span>
+            </Blockquote>
+          </div>
+          {graphics}
           {mobileGraphics}
           <Footer />
         </div>

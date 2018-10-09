@@ -418,9 +418,12 @@ var Public =
 	          null,
 	          _react2.default.createElement(
 	            _Container2.default,
-	            { height: containerHeight },
-	            _react2.default.createElement(_Img2.default, { id: 'hero-image', src: HEROIMG, alt: 'Ocean wise' }),
-	            _react2.default.createElement(_Logo2.default, { src: source, alt: 'Logo' }),
+	            { height: containerHeight, image: HEROIMG },
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'https://ocean.org/', style: { position: 'absolute', zIndex: 50, top: 15, left: window.innerWidth > 812 ? 20 : '-27px' } },
+	              _react2.default.createElement(_Logo2.default, { src: source, alt: 'Logo' })
+	            ),
 	            Nav,
 	            _react2.default.createElement(
 	              _Header2.default,
@@ -611,7 +614,7 @@ var Public =
 	            { style: { fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir } },
 	            _react2.default.createElement(
 	              'div',
-	              null,
+	              { style: { marginRight: window.innerWidth > 768 ? 50 : 0 } },
 	              _react2.default.createElement(
 	                'p',
 	                null,
@@ -640,7 +643,7 @@ var Public =
 	                  { style: { fontWeight: 700, color: '#39395a' } },
 	                  'Monthly Lecture'
 	                ),
-	                ' | This monthly lecture series delivers perspectives on our oceans and climate change. They explore how all fdacets of medern society are affected by our changing environment.'
+	                ' | This monthly lecture series delivers perspectives on our oceans and climate change. They explore how all facets of modern society are affected by our changing environment.'
 	              ),
 	              _react2.default.createElement(
 	                'p',
@@ -675,18 +678,7 @@ var Public =
 	                  { href: 'https://education.ocean.org/oceanmatters', target: '_blank' },
 	                  'Get Involved'
 	                )
-	              ),
-	              _react2.default.createElement(
-	                _Blockquote2.default,
-	                null,
-	                'This event was excellent. I enjoyed the diversity of the experts and depth of their knowledge in their particular field of research and work',
-	                _react2.default.createElement(
-	                  'span',
-	                  null,
-	                  'Hazel, Student'
-	                )
-	              ),
-	              graphics
+	              )
 	            ),
 	            _react2.default.createElement(
 	              'div',
@@ -696,6 +688,21 @@ var Public =
 	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG3, alt: 'Presenting' })
 	            )
 	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { style: { display: 'flex', flexDirection: 'column' } },
+	            _react2.default.createElement(
+	              _Blockquote2.default,
+	              null,
+	              'This event was excellent. I enjoyed the diversity of the experts and depth of their knowledge in their particular field of research and work',
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                'Hazel, Student'
+	              )
+	            )
+	          ),
+	          graphics,
 	          mobileGraphics,
 	          _react2.default.createElement(_Footer2.default, null)
 	        )
@@ -43609,7 +43616,7 @@ var Public =
 	  value: true
 	});
 
-	var _templateObject = _taggedTemplateLiteral(['\n  height: ', 'px;\n  overflow-y: hidden;\n  display: inline-block;\n  width: 100%;\n  &::after {\n    content: \'\';\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: ', 'px;\n    display: inline-block;\n    background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.35)), color-stop(100%, rgba(0,0,0,0.1)));\n    background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#a6000000\', endColorstr="#00000000", GradientType=0 );\n  }\n'], ['\n  height: ', 'px;\n  overflow-y: hidden;\n  display: inline-block;\n  width: 100%;\n  &::after {\n    content: \'\';\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: ', 'px;\n    display: inline-block;\n    background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.35)), color-stop(100%, rgba(0,0,0,0.1)));\n    background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#a6000000\', endColorstr="#00000000", GradientType=0 );\n  }\n']);
+	var _templateObject = _taggedTemplateLiteral(['\n  height: ', 'px;\n  overflow-y: hidden;\n  display: inline-block;\n  background-image: url(', ');\n  background-size: cover;\n  width: 100%;\n  &::after {\n    content: \'\';\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: ', 'px;\n    display: inline-block;\n    background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.35)), color-stop(100%, rgba(0,0,0,0.1)));\n    background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#a6000000\', endColorstr="#00000000", GradientType=0 );\n  }\n'], ['\n  height: ', 'px;\n  overflow-y: hidden;\n  display: inline-block;\n  background-image: url(', ');\n  background-size: cover;\n  width: 100%;\n  &::after {\n    content: \'\';\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: ', 'px;\n    display: inline-block;\n    background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.35)), color-stop(100%, rgba(0,0,0,0.1)));\n    background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#a6000000\', endColorstr="#00000000", GradientType=0 );\n  }\n']);
 
 	var _styledComponents = __webpack_require__(362);
 
@@ -43621,6 +43628,8 @@ var Public =
 
 	var Container = _styledComponents2.default.div(_templateObject, function (props) {
 	  return props.height;
+	}, function (props) {
+	  return props.image;
 	}, function (props) {
 	  return props.height;
 	});
@@ -43834,7 +43843,7 @@ var Public =
 	  value: true
 	});
 
-	var _templateObject = _taggedTemplateLiteral(['\n  display: inline-block;\n  width: 157px;\n  height: 60px;\n  position: absolute;\n  top: 15px;\n  left: 20px;\n  @media all and (max-width: 812px) {\n    top: 15px;\n    left: -27px;\n  }\n'], ['\n  display: inline-block;\n  width: 157px;\n  height: 60px;\n  position: absolute;\n  top: 15px;\n  left: 20px;\n  @media all and (max-width: 812px) {\n    top: 15px;\n    left: -27px;\n  }\n']);
+	var _templateObject = _taggedTemplateLiteral(['\n  display: inline-block;\n  width: 157px;\n  height: 60px;\n'], ['\n  display: inline-block;\n  width: 157px;\n  height: 60px;\n']);
 
 	var _styledComponents = __webpack_require__(362);
 

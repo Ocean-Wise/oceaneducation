@@ -5,6 +5,9 @@ const Container = styled.div`
   height: ${props => props.height}px;
   overflow-y: hidden;
   display: inline-block;
+  background-image: url(${(props) => props.image});
+  background-size: cover;
+  background-position: center;
   width: 100%;
   &::after {
     content: '';

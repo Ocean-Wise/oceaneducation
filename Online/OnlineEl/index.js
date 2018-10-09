@@ -140,12 +140,10 @@ class OnlineEl extends React.Component { // eslint-disable-line react/prefer-sta
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
           <img src={G2} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
           <img src={G3} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
           <img src={G4} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
           <img src={G6} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
           <img src={G7} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
         </div>
@@ -180,9 +178,8 @@ class OnlineEl extends React.Component { // eslint-disable-line react/prefer-sta
     return (
       <MuiThemeProvider>
         <div>
-          <Container height={containerHeight}>
-            <Img id="hero-image" src={HEROIMG} alt="Ocean wise" />
-            <Logo src={source} alt="Logo" />
+          <Container height={containerHeight} image={HEROIMG}>
+            <a href="https://ocean.org/" style={{ position: 'absolute', zIndex: 50, top: 15, left: window.innerWidth > 812 ? 20 : '-27px' }}><Logo src={source} alt="Logo" /></a>
             {Nav}
             <Header>
               <H1>{TITLE}</H1>
@@ -269,12 +266,12 @@ class OnlineEl extends React.Component { // eslint-disable-line react/prefer-sta
 
           </Drawer>
           <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
-            <div>
-              <p>Online Learning is an interactive environment that furthers understanding and connections to the ocean at <a href="http://education.ocean.org/">education.ocean.org</a>. We engage thousands of individuals, helping participants understand ocean literacy by integrating digital resources and user generated content within carefully stcructured curriculum. The pragram creates opportunities for students and educators to learn in an authentic, multilingual, social context with their peers throughout the digital world.</p>
-              <p> Program content connects to Ocean Wise<sup>&reg;</sup> direct action and research initiatives and advance participants along the conservation continuum.</p>
+            <div  style={{ marginRight: window.innerWidth > 768 ? 50 : 0 }}>
+              <p>Online Learning is an interactive environment that furthers understanding and connections to the ocean at <a href="http://education.ocean.org/">education.ocean.org</a>. We engage thousands of individuals, helping participants understand ocean literacy by integrating digital resources and user generated content within carefully structured curriculum. The program creates opportunities for students and educators to learn in an authentic, multilingual, social context with their peers throughout the digital world.</p>
+            <p> Program content connects to Ocean Wise<sup>&reg;</sup> direct action and research initiatives and advances participants along the conservation continuum.</p>
               <h4 style={{ textTransform: 'uppercase', color: '#39395a' }}>They include:</h4>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Multilingual Learning Platforms</span> | They include resources, quizzes, videos and badges designed to support educators and help develop an understanding of how humans impact the ocean and how the ocean influences us. Available for elementary, middle and secondary schools.
+                <span style={{ fontWeight: 700, color: '#39395a' }}>Multilingual Learning Platforms</span> | Web resources, quizzes, videos and badges designed to support educators and help develop an understanding of how humans impact the ocean and how the ocean influences us. Available for elementary, middle and secondary schools.
               </p>
               <p>
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Social Learning</span> | Our video conferencing and online portals provide a platform for global student conversations on conservation of ocean and aquatic envirenments. Learning from and with each other, we create a forum for meaningful discussion and dialogue.
@@ -283,13 +280,8 @@ class OnlineEl extends React.Component { // eslint-disable-line react/prefer-sta
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Virtual Visits</span> | These video conferences enable student-driven experiences with aquarium habitats, live animals, visual props and specimen dissections.
               </p>
               <p>
-                <ButtonLink href="http://literacy.ocean.org" target="_blank">Book Now</ButtonLink>
+                <ButtonLink href="mailto:onlinelearning@ocean.org" target="_blank">Book Now</ButtonLink>
               </p>
-              <Blockquote>
-                It was fascinating and I could see that the kids were enthralled. I haven't seen a class yet so engaged and inquisitive.
-                <span>Connected North Participant</span>
-              </Blockquote>
-              {graphics}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Conferencing" />
@@ -297,6 +289,13 @@ class OnlineEl extends React.Component { // eslint-disable-line react/prefer-sta
               <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Teaching" />
             </div>
           </div>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <Blockquote>
+              It was fascinating and I could see that the kids were enthralled. I haven't seen a class yet so engaged and inquisitive.
+              <span>Connected North Participant</span>
+            </Blockquote>
+          </div>
+          {graphics}
           {mobileGraphics}
           <Footer />
         </div>

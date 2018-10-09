@@ -228,9 +228,8 @@ class OceanEl extends React.Component { // eslint-disable-line react/prefer-stat
     return (
       <MuiThemeProvider>
         <div>
-          <Container height={containerHeight}>
-            <Img id="hero-image" src={HEROIMG} alt="Ocean wise" />
-            <Logo src={source} alt="Logo" />
+          <Container height={containerHeight} image={HEROIMG}>
+            <a href="https://ocean.org/" style={{ position: 'absolute', zIndex: 50, top: 15, left: window.innerWidth > 812 ? 20 : '-27px' }}><Logo src={source} alt="Logo" /></a>
             {Nav}
             <Header>
               <H1 style={{ textShadow: '1px 1px 1px black' }}>{TITLE}</H1>
@@ -317,7 +316,7 @@ class OceanEl extends React.Component { // eslint-disable-line react/prefer-stat
 
           </Drawer>
           <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
-            <div>
+            <div style={{ marginRight: window.innerWidth > 768 ? 50 : 0 }}>
               <center>
                 <ButtonLink href="https://education.ocean.org/oceanbridge" target="_blank">{trans(en, 'enter')}</ButtonLink>
                 <ButtonLink onClick={this.toggleLang}>{trans(en, 'trans')}</ButtonLink>
