@@ -260,7 +260,7 @@ var Ocean =
 	      out = en ? 'Ocean Bridge connects Canadian youth from coast to coast to coast' : 'Portail Océan rapproche les jeunes canadiens d\'un océan à l\'autre';
 	      break;
 	    case 'para1':
-	      out = en ? 'empowering them to make a difference towards ocean conservation. Each year a national team of 40 youth (ages 18-30) engage in co-creating and delivering service projects addressing Ocean Health and Ocean Literacy.' : ' pour les mobiliser à avoir un impact positif sur nos océans. Chaque année, 40 jeunes (de 18 à 30 ans) formeront une équipe nationale qui réalisera des projets de service dans leurs communautés et participeront à deux expéditions immersives axées sur la santé et la connaissance des océans.';
+	      out = en ? 'empowering them to make a difference towards ocean conservation. Each year a national team of 40 youth (ages 18-30) form a national team engaged in co-creating and delivering service projects for their home communities and two immersive expeditions to address Ocean Health and Ocean Literacy in Canada.' : ' pour les mobiliser à avoir un impact positif sur nos océans. Chaque année, 40 jeunes (de 18 à 30 ans) formeront une équipe nationale qui réalisera des projets de service dans leurs communautés et participeront à deux expéditions immersives axées sur la santé et la connaissance des océans.';
 	      break;
 	    case 'para2':
 	      out = en ? 'Ocean Bridge is comprised of 3 key elements to support youth as they adopt a culture of service for our oceans:' : 'Portail Océan comprend 3 éléments clés pour encourager les jeunes au services nos océans:';
@@ -715,7 +715,7 @@ var Ocean =
 	                null,
 	                _react2.default.createElement(
 	                  _ButtonLink2.default,
-	                  { onClick: this.toggleModal1 },
+	                  { onClick: this.toggleModal1, noMargin: true },
 	                  trans(en, 'leadersWanted')
 	                )
 	              )
@@ -727,15 +727,15 @@ var Ocean =
 	              _react2.default.createElement(
 	                _Thumbnail2.default,
 	                { onClick: this.toggleModal2 },
-	                _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG3, alt: 'Cleaning' }),
+	                _react2.default.createElement('img', { style: { margin: '5px auto', width: this.state.mobile ? 300 : 350 }, src: IMG3, alt: 'Cleaning' }),
 	                _react2.default.createElement(
 	                  _VidButton2.default,
 	                  null,
 	                  _react2.default.createElement('img', { src: _play2.default, alt: 'Play', width: 18, style: { marginLeft: 5 } })
 	                )
 	              ),
-	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG2, alt: 'Working' }),
-	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG1, alt: 'Connecting' })
+	              _react2.default.createElement('img', { style: { margin: '5px auto', width: this.state.mobile ? 300 : 350 }, src: IMG2, alt: 'Working' }),
+	              _react2.default.createElement('img', { style: { margin: '5px auto', width: this.state.mobile ? 300 : 350 }, src: IMG1, alt: 'Connecting' })
 	            )
 	          ),
 	          _react2.default.createElement(_Footer2.default, null)
@@ -39298,7 +39298,7 @@ var Ocean =
 	  value: true
 	});
 
-	var _templateObject = _taggedTemplateLiteral(['\n  color: #005eb8;\n  cursor: pointer;\n  padding: 20px 10px 20px 10px;\n  font-weight: 700;\n  border: 1px solid #005eb8;\n  text-align: center;\n  margin-left: 15px;\n  font-size: 22px;\n  line-height: 18px;\n  appearance: none;\n  font-family: \'Helvetica Neue\', Helvetica, Roboto, Arial, sans-serif;\n  letter-spacing: 0.6px;\n  text-decoration: none;\n  display: inline-block;\n  width: 300px;\n  margin-bottom: 25px;\n  transition: all 0.5s cubic-bezier(.61, .03, 1, .59);\n  &:hover {\n    color: #000;\n  }\n  @media all and (max-width: 490px) {\n    width: 230px;\n  }\n'], ['\n  color: #005eb8;\n  cursor: pointer;\n  padding: 20px 10px 20px 10px;\n  font-weight: 700;\n  border: 1px solid #005eb8;\n  text-align: center;\n  margin-left: 15px;\n  font-size: 22px;\n  line-height: 18px;\n  appearance: none;\n  font-family: \'Helvetica Neue\', Helvetica, Roboto, Arial, sans-serif;\n  letter-spacing: 0.6px;\n  text-decoration: none;\n  display: inline-block;\n  width: 300px;\n  margin-bottom: 25px;\n  transition: all 0.5s cubic-bezier(.61, .03, 1, .59);\n  &:hover {\n    color: #000;\n  }\n  @media all and (max-width: 490px) {\n    width: 230px;\n  }\n']);
+	var _templateObject = _taggedTemplateLiteral(['\n  color: #005eb8;\n  cursor: pointer;\n  padding: 20px 10px 20px 10px;\n  font-weight: 700;\n  border: 1px solid #005eb8;\n  text-align: center;\n  font-size: 22px;\n  line-height: 18px;\n  appearance: none;\n  font-family: \'Helvetica Neue\', Helvetica, Roboto, Arial, sans-serif;\n  letter-spacing: 0.6px;\n  text-decoration: none;\n  display: inline-block;\n  width: 300px;\n  transition: all 0.5s cubic-bezier(.61, .03, 1, .59);\n  ', '\n  &:hover {\n    color: #000;\n  }\n  @media all and (max-width: 490px) {\n    width: 230px;\n    margin-left: 0px;\n  }\n'], ['\n  color: #005eb8;\n  cursor: pointer;\n  padding: 20px 10px 20px 10px;\n  font-weight: 700;\n  border: 1px solid #005eb8;\n  text-align: center;\n  font-size: 22px;\n  line-height: 18px;\n  appearance: none;\n  font-family: \'Helvetica Neue\', Helvetica, Roboto, Arial, sans-serif;\n  letter-spacing: 0.6px;\n  text-decoration: none;\n  display: inline-block;\n  width: 300px;\n  transition: all 0.5s cubic-bezier(.61, .03, 1, .59);\n  ', '\n  &:hover {\n    color: #000;\n  }\n  @media all and (max-width: 490px) {\n    width: 230px;\n    margin-left: 0px;\n  }\n']);
 
 	var _styledComponents = __webpack_require__(375);
 
@@ -39308,7 +39308,9 @@ var Ocean =
 
 	function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-	var Button = _styledComponents2.default.a(_templateObject);
+	var Button = _styledComponents2.default.a(_templateObject, function (props) {
+	  return !props.noMargin ? '\n    margin-bottom: 25px;\n    margin-left: 15px;\n  ' : '';
+	});
 
 	exports.default = Button;
 
@@ -46174,7 +46176,7 @@ var Ocean =
 	  value: true
 	});
 
-	var _templateObject = _taggedTemplateLiteral(['\n  cursor: pointer;\n  position: relative;\n  margin: 0 auto;\n  button {\n    position: absolute;\n    top: 92px;\n    left: 155px;\n  }\n  ', '\n  ', '\n'], ['\n  cursor: pointer;\n  position: relative;\n  margin: 0 auto;\n  button {\n    position: absolute;\n    top: 92px;\n    left: 155px;\n  }\n  ', '\n  ', '\n']),
+	var _templateObject = _taggedTemplateLiteral(['\n  cursor: pointer;\n  position: relative;\n  margin: 0 auto;\n  button {\n    position: absolute;\n    top: 92px;\n    left: 155px;\n  }\n  ', '\n  ', '\n  @media all and (max-width: 812px) {\n    #thumb {\n      height: unset;\n    }\n    button {\n      top: 65px;\n      left: 100px;\n    }\n  }\n'], ['\n  cursor: pointer;\n  position: relative;\n  margin: 0 auto;\n  button {\n    position: absolute;\n    top: 92px;\n    left: 155px;\n  }\n  ', '\n  ', '\n  @media all and (max-width: 812px) {\n    #thumb {\n      height: unset;\n    }\n    button {\n      top: 65px;\n      left: 100px;\n    }\n  }\n']),
 	    _templateObject2 = _taggedTemplateLiteral(['\n    #thumb {\n      height: unset;\n    }\n    button {\n      top: 80px;\n      left: 145px;\n    }\n  '], ['\n    #thumb {\n      height: unset;\n    }\n    button {\n      top: 80px;\n      left: 145px;\n    }\n  ']);
 
 	var _styledComponents = __webpack_require__(375);

@@ -7,7 +7,6 @@ const Button = styled.a`
   font-weight: 700;
   border: 1px solid #005eb8;
   text-align: center;
-  margin-left: 15px;
   font-size: 22px;
   line-height: 18px;
   appearance: none;
@@ -16,13 +15,17 @@ const Button = styled.a`
   text-decoration: none;
   display: inline-block;
   width: 300px;
-  margin-bottom: 25px;
   transition: all 0.5s cubic-bezier(.61, .03, 1, .59);
+  ${(props) => !props.noMargin ? `
+    margin-bottom: 25px;
+    margin-left: 15px;
+  ` : ''}
   &:hover {
     color: #000;
   }
   @media all and (max-width: 490px) {
     width: 230px;
+    margin-left: 0px;
   }
 `;
 

@@ -88,7 +88,7 @@ function trans(en = true, val) {
       out = en ? 'Ocean Bridge connects Canadian youth from coast to coast to coast' : 'Portail Océan rapproche les jeunes canadiens d\'un océan à l\'autre';
       break;
     case 'para1':
-      out = en ? 'empowering them to make a difference towards ocean conservation. Each year a national team of 40 youth (ages 18-30) engage in co-creating and delivering service projects addressing Ocean Health and Ocean Literacy.' : ' pour les mobiliser à avoir un impact positif sur nos océans. Chaque année, 40 jeunes (de 18 à 30 ans) formeront une équipe nationale qui réalisera des projets de service dans leurs communautés et participeront à deux expéditions immersives axées sur la santé et la connaissance des océans.';
+      out = en ? 'empowering them to make a difference towards ocean conservation. Each year a national team of 40 youth (ages 18-30) form a national team engaged in co-creating and delivering service projects for their home communities and two immersive expeditions to address Ocean Health and Ocean Literacy in Canada.' : ' pour les mobiliser à avoir un impact positif sur nos océans. Chaque année, 40 jeunes (de 18 à 30 ans) formeront une équipe nationale qui réalisera des projets de service dans leurs communautés et participeront à deux expéditions immersives axées sur la santé et la connaissance des océans.';
       break;
     case 'para2':
       out = en ? 'Ocean Bridge is comprised of 3 key elements to support youth as they adopt a culture of service for our oceans:' : 'Portail Océan comprend 3 éléments clés pour encourager les jeunes au services nos océans:';
@@ -334,18 +334,18 @@ class OceanEl extends React.Component { // eslint-disable-line react/prefer-stat
               <p>
                 <span style={{ fontWeight: 700, color: '#39395a' }}>{trans(en, 'oceanLiteracy')}</span> | {trans(en, 'oceanLiteracyPara')}
               </p>
-              <p><ButtonLink onClick={this.toggleModal1}>{trans(en, 'leadersWanted')}</ButtonLink></p>
+              <p><ButtonLink onClick={this.toggleModal1} noMargin>{trans(en, 'leadersWanted')}</ButtonLink></p>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <ModalVideo channel="youtube" isOpen={this.state.vid2Open} videoId="crCMygsLYps" onClose={this.toggleModal2} />
               <Thumbnail onClick={this.toggleModal2}>
-                <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Cleaning" />
+                <img style={{ margin: '5px auto', width: this.state.mobile ? 250 : 350 }} src={IMG3} alt="Cleaning" />
                 <VidButton>
                   <img src={playIcon} alt="Play" width={18} style={{ marginLeft: 5 }} />
                 </VidButton>
               </Thumbnail>
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG2} alt="Working" />
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Connecting" />
+              <img style={{ margin: '5px auto', width: this.state.mobile ? 250 : 350 }} src={IMG2} alt="Working" />
+              <img style={{ margin: '5px auto', width: this.state.mobile ? 250 : 350 }} src={IMG1} alt="Connecting" />
             </div>
           </div>
           <Footer />

@@ -28,6 +28,15 @@ const Thumbnail = styled.div`
       left: 145px;
     }
   `}
+  @media all and (max-width: 812px) {
+    #thumb {
+      height: unset;
+    }
+    button {
+      top: 65px;
+      left: 100px;
+    }
+  }
 `;
 
 export default Thumbnail;
