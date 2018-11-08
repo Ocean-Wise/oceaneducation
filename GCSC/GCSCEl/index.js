@@ -151,12 +151,10 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
           <img src={G2} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
           <img src={G3} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
           <img src={G4} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
           <img src={G6} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
           <img src={G7} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
         </div>
@@ -191,9 +189,8 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
     return (
       <MuiThemeProvider>
         <div>
-          <Container height={containerHeight}>
-            <Img id="hero-image" src={HEROIMG} alt="Ocean wise" />
-            <Logo src={source} alt="Logo" />
+          <Container height={containerHeight} image={HEROIMG}>
+            <a href="https://ocean.org/" style={{ position: 'absolute', zIndex: 50, top: 15, left: window.innerWidth > 812 ? 20 : '-27px' }}><Logo src={source} alt="Logo" /></a>
             {Nav}
             <Header>
               <H1>{TITLE}</H1>
@@ -280,7 +277,7 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
 
           </Drawer>
           <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
-            <div>
+            <div style={{ marginRight: window.innerWidth > 768 ? 50 : 0 }}>
               <p>The Great Canadian Shoreline Cleanup<sup>&reg;</sup> is a joint program of Ocean Wise<sup>&reg;</sup> and WWF-Canada that aims to build an understanding of ocean literacy by engaging Canadians to care for their shorelines. As one of Canada's largest volunteer-powered conservation programs, we engage with tens of thousands of people including:</p>
               <p>
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Schools & Youth</span> | A service learning opportunity for students of all ages, to build a connection to nature and play an important role in ocean health through citizen science. Resources to extend learning beyond the shoreline are provided to support teachers and group leaders.
@@ -292,11 +289,6 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Community</span> | We support volunteers in every province and territory all year long and anywhere that land connects to water, with the goal of keeping Canadian shorelines healthy and clean.
               </p>
               <p><ButtonLink href="https://education.ocean.org/shoreline" target="_blank">Visit Shoreline Cleanup Community</ButtonLink></p>
-              <Blockquote>
-                It was such an fun and innovative way to do a park cleanup while participating in a citizen science project and learning about pollution in our water ways.
-                <span>Holly, Site Coordinator, St. John's Newfoundland and Labrador</span>
-              </Blockquote>
-              {graphics}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <ModalVideo channel="youtube" isOpen={this.state.vidOpen} videoId="7ykQq_KwwcI" onClose={this.toggleModal} />
@@ -310,6 +302,13 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
               <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Teamwork" />
             </div>
           </div>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <Blockquote>
+              It was such an fun and innovative way to do a park cleanup while participating in a citizen science project and learning about pollution in our water ways.
+              <span>Holly, Site Coordinator, St. John's Newfoundland and Labrador</span>
+            </Blockquote>
+          </div>
+          {graphics}
           {mobileGraphics}
           <Footer />
         </div>

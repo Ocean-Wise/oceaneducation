@@ -365,17 +365,13 @@ var Online =
 	          'div',
 	          { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
 	          _react2.default.createElement('img', { src: _4.default, alt: 'Camps', style: { width: '280px', height: '150px', marginTop: 20 } }),
-	          _react2.default.createElement('img', { src: _6.default, alt: 'Clubs', style: { width: '280px', height: '150px', marginTop: 20 } })
+	          _react2.default.createElement('img', { src: _6.default, alt: 'Clubs', style: { width: '280px', height: '150px', marginTop: 20 } }),
+	          _react2.default.createElement('img', { src: _8.default, alt: 'Education', style: { width: '280px', height: '150px', marginTop: 20 } })
 	        ),
 	        _react2.default.createElement(
 	          'div',
 	          { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
-	          _react2.default.createElement('img', { src: _8.default, alt: 'Education', style: { width: '280px', height: '150px', marginTop: 20 } }),
-	          _react2.default.createElement('img', { src: _10.default, alt: 'Sleepovers', style: { width: '280px', height: '150px', marginTop: 20 } })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' } },
+	          _react2.default.createElement('img', { src: _10.default, alt: 'Sleepovers', style: { width: '280px', height: '150px', marginTop: 20 } }),
 	          _react2.default.createElement('img', { src: _12.default, alt: 'Parties', style: { width: '280px', height: '150px', marginTop: 20 } }),
 	          _react2.default.createElement('img', { src: _14.default, alt: 'Placements', style: { width: '280px', height: '150px', marginTop: 20 } })
 	        )
@@ -422,9 +418,12 @@ var Online =
 	          null,
 	          _react2.default.createElement(
 	            _Container2.default,
-	            { height: containerHeight },
-	            _react2.default.createElement(_Img2.default, { id: 'hero-image', src: HEROIMG, alt: 'Ocean wise' }),
-	            _react2.default.createElement(_Logo2.default, { src: source, alt: 'Logo' }),
+	            { height: containerHeight, image: HEROIMG },
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'https://ocean.org/', style: { position: 'absolute', zIndex: 50, top: 15, left: window.innerWidth > 812 ? 20 : '-27px' } },
+	              _react2.default.createElement(_Logo2.default, { src: source, alt: 'Logo' })
+	            ),
 	            Nav,
 	            _react2.default.createElement(
 	              _Header2.default,
@@ -615,7 +614,7 @@ var Online =
 	            { style: { fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir } },
 	            _react2.default.createElement(
 	              'div',
-	              null,
+	              { style: { marginRight: window.innerWidth > 768 ? 50 : 0 } },
 	              _react2.default.createElement(
 	                'p',
 	                null,
@@ -625,7 +624,7 @@ var Online =
 	                  { href: 'http://education.ocean.org/' },
 	                  'education.ocean.org'
 	                ),
-	                '. We engage thousands of individuals, helping participants understand ocean literacy by integrating digital resources and user generated content within carefully stcructured curriculum. The pragram creates opportunities for students and educators to learn in an authentic, multilingual, social context with their peers throughout the digital world.'
+	                '. We engage thousands of individuals, helping participants understand ocean literacy by integrating digital resources and user generated content within carefully structured curriculum. The program creates opportunities for students and educators to learn in an authentic, multilingual, social context with their peers throughout the digital world.'
 	              ),
 	              _react2.default.createElement(
 	                'p',
@@ -636,7 +635,7 @@ var Online =
 	                  null,
 	                  '\xAE'
 	                ),
-	                ' direct action and research initiatives and advance participants along the conservation continuum.'
+	                ' direct action and research initiatives and advances participants along the conservation continuum.'
 	              ),
 	              _react2.default.createElement(
 	                'h4',
@@ -651,7 +650,7 @@ var Online =
 	                  { style: { fontWeight: 700, color: '#39395a' } },
 	                  'Multilingual Learning Platforms'
 	                ),
-	                ' | They include resources, quizzes, videos and badges designed to support educators and help develop an understanding of how humans impact the ocean and how the ocean influences us. Available for elementary, middle and secondary schools.'
+	                ' | Web resources, quizzes, videos and badges designed to support educators and help develop an understanding of how humans impact the ocean and how the ocean influences us. Available for elementary, middle and secondary schools.'
 	              ),
 	              _react2.default.createElement(
 	                'p',
@@ -678,21 +677,10 @@ var Online =
 	                null,
 	                _react2.default.createElement(
 	                  _ButtonLink2.default,
-	                  { href: 'http://literacy.ocean.org', target: '_blank' },
+	                  { href: 'mailto:onlinelearning@ocean.org', target: '_blank' },
 	                  'Book Now'
 	                )
-	              ),
-	              _react2.default.createElement(
-	                _Blockquote2.default,
-	                null,
-	                'It was fascinating and I could see that the kids were enthralled. I haven\'t seen a class yet so engaged and inquisitive.',
-	                _react2.default.createElement(
-	                  'span',
-	                  null,
-	                  'Connected North Participant'
-	                )
-	              ),
-	              graphics
+	              )
 	            ),
 	            _react2.default.createElement(
 	              'div',
@@ -702,6 +690,21 @@ var Online =
 	              _react2.default.createElement('img', { style: { margin: '5px auto', width: 350 }, src: IMG3, alt: 'Teaching' })
 	            )
 	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { style: { display: 'flex', flexDirection: 'column' } },
+	            _react2.default.createElement(
+	              _Blockquote2.default,
+	              null,
+	              'It was fascinating and I could see that the kids were enthralled. I haven\'t seen a class yet so engaged and inquisitive.',
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                'Connected North Participant'
+	              )
+	            )
+	          ),
+	          graphics,
 	          mobileGraphics,
 	          _react2.default.createElement(_Footer2.default, null)
 	        )
@@ -43615,7 +43618,7 @@ var Online =
 	  value: true
 	});
 
-	var _templateObject = _taggedTemplateLiteral(['\n  height: ', 'px;\n  overflow-y: hidden;\n  display: inline-block;\n  width: 100%;\n  &::after {\n    content: \'\';\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: ', 'px;\n    display: inline-block;\n    background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.35)), color-stop(100%, rgba(0,0,0,0.1)));\n    background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#a6000000\', endColorstr="#00000000", GradientType=0 );\n  }\n'], ['\n  height: ', 'px;\n  overflow-y: hidden;\n  display: inline-block;\n  width: 100%;\n  &::after {\n    content: \'\';\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: ', 'px;\n    display: inline-block;\n    background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.35)), color-stop(100%, rgba(0,0,0,0.1)));\n    background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#a6000000\', endColorstr="#00000000", GradientType=0 );\n  }\n']);
+	var _templateObject = _taggedTemplateLiteral(['\n  height: ', 'px;\n  overflow-y: hidden;\n  display: inline-block;\n  background-image: url(', ');\n  background-size: cover;\n  background-position: center;\n  width: 100%;\n  &::after {\n    content: \'\';\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: ', 'px;\n    display: inline-block;\n    background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.35)), color-stop(100%, rgba(0,0,0,0.1)));\n    background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#a6000000\', endColorstr="#00000000", GradientType=0 );\n  }\n'], ['\n  height: ', 'px;\n  overflow-y: hidden;\n  display: inline-block;\n  background-image: url(', ');\n  background-size: cover;\n  background-position: center;\n  width: 100%;\n  &::after {\n    content: \'\';\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: ', 'px;\n    display: inline-block;\n    background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.35)), color-stop(100%, rgba(0,0,0,0.1)));\n    background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#a6000000\', endColorstr="#00000000", GradientType=0 );\n  }\n']);
 
 	var _styledComponents = __webpack_require__(362);
 
@@ -43627,6 +43630,8 @@ var Online =
 
 	var Container = _styledComponents2.default.div(_templateObject, function (props) {
 	  return props.height;
+	}, function (props) {
+	  return props.image;
 	}, function (props) {
 	  return props.height;
 	});
@@ -43840,7 +43845,7 @@ var Online =
 	  value: true
 	});
 
-	var _templateObject = _taggedTemplateLiteral(['\n  display: inline-block;\n  width: 157px;\n  height: 60px;\n  position: absolute;\n  top: 15px;\n  left: 20px;\n  @media all and (max-width: 812px) {\n    top: 15px;\n    left: -27px;\n  }\n'], ['\n  display: inline-block;\n  width: 157px;\n  height: 60px;\n  position: absolute;\n  top: 15px;\n  left: 20px;\n  @media all and (max-width: 812px) {\n    top: 15px;\n    left: -27px;\n  }\n']);
+	var _templateObject = _taggedTemplateLiteral(['\n  display: inline-block;\n  width: 157px;\n  height: 60px;\n'], ['\n  display: inline-block;\n  width: 157px;\n  height: 60px;\n']);
 
 	var _styledComponents = __webpack_require__(362);
 

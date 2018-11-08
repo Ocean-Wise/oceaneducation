@@ -178,9 +178,8 @@ class PublicEl extends React.Component { // eslint-disable-line react/prefer-sta
     return (
       <MuiThemeProvider>
         <div>
-          <Container height={containerHeight}>
-            <Img id="hero-image" src={HEROIMG} alt="Ocean wise" />
-            <Logo src={source} alt="Logo" />
+          <Container height={containerHeight} image={HEROIMG}>
+            <a href="https://ocean.org/" style={{ position: 'absolute', zIndex: 50, top: 15, left: window.innerWidth > 812 ? 20 : '-27px' }}><Logo src={source} alt="Logo" /></a>
             {Nav}
             <Header>
               <H1>{TITLE}</H1>
@@ -267,14 +266,14 @@ class PublicEl extends React.Component { // eslint-disable-line react/prefer-sta
 
           </Drawer>
           <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
-            <div>
+            <div style={{ marginRight: window.innerWidth > 768 ? 50 : 0 }}>
               <p>Public Programs are gateways to the ocean conservation community. They enable interactive dialog and discovery. We offer individuals opportunities to further their knowledge and explore their curiosity of the ocean and science.</p>
               <h4 style={{ textTransform: 'uppercase', color: '#39395a' }}>These include:</h4>
               <p>
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Film Forum</span> | A Global Initiative: Each public event features an ocean-theme documentary movie, followed by a discussion with experts. These events take place at the Vancouver Aquarium and in partner institutions around the globe.
               </p>
               <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Monthly Lecture</span> | This monthly lecture series delivers perspectives on our oceans and climate change. They explore how all fdacets of medern society are affected by our changing environment.
+                <span style={{ fontWeight: 700, color: '#39395a' }}>Monthly Lecture</span> | This monthly lecture series delivers perspectives on our oceans and climate change. They explore how all facets of modern society are affected by our changing environment.
               </p>
               <p>
                 <span style={{ fontWeight: 700, color: '#39395a' }}>Nature Café</span> | These informal workshops and discussions explore anything and everything to do with our oceans, sustainability and the natural world.
@@ -286,11 +285,6 @@ class PublicEl extends React.Component { // eslint-disable-line react/prefer-sta
                 <ButtonLink href="https://education.ocean.org/oceanmatters/contact" target="_blank">Contact Us</ButtonLink>
                 <ButtonLink href="https://education.ocean.org/oceanmatters" target="_blank">Get Involved</ButtonLink>
               </div>
-              <Blockquote>
-                This event was excellent. I enjoyed the diversity of the experts and depth of their knowledge in their particular field of research and work
-                <span>Hazel, Student</span>
-              </Blockquote>
-              {graphics}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Diving" />
@@ -298,6 +292,13 @@ class PublicEl extends React.Component { // eslint-disable-line react/prefer-sta
               <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Presenting" />
             </div>
           </div>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <Blockquote>
+              This event was excellent. I enjoyed the diversity of the experts and depth of their knowledge in their particular field of research and work
+              <span>Hazel, Student</span>
+            </Blockquote>
+          </div>
+          {graphics}
           {mobileGraphics}
           <Footer />
         </div>

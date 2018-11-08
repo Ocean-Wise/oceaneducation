@@ -1,8 +1,9 @@
 #!/bin/bash -e
 
 cd ChildrenAndYouth
-yarn bundle-js
+yarn && yarn bundle-js
 cd ../Curriculum
+<<<<<<< HEAD
 yarn bundle-js
 # cd ../GCSC
 # yarn bundle-js
@@ -10,12 +11,26 @@ cd ../Mobile
 yarn bundle-js
 # cd ../Ocean
 # yarn bundle-js
+=======
+yarn && yarn bundle-js
+cd ../GCSC
+yarn && yarn bundle-js
+cd ../Mobile
+yarn && yarn bundle-js
+cd ../Ocean
+yarn && yarn bundle-js
+>>>>>>> 95ca854906ca06233fba489d4f5da1d652ac0558
 cd ../Online
-yarn bundle-js
+yarn && yarn bundle-js
 cd ../Public
+<<<<<<< HEAD
 yarn bundle-js
 cd ../Service
 yarn bundle-js
+=======
+yarn && yarn bundle-js
+cd ..
+>>>>>>> 95ca854906ca06233fba489d4f5da1d652ac0558
 
 #mkdir builds
 cp ChildrenAndYouth/builds/ChildrenAndYouth.min.js builds

@@ -178,9 +178,8 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
     return (
       <MuiThemeProvider>
         <div>
-          <Container height={containerHeight}>
-            <Img id="hero-image" src={HEROIMG} alt="Ocean wise" />
-            <Logo src={source} alt="Logo" />
+          <Container height={containerHeight} image={HEROIMG}>
+            <a href="https://ocean.org/" style={{ position: 'absolute', zIndex: 50, top: 15, left: window.innerWidth > 812 ? 20 : '-27px' }}><Logo src={source} alt="Logo" /></a>
             {Nav}
             <Header>
               <H1>{TITLE}</H1>
@@ -267,7 +266,7 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
 
           </Drawer>
           <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
-            <div>
+            <div style={{ marginRight: window.innerWidth > 768 ? 50 : 0 }}>
               <p>Curriculum Programs deliver multi-sensory workshops to students of all ages. We engage over 20.000 students per year in inquiry-based learning, led by a group of professional educators and biologists.</p>
               <p>Our content connects to the Ocean Wise<sup>&reg;</sup> direct action and research initiatives and advance participants along the conservation continuum. Our programs are aligned with the British Columbia provincial curriculum.</p>
               <h4 style={{ textTransform: 'uppercase', color: '#39395a' }}>They include:</h4>
@@ -280,11 +279,6 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
               <p>
                 <ButtonLink href="http://www.vanaqua.org/learn/summer-programs/coastal-connections" target="_blank">Coastal Ecosystems</ButtonLink><br /> These are outdoor, hands-on introduction to the skills and tools that marine scientists use on a daily basis. Students explore how scientific investigation can play a major role in preserving marine life, and how our actions have an impact on the world around us.
               </p>
-              <Blockquote>
-                We are starting inquire projects next week that study our global impact... particularly the ocean. And it all started from that field trip to the Aquarium!
-                <span>Teacher, Maillard Middle School</span>
-              </Blockquote>
-              {graphics}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Exploring" />
@@ -292,6 +286,13 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
               <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Investigating" />
             </div>
           </div>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <Blockquote>
+              We are starting inquiry projects next week that study our global impact... particularly the ocean. And it all started from that field trip to the Aquarium!
+              <span>Teacher, Maillard Middle School</span>
+            </Blockquote>
+          </div>
+          {graphics}
           {mobileGraphics}
           <Footer />
         </div>
