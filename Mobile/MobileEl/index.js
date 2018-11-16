@@ -33,6 +33,9 @@ import Thumbnail from './Thumbnail';
 import VidButton from './VidButton';
 import playIcon from './play.svg';
 import ButtonLink from './ButtonLink';
+import ItemGrid from '../ItemGrid';
+import Quote from '../Quote';
+import ImpactGraphics from '../ImpactGraphics';
 
 import G1 from './graphics/1.png';
 import G2 from './graphics/2.png';
@@ -41,6 +44,8 @@ import G4 from './graphics/4.png';
 import G5 from './graphics/5.png';
 import G6 from './graphics/6.png';
 import G7 from './graphics/7.png';
+
+const graphics = [G1, G2, G3, G4, G5, G6, G7];
 
 const TITLE = 'Mobile Programs';
 const HEROIMG = 'https://ocean.org/wp-content/uploads/MP-00.jpg';
@@ -143,48 +148,60 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
       exitRight = 15;
     }
 
-    const graphics = this.state.mobileGraphics ? '' : (
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G1} alt="Students" style={{ width: '410px', height: '150px', marginTop: 10 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G2} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G3} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G4} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G6} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G7} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-      </div>
-    );
-
-    const mobileGraphics = this.state.mobileGraphics ? (
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G1} alt="Students" style={{ width: '410px', height: '150px', marginTop: 10 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G2} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G3} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G4} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G6} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G7} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-      </div>
-    ) : '';
-
     const containerHeight = document.getElementById('hero-image') === null ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500) === 0 ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500);
 
     const flexDir = this.state.mobile ? 'column' : 'row';
     const imageWidth = this.state.mobile ? '100%' : '350px';
+
+    const school = (
+      <span>
+        <img src={IMG2} alt="Seeing" />
+        <h3>Schools</h3>
+        <p>Programs for K-12, satisfy a wido range of learning outcomes. We strive to create a lasting connection to our oceans and aquatic habitats by encouraging direct conservation action.</p>
+      </span>
+    );
+
+    const camp = (
+      <span>
+        <img src={IMG1} alt="Youth Camps" />
+        <h3>Youth Camps</h3>
+        <p>Delivered at your location, these programs are designed to inspire future generations of ocean champions who understand more about our oceans and how to protect its precious life.</p>
+      </span>
+    );
+
+    const community = (
+      <span>
+        <img src={IMG3} alt="Community Events" />
+        <h3>Community Events</h3>
+        <p>We provide a memorable, unique and captivating experience at festivals and events through highly interactive, direct conversations.</p>
+        <p><a href="https://education.ocean.org/mobile" target="_blank">Find an upcoming event in your area.</a></p>
+      </span>
+    );
+
+    const items = [school, camp, community];
+
+    const quote = {
+      q: "Small groups and well-trained, positive, passionate staff make this an amazing, in-school field trip.",
+      attr: "Teacher, New Westminster"
+    };
+
+    const Content = (
+      <div style={{ flexGrow: 1, margin: '0 auto', fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
+        <div style={{ maxWidth: 690, padding: '0 30px', margin: '0 auto' }}>
+          <h1>Mobile Programs</h1>
+          <p>Mobile Programs is the traveling education stream of Ocean Wise<sup>&reg;</sup>. We bring ocean education to schools, youth groups, and communities coast to coast. To date we have engaged over 625,000 students, youth and community members.</p>
+          <p>Programs feature live animals, marine artifacts and hands-on interactive activities designed to encourage stewardshup of our oceans and waterways.<br />Our educators deliver expert level, multi-sensory aquatic programs, based on the Ocean Literacy Framework.</p>
+        </div>
+        <ItemGrid items={items} width={this.state.width} />
+        <div style={{ height: 1, maxWidth: 1110, backgroundColor: '#D8D8D8', margin: '0 auto 30px' }} />
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', padding: '0 25px' }}>
+          <ButtonLink href="http://www.vanaqua.org/learn/outreach/aquavan" target="_blank" style={{ marginRight: 20 }}>Learn More</ButtonLink>
+          <p>Or book a mobile program for your school or community by contacting us at <a href="tel:+16046593488">604-659-3488</a> or <a href="mailto:mobile@ocean.org">mobile@ocean.org</a></p>
+        </div>
+        <Quote q={quote.q} attr={quote.attr} />
+        <ImpactGraphics graphics={graphics} title={'Mobile Programs'} width={this.state.width} />
+      </div>
+    );
 
     return (
       <MuiThemeProvider>
@@ -192,9 +209,10 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
           <Container height={containerHeight} image={HEROIMG}>
             <a href="https://ocean.org/" style={{ position: 'absolute', zIndex: 50, top: 15, left: window.innerWidth > 812 ? 20 : '-27px' }}><Logo src={source} alt="Logo" /></a>
             {Nav}
-            <Header>
-              <H1>{TITLE}</H1>
-            </Header>
+            <ModalVideo channel="youtube" isOpen={this.state.vidOpen} videoId="BktBaRylQfc" onClose={this.toggleModal} />
+            <VidButton onClick={this.toggleModal}>
+              <img src={playIcon} alt="Play" width={18} style={{ marginLeft: 5 }} />
+            </VidButton>
           </Container>
           <Drawer
             openSecondary
@@ -276,43 +294,7 @@ class MobileEl extends React.Component { // eslint-disable-line react/prefer-sta
             </Ul>
 
           </Drawer>
-          <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
-            <div style={{ marginRight: window.innerWidth > 768 ? 50 : 0 }}>
-              <p>Mobile Programs is the traveling education stream of Ocean Wise<sup>&reg;</sup>. We bring ocean education to schools, youth groups, and communities coast to coast. To date we have engaged over 625,000 students, youth and community members.</p>
-              <p>Programs feature live animals, marine artifacts and hands-on interactive activities designed to encourage stewardshup of our oceans and waterways.<br />Our educators deliver expert level, multi-sensory aquatic programs, based on the Ocean Literacy Framework.</p>
-              <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Schools</span> | Programs for K-12, satisfy a wido range of learning outcomes. We strive to create a lasting connection to our oceans and aquatic habitats by encouraging direct conservation action.
-              </p>
-              <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Youth Camps</span> | Delivered at your location, these programs are designed to inspire future generations of ocean champions who understand more about our oceans and how to protect its precious life.
-              </p>
-              <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}><a href="https://education.ocean.org/mobile">Community Events</a></span> | We provide a memorable, unique and captivating experience at festivals and events through highly interactive, direct conversations.
-              </p>
-              <p><b>We bring the ocean to you</b> with logistical ease and provide a memorable, unique and engaging experience for all ages.</p>
-              <p><b>For information on how to get involved email</b> <a href="mailto:mobile@ocean.org">mobile@ocean.org</a></p>
-              <p><ButtonLink href="http://www.vanaqua.org/learn/outreach/aquavan" target="_blank">Book Now</ButtonLink></p>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <ModalVideo channel="youtube" isOpen={this.state.vidOpen} videoId="BktBaRylQfc" onClose={this.toggleModal} />
-              <Thumbnail onClick={this.toggleModal}>
-                <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Learning" />
-                <VidButton>
-                  <img src={playIcon} alt="Play" width={18} style={{ marginLeft: 5 }} />
-                </VidButton>
-              </Thumbnail>
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG2} alt="Seeing" />
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Community" />
-            </div>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <Blockquote>
-              Small groups and well-trained, positive, passionate staff make this an amazing, in-school field trip.
-              <span>Teacher, New Westminster</span>
-            </Blockquote>
-          </div>
-          {graphics}
-          {mobileGraphics}
+          {Content}
           <Footer />
         </div>
       </MuiThemeProvider>

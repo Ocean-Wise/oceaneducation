@@ -1,1 +1,0 @@
-https://medium.com/@sevenleaps/using-react-components-in-non-react-websites-12fb7d71b63f

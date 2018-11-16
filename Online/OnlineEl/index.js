@@ -29,6 +29,9 @@ import Img from './Img';
 import Logo from './Logo';
 import Blockquote from './Blockquote';
 import ButtonLink from './ButtonLink';
+import ItemGrid from '../ItemGrid';
+import Quote from '../Quote';
+import ImpactGraphics from '../ImpactGraphics';
 
 import G1 from './graphics/1.png';
 import G2 from './graphics/2.png';
@@ -37,6 +40,8 @@ import G4 from './graphics/4.png';
 import G5 from './graphics/5.png';
 import G6 from './graphics/6.png';
 import G7 from './graphics/7.png';
+
+const graphics = [G1, G2, G3, G4, G5, G6, G7];
 
 const TITLE = 'Online Learning';
 const HEROIMG = 'https://ocean.org/wp-content/uploads/OL-00.jpg';
@@ -132,48 +137,57 @@ class OnlineEl extends React.Component { // eslint-disable-line react/prefer-sta
       exitRight = 15;
     }
 
-    const graphics = this.state.mobileGraphics ? '' : (
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G1} alt="Students" style={{ width: '410px', height: '150px', marginTop: 10 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G2} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G3} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G4} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G6} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G7} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-      </div>
-    );
-
-    const mobileGraphics = this.state.mobileGraphics ? (
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G1} alt="Students" style={{ width: '410px', height: '150px', marginTop: 10 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G2} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G3} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G4} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G6} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G7} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-      </div>
-    ) : '';
-
     const containerHeight = document.getElementById('hero-image') === null ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500) === 0 ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500);
 
     const flexDir = this.state.mobile ? 'column' : 'row';
-    const imageWidth = this.state.mobile ? '100%' : '350px';
+
+    const learn = (
+      <span>
+        <img src={IMG1} alt="Conferencing" />
+        <h3>Multilingual Learning Platforms</h3>
+        <p>Web resources, quizzes, videos and badges designed to support educators and help develop an understanding of how humans impact the ocean and how the ocean influences us. Available for elementary, middle and secondary schools.</p>
+      </span>
+    );
+
+    const social = (
+      <span>
+        <img src={IMG3} alt="Teaching" />
+        <h3>Social Learning</h3>
+        <p>Our video conferencing and online portals provide a platform for global student conversations on conservation of ocean and aquatic envirenments. Learning from and with each other, we create a forum for meaningful discussion and dialogue.</p>
+      </span>
+    );
+
+    const virtual = (
+      <span>
+        <img src={IMG2} alt="Streaming" />
+        <h3>Virtual Visits</h3>
+        <p>These video conferences enable student-driven experiences with aquarium habitats, live animals, visual props and specimen dissections.</p>
+      </span>
+    );
+
+    const items = [learn, social, virtual];
+
+    const quote = {
+      q: "It was fascinating and I could see that the kids were enthralled. I haven't seen a class yet so engaged and inquisitive.",
+      attr: "Connected North Participant"
+    };
+
+    const Content = (
+      <div style={{ flexGrow: 1, margin: '0 auto', fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
+        <div style={{ maxWidth: 690, padding: '0 30px', margin: '0 auto' }}>
+          <h1>Online Learning</h1>
+          <p>Online Learning is an interactive environment that furthers understanding and connections to the ocean at <a href="http://education.ocean.org/">education.ocean.org</a>. We engage thousands of individuals, helping participants understand ocean literacy by integrating digital resources and user generated content within carefully structured curriculum. The program creates opportunities for students and educators to learn in an authentic, multilingual, social context with their peers throughout the digital world.</p>
+          <p>Program content connects to Ocean Wise<sup>&reg;</sup> direct action and research initiatives and advances participants along the conservation continuum.</p>
+        </div>
+        <ItemGrid items={items} width={this.state.width} />
+        <div style={{ height: 1, maxWidth: 1110, backgroundColor: '#D8D8D8', margin: '0 auto 30px' }} />
+          <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', padding: '0 25px' }}>
+            <ButtonLink href="mailto:onlinelearning@ocean.org" target="_blank" style={{ marginRight: 20 }}>Book Now</ButtonLink>
+          </div>
+          <Quote q={quote.q} attr={quote.attr} />
+          <ImpactGraphics graphics={graphics} title={'Online Learning'} width={this.state.width} />
+      </div>
+    );
 
     return (
       <MuiThemeProvider>
@@ -181,9 +195,6 @@ class OnlineEl extends React.Component { // eslint-disable-line react/prefer-sta
           <Container height={containerHeight} image={HEROIMG}>
             <a href="https://ocean.org/" style={{ position: 'absolute', zIndex: 50, top: 15, left: window.innerWidth > 812 ? 20 : '-27px' }}><Logo src={source} alt="Logo" /></a>
             {Nav}
-            <Header>
-              <H1>{TITLE}</H1>
-            </Header>
           </Container>
           <Drawer
             openSecondary
@@ -265,38 +276,7 @@ class OnlineEl extends React.Component { // eslint-disable-line react/prefer-sta
             </Ul>
 
           </Drawer>
-          <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
-            <div  style={{ marginRight: window.innerWidth > 768 ? 50 : 0 }}>
-              <p>Online Learning is an interactive environment that furthers understanding and connections to the ocean at <a href="http://education.ocean.org/">education.ocean.org</a>. We engage thousands of individuals, helping participants understand ocean literacy by integrating digital resources and user generated content within carefully structured curriculum. The program creates opportunities for students and educators to learn in an authentic, multilingual, social context with their peers throughout the digital world.</p>
-            <p> Program content connects to Ocean Wise<sup>&reg;</sup> direct action and research initiatives and advances participants along the conservation continuum.</p>
-              <h4 style={{ textTransform: 'uppercase', color: '#39395a' }}>They include:</h4>
-              <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Multilingual Learning Platforms</span> | Web resources, quizzes, videos and badges designed to support educators and help develop an understanding of how humans impact the ocean and how the ocean influences us. Available for elementary, middle and secondary schools.
-              </p>
-              <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Social Learning</span> | Our video conferencing and online portals provide a platform for global student conversations on conservation of ocean and aquatic envirenments. Learning from and with each other, we create a forum for meaningful discussion and dialogue.
-              </p>
-              <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Virtual Visits</span> | These video conferences enable student-driven experiences with aquarium habitats, live animals, visual props and specimen dissections.
-              </p>
-              <p>
-                <ButtonLink href="mailto:onlinelearning@ocean.org" target="_blank">Book Now</ButtonLink>
-              </p>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Conferencing" />
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG2} alt="Streaming" />
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Teaching" />
-            </div>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <Blockquote>
-              It was fascinating and I could see that the kids were enthralled. I haven't seen a class yet so engaged and inquisitive.
-              <span>Connected North Participant</span>
-            </Blockquote>
-          </div>
-          {graphics}
-          {mobileGraphics}
+          {Content}
           <Footer />
         </div>
       </MuiThemeProvider>

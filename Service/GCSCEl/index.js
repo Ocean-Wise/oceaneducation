@@ -33,6 +33,9 @@ import Blockquote from './Blockquote';
 import Thumbnail from './Thumbnail';
 import VidButton from './VidButton';
 import playIcon from './play.svg';
+import ItemGrid from '../ItemGrid';
+import Quote from '../Quote';
+import ImpactGraphics from '../ImpactGraphics';
 
 import G1 from './graphics/1.png';
 import G2 from './graphics/2.png';
@@ -41,6 +44,8 @@ import G4 from './graphics/4.png';
 import G5 from './graphics/5.png';
 import G6 from './graphics/6.png';
 import G7 from './graphics/7.png';
+
+const graphics = [G1, G2, G3, G4, G5, G6, G7];
 
 const TITLE = 'Great Canadian Shoreline Cleanup';
 const HEROIMG = 'https://ocean.org/wp-content/uploads/GCSC-00.jpg';
@@ -143,50 +148,58 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
       exitRight = 15;
     }
 
-    const graphics = this.state.mobileGraphics ? '' : (
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G1} alt="Students" style={{ width: '410px', height: '150px', marginTop: 10 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G2} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G3} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G4} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G6} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G7} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-      </div>
-    );
-
-    const mobileGraphics = this.state.mobileGraphics ? (
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G1} alt="Students" style={{ width: '410px', height: '150px', marginTop: 10 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G2} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G3} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G4} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G6} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G7} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-      </div>
-    ) : '';
-
     const containerHeight = document.getElementById('hero-image') === null ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500) === 0 ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500);
 
     const flexDir = this.state.mobile ? 'column' : 'row';
     const imageWidth = this.state.mobile ? '100%' : '350px';
+
+    const school = (
+      <span>
+        <img src={IMG1} alt="Schools & Youth" />
+        <h3>Schools & Youth</h3>
+        <p>A service learning opportunity for students of all ages, to build a connection to nature and play an important role in ocean health through citizen science. Resources to extend learning beyond the shoreline are provided to support teachers and group leaders.</p>
+      </span>
+    );
+
+    const work = (
+      <span>
+        <img src={IMG2} alt="Workplace" />
+        <h3>Workplace</h3>
+        <p>This program supports corporate social responsibility (CSR) and employee engagement. Organizations looking for meaningful activities in their community can lead cleanups that their teams, customers and partners can participate in.</p>
+      </span>
+    );
+
+    const community = (
+      <span>
+        <img src={IMG3} alt="Community" />
+        <h3>Community</h3>
+        <p>We support volunteers in every province and territory all year long and anywhere that land connects to water, with the goal of keeping Canadian shorelines healthy and clean.</p>
+      </span>
+    );
+
+    const items = [school, work, community];
+
+    const quote = {
+      q: "It was such an fun and innovative way to do a park cleanup while participating in a citizen science project and learning about pollution in our water ways.",
+      attr: "Holly, Site Coordinator, St. John's Newfoundland and Labrador"
+    };
+
+    const Content = (
+      <div style={{ flexGrow: 1, margin: '0 auto', fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
+        <div style={{ maxWidth: 690, padding: '0 30px', margin: '0 auto' }}>
+          <h1 style={{ fontSize: '3em', marginBottom: 0 }}>Shoreline Cleanup</h1>
+          <p style={{ color: '#535353' }}>The Great Canadian Shoreline Cleanup<sup>&reg;</sup> is a joint program of Ocean Wise<sup>&reg;</sup> and WWF-Canada that aims to build an understanding of ocean literacy by engaging Canadians to care for their shorelines. As one of Canada's largest volunteer-powered conservation programs, we engage with tens of thousands of people including:</p>
+        </div>
+        <ItemGrid items={items} width={this.state.width} />
+        <div style={{ height: 1, maxWidth: 1110, backgroundColor: '#D8D8D8', margin: '30px auto' }} />
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', padding: '0 25px' }}>
+          <ButtonLink href="https://education.ocean.org/shoreline" target="_blank" style={{ marginRight: 20 }}>Find Out More</ButtonLink>
+          <p>Or join a cleanup in your neighbourhood at <a href="https://shorelinecleanup.ca/" target="_blank">ShorelineCleanup.ca</a></p>
+        </div>
+        <Quote q={quote.q} attr={quote.attr} />
+        <ImpactGraphics graphics={graphics} title={'Shoreline Cleanup'} width={this.state.width} />
+      </div>
+    );
 
     return (
       <MuiThemeProvider>
@@ -195,9 +208,10 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
             <Img id="hero-image" src={HEROIMG} alt="Ocean wise" />
             <Logo src={source} alt="Logo" />
             {Nav}
-            <Header>
-              <H1>{TITLE}</H1>
-            </Header>
+            <ModalVideo channel="youtube" isOpen={this.state.vidOpen} videoId="7ykQq_KwwcI" onClose={this.toggleModal} />
+            <VidButton onClick={this.toggleModal}>
+              <img src={playIcon} alt="Play" width={18} style={{ marginLeft: 5 }} />
+            </VidButton>
           </Container>
           <Drawer
             openSecondary
@@ -278,39 +292,7 @@ class GCSCEl extends React.Component { // eslint-disable-line react/prefer-state
               <Li><A href="https://ocean.org/privacy-policy/">Privacy</A></Li>
             </Ul>
           </Drawer>
-          <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
-            <div>
-              <ButtonLink href="https://education.ocean.org/pages/GCSC.html">Go Back</ButtonLink>
-              <p style={{ paddingRight: 20 }}>The Great Canadian Shoreline Cleanup<sup>&reg;</sup> is a joint program of Ocean Wise<sup>&reg;</sup> and WWF-Canada that aims to build an understanding of ocean literacy by engaging Canadians to care for their shorelines. As one of Canada's largest volunteer-powered conservation programs, we engage with tens of thousands of people including:</p>
-              <p style={{ paddingRight: 20 }}>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Schools & Youth</span> | A service learning opportunity for students of all ages, to build a connection to nature and play an important role in ocean health through citizen science. Resources to extend learning beyond the shoreline are provided to support teachers and group leaders.
-              </p>
-              <p style={{ paddingRight: 20 }}>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Workplace</span> | This program supports corporate social responsibility (CSR) and employee engagement. Organizations looking for meaningful activities in their community can lead cleanups that their teams, customers and partners can participate in.
-              </p>
-              <p style={{ paddingRight: 20 }}>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Community</span> | We support volunteers in every province and territory all year long and anywhere that land connects to water, with the goal of keeping Canadian shorelines healthy and clean.
-              </p>
-              <p><ButtonLink href="https://education.ocean.org/shoreline" target="_blank">Visit Shoreline Cleanup Community</ButtonLink></p>
-              <Blockquote>
-                It was such an fun and innovative way to do a park cleanup while participating in a citizen science project and learning about pollution in our water ways.
-                <span>Holly, Site Coordinator, St. John's Newfoundland and Labrador</span>
-              </Blockquote>
-              {graphics}
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <ModalVideo channel="youtube" isOpen={this.state.vidOpen} videoId="7ykQq_KwwcI" onClose={this.toggleModal} />
-              <Thumbnail onClick={this.toggleModal}>
-                <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Garbage" />
-                <VidButton>
-                  <img src={playIcon} alt="Play" width={18} style={{ marginLeft: 5 }} />
-                </VidButton>
-              </Thumbnail>
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG2} alt="Plastic" />
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Teamwork" />
-            </div>
-          </div>
-          {mobileGraphics}
+          {Content}
           <Footer />
         </div>
       </MuiThemeProvider>

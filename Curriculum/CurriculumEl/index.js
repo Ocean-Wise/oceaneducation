@@ -29,6 +29,9 @@ import NavItem from './NavItem';
 import Img from './Img';
 import Logo from './Logo';
 import Blockquote from './Blockquote';
+import ItemGrid from '../ItemGrid';
+import Quote from '../Quote';
+import ImpactGraphics from '../ImpactGraphics';
 
 import STUDENT from './graphics/1.png';
 import PROGRAMS from './graphics/2.png';
@@ -37,6 +40,8 @@ import SUPPORTING from './graphics/4.png';
 import EXP from './graphics/5.png';
 import BENNET from './graphics/6.png';
 import FRENCH from './graphics/7.png';
+
+const graphics = [STUDENT, PROGRAMS, CONNECTED, SUPPORTING, EXP, BENNET, FRENCH];
 
 const TITLE = 'Curriculum Programs';
 const HEROIMG = 'https://ocean.org/wp-content/uploads/CP-00.jpg';
@@ -132,48 +137,57 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
       exitRight = 15;
     }
 
-    const graphics = this.state.mobileGraphics ? '' : (
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={STUDENT} alt="Students" style={{ width: '410px', height: '150px' }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={CONNECTED} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={PROGRAMS} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={EXP} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={SUPPORTING} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={BENNET} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={FRENCH} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-      </div>
-    );
-
-    const mobileGraphics = this.state.mobileGraphics ? (
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={STUDENT} alt="Students" style={{ width: '410px', height: '150px' }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={CONNECTED} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={PROGRAMS} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={EXP} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={SUPPORTING} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={BENNET} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={FRENCH} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-      </div>
-    ) : '';
-
     const containerHeight = document.getElementById('hero-image') === null ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500) === 0 ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500);
 
     const flexDir = this.state.mobile ? 'column' : 'row';
     const imageWidth = this.state.mobile ? '100%' : '350px';
+
+    const lab = (
+      <span>
+        <img src={IMG2} alt="Learning" />
+        <h3>Aquaquest Learning Labs and Classrooms</h3>
+        <p>These workshops advance ocean literacy with students. They create an appreciation of ocean health, as well as personal connections with marine life and their ecosystems.</p>
+        <ButtonLink href="http://www.vanaqua.org/learn/schools/programs/4-7/wetlab-community" target="_blank">Book Now</ButtonLink>
+      </span>
+    );
+
+    const vaExp = (
+      <span>
+        <img src={IMG1} alt="Investigating" />
+        <h3>Vancouver Aquarium Experience</h3>
+        <p>Guided tours through the aquarium connect students to global ecosystems and establish a sense of place in their communities.</p>
+      <ButtonLink href="http://www.vanaqua.org/learn/schools" target="_blank">Book Now</ButtonLink>
+      </span>
+    );
+
+    const coastal = (
+      <span>
+        <img src={IMG3} alt="Exploring" />
+        <h3>Coastal Ecosystems</h3>
+        <p>These are outdoor, hands-on introduction to the skills and tools that marine scientists use on a daily basis. Students explore how scientific investigation can play a major role in preserving marine life, and how our actions have an impact on the world around us.</p>
+        <ButtonLink href="http://www.vanaqua.org/learn/summer-programs/coastal-connections" target="_blank">Book Now</ButtonLink>
+      </span>
+    );
+
+    const items = [lab, vaExp, coastal];
+
+    const quote = {
+      q: "We are starting inquiry projects next week that study our global impact... particularly the ocean. And it all started from that field trip to the Aquarium!",
+      attr: "Teacher, Maillard Middle School"
+    };
+
+    const Content = (
+      <div style={{ flexGrow: 1, margin: '0 auto', fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
+        <div style={{ maxWidth: 690, padding: '0 30px', margin: '0 auto' }}>
+          <h1 style={{ fontSize: '3em', marginBottom: 0 }}>Curriculum Programs</h1>
+          <p style={{ color: '#535353' }}>Curriculum Programs deliver multi-sensory workshops to students of all ages. We engage over 20.000 students per year in inquiry-based learning, led by a group of professional educators and biologists.</p>
+          <p style={{ color: '#535353' }}>Our content connects to the Ocean Wise<sup>&reg;</sup> direct action and research initiatives and advance participants along the conservation continuum. Our programs are aligned with the British Columbia provincial curriculum.</p>
+        </div>
+        <ItemGrid items={items} width={this.state.width} />
+        <Quote q={quote.q} attr={quote.attr} />
+        <ImpactGraphics graphics={graphics} title={'Curriculum Programs'} width={this.state.width} />
+      </div>
+    );
 
     return (
       <MuiThemeProvider>
@@ -181,9 +195,6 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
           <Container height={containerHeight} image={HEROIMG}>
             <a href="https://ocean.org/" style={{ position: 'absolute', zIndex: 50, top: 15, left: window.innerWidth > 812 ? 20 : '-27px' }}><Logo src={source} alt="Logo" /></a>
             {Nav}
-            <Header>
-              <H1>{TITLE}</H1>
-            </Header>
           </Container>
           <Drawer
             openSecondary
@@ -265,35 +276,7 @@ class CurriculumEl extends React.Component { // eslint-disable-line react/prefer
             </Ul>
 
           </Drawer>
-          <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
-            <div style={{ marginRight: window.innerWidth > 768 ? 50 : 0 }}>
-              <p>Curriculum Programs deliver multi-sensory workshops to students of all ages. We engage over 20.000 students per year in inquiry-based learning, led by a group of professional educators and biologists.</p>
-              <p>Our content connects to the Ocean Wise<sup>&reg;</sup> direct action and research initiatives and advance participants along the conservation continuum. Our programs are aligned with the British Columbia provincial curriculum.</p>
-              <h4 style={{ textTransform: 'uppercase', color: '#39395a' }}>They include:</h4>
-              <p>
-                <ButtonLink href="http://www.vanaqua.org/learn/schools/programs/4-7/wetlab-community" target="_blank">Aquaquest Learning Labs and Classrooms</ButtonLink><br /> These workshops advance ocean literacy with students. They create an appreciation of ocean health, as well as personal connections with marine life and their ecosystems.
-              </p>
-              <p>
-                <ButtonLink href="http://www.vanaqua.org/learn/schools" target="_blank">Vancouver Aquarium Experience</ButtonLink><br /> Guided tours through the aquarium connect students to global ecosystems and establish a sense of place in their communities.
-              </p>
-              <p>
-                <ButtonLink href="http://www.vanaqua.org/learn/summer-programs/coastal-connections" target="_blank">Coastal Ecosystems</ButtonLink><br /> These are outdoor, hands-on introduction to the skills and tools that marine scientists use on a daily basis. Students explore how scientific investigation can play a major role in preserving marine life, and how our actions have an impact on the world around us.
-              </p>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Exploring" />
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG2} alt="Learning" />
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Investigating" />
-            </div>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <Blockquote>
-              We are starting inquiry projects next week that study our global impact... particularly the ocean. And it all started from that field trip to the Aquarium!
-              <span>Teacher, Maillard Middle School</span>
-            </Blockquote>
-          </div>
-          {graphics}
-          {mobileGraphics}
+          {Content}
           <Footer />
         </div>
       </MuiThemeProvider>

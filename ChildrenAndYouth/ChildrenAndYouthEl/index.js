@@ -11,6 +11,7 @@ import Drawer from 'material-ui/Drawer';
 import Clear from 'material-ui/svg-icons/content/clear';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import grey50 from 'material-ui/styles/colors';
+import Grid from '@material-ui/core/Grid';
 
 import Header from './Header';
 import Footer from '../Footer';
@@ -29,6 +30,9 @@ import NavItem from './NavItem';
 import Img from './Img';
 import Logo from './Logo';
 import Blockquote from './Blockquote';
+import ItemGrid from '../ItemGrid';
+import Quote from '../Quote';
+import ImpactGraphics from '../ImpactGraphics';
 
 import STUDENT from './graphics/1.png';
 import CLUB from './graphics/2.png';
@@ -38,6 +42,8 @@ import EDU from './graphics/5.png';
 import EXP from './graphics/6.png';
 import PARTY from './graphics/7.png';
 import HEROIMG from './graphics/hero.jpg';
+
+const graphics = [STUDENT, CLUB, CAMP, SLEEP, EDU, EXP, PARTY];
 
 const TITLE = 'Children and Youth';
 // const HEROIMG = 'https://ocean.org/wp-content/uploads/CAMP-1.jpg';
@@ -133,48 +139,67 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
       exitRight = 15;
     }
 
-    const graphics = this.state.mobileGraphics ? '' : (
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={STUDENT} alt="Students" style={{ width: '370px', height: '150px' }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={CAMP} alt="Camps" style={{ width: '300px', height: '150px', marginTop: 20 }} />
-          <img src={CLUB} alt="Clubs" style={{ width: '300px', height: '150px', marginTop: 20 }} />
-          <img src={EDU} alt="Education" style={{ width: '300px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={SLEEP} alt="Sleepovers" style={{ width: '300px', height: '150px', marginTop: 20 }} />
-          <img src={PARTY} alt="Parties" style={{ width: '300px', height: '150px', marginTop: 20 }} />
-          <img src={EXP} alt="Placements" style={{ width: '300px', height: '150px', marginTop: 20 }} />
-        </div>
-      </div>
-    );
-
-    const mobileGraphics = this.state.mobileGraphics ? (
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={STUDENT} alt="Students" style={{ width: '370px', height: '150px' }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={CAMP} alt="Camps" style={{ width: '300px', height: '150px', marginTop: 20 }} />
-          <img src={CLUB} alt="Clubs" style={{ width: '300px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={EDU} alt="Education" style={{ width: '300px', height: '150px', marginTop: 20 }} />
-          <img src={SLEEP} alt="Sleepovers" style={{ width: '300px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={PARTY} alt="Parties" style={{ width: '300px', height: '150px', marginTop: 20 }} />
-          <img src={EXP} alt="Placements" style={{ width: '300px', height: '150px', marginTop: 20 }} />
-        </div>
-      </div>
-    ) : '';
-
     const containerHeight = document.getElementById('hero-image') === null ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500) === 0 ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500);
 
     const flexDir = this.state.mobile ? 'column' : 'row';
-    const imageWidth = this.state.mobile ? '100%' : '350px';
+    const imageWidth = this.state.mobile ? '100%' : '320px';
+
+    const camp = (
+      <span>
+        <img src={IMG3} alt="Camps & Clubs" />
+        <h3>Camps & Clubs</h3>
+        <p>Programs embrace nature play, science, art and hands-on experiences to foster a love of our natural world.</p>
+        <ButtonLink href="http://www.vanaqua.org/learn/camps" target="_blank">Book Now</ButtonLink>
+      </span>
+    );
+
+    const sleep = (
+      <span>
+        <img src={IMG2} alt="Sleepovers" />
+        <h3>Sleepovers</h3>
+        <p>Participants spend the night at the Vancouver Aquarium and visit the Wet Lab to explore the three corners of the world.</p>
+        <ButtonLink href="http://www.vanaqua.org/experience/activities/sleepovers" target="_blank">Book Now</ButtonLink>
+      </span>
+    );
+
+    const birthday = (
+      <span>
+        <img src="https://via.placeholder.com/150" alt="Birthday Parties" />
+        <h3>Birthday Parties</h3>
+        <p>Participants tour the Aquarium with an experienced educator and engage in a multisensory exploration of the BC intertidal zone in our Wet Lab.</p>
+        <ButtonLink href="http://www.vanaqua.org/plan/birthdays" target="_blank">Book Now</ButtonLink>
+      </span>
+    );
+
+    const youth = (
+      <span>
+        <img src={IMG1} alt="Youth Leadership" />
+        <h3>Youth Leadership</h3>
+        <p>Participants are immersed in conservation and sustainability workshops led by our educators, experts and scientists. We alse mentor the next generation of ocean champions through work experience volunteer placements each year.</p>
+        <ButtonLink href="https://education.ocean.org/youth" target="_blank">Learn More</ButtonLink>
+      </span>
+    );
+
+    const items = [camp, sleep, birthday, youth];
+
+    const quote = {
+      q: "AquaCamps are the best because we learn all about marine life and how to take care of the ocean. I learned that the sea turtle only eats green food like broccoli, spinach and kale. The camp leaders always have exciting games like sea star tag and camouflage. AquaCamps are a lot of fun!",
+      attr: "Cole, Age 6 - AquaCamper since 2013"
+    };
+
+    // Padding on mobile needs to be lessened
+    const Content = (
+      <div style={{ flexGrow: 1, margin: '0 auto', fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
+        <div style={{ maxWidth: 690, padding: '0 30px', margin: '0 auto' }}>
+          <h1 style={{ fontSize: '3em', marginBottom: 0 }}>Children and Youth Programs</h1>
+          <p style={{ color: '#535353' }}>Children and Youth Programs are immersive ocean education experiences that foster love for our oceans through fun and interactive activities. The team engages over 9,000 children, youth and families in marine science annually.</p>
+          <p style={{ color: '#535353' }}>Our team of educators are passionate about inspiring the next generation of young leaders. Our approach is supported by the accepted social science assertions that adults develop concern for the environment based on experiences of awe and wonder as a child.</p>
+        </div>
+        <ItemGrid items={items} width={this.state.width} />
+        <Quote q={quote.q} attr={quote.attr} />
+        <ImpactGraphics graphics={graphics} title={'Children & Youth Program'} width={this.state.width} />
+      </div>
+    );
 
     return (
       <MuiThemeProvider>
@@ -182,9 +207,6 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
           <Container height={containerHeight} image={HEROIMG}>
             <a href="https://ocean.org/" style={{ position: 'absolute', zIndex: 50, top: 15, left: window.innerWidth > 812 ? 20 : '-27px' }}><Logo src={source} alt="Logo" /></a>
             {Nav}
-            <Header>
-              <H1>{TITLE}</H1>
-            </Header>
           </Container>
           <Drawer
             openSecondary
@@ -250,54 +272,20 @@ class ChildrenAndYouthEl extends React.Component { // eslint-disable-line react/
                 </a>
               </Li>
             </Ul>
-
             <MenuHeader>Get Newsletter</MenuHeader>
             <form action="https://vanaqua.createsend.com/t/r/s/urxdtd/" method="post">
               <label><span>Enter your email</span>
               <Input type="email" placeholder="Enter your email" name="cm-urxdtd-urxdtd" required="" /></label>
               <Button>Subscribe</Button>
             </form>
-
             <MenuHeader style={{ marginTop: 25 }}>© 2017 Ocean Wise</MenuHeader>
             <Ul>
               <Li><A href="https://ocean.org/media-releases/">Media</A></Li>
               <Li><A href="https://ocean.org/terms-conditions/">Terms</A></Li>
               <Li><A href="https://ocean.org/privacy-policy/">Privacy</A></Li>
             </Ul>
-
           </Drawer>
-          <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
-            <div style={{ marginRight: window.innerWidth > 768 ? 50 : 0 }}>
-              <p>Children and Youth Programs are immersive ocean education experiences that foster love for our oceans through fun and interactive activities. The team engages over 9,000 children, youth and families in marine science annually.</p>
-            <p>Our team of educators are passionate about inspiring the next generation of young leaders. Our approach is supported by the accepted social science assertions that adults develop concern for the environment based on experiences of awe and wonder as a child.</p>
-              <h4 style={{ textTransform: 'uppercase', color: '#39395a' }}>The program comprises:</h4>
-              <p>
-                <ButtonLink href="http://www.vanaqua.org/learn/camps" target="_blank">Camps & Clubs</ButtonLink> <br /> Programs embrace nature play, science, art and hands-on experiences to foster a love of our natural world.
-              </p>
-              <p>
-                <ButtonLink href="http://www.vanaqua.org/experience/activities/sleepovers" target="_blank">Sleepovers</ButtonLink> <br /> Participants spend the night at the Vancouver Aquarium and visit the Wet Lab to explore the three corners of the world.
-              </p>
-              <p>
-                <ButtonLink href="http://www.vanaqua.org/plan/birthdays" target="_blank">Birthday Parties</ButtonLink> <br /> Participants tour the Aquarium with an experienced educator and engage in a multisensory exploration of the BC intertidal zone in our Wet Lab.
-              </p>
-              <p>
-                <ButtonLink href="https://education.ocean.org/youth" target="_blank">Youth Leadership</ButtonLink> <br /> Participants are immersed in conservation and sustainability workshops led by our educators, experts and scientists. We alse mentor the next generation of ocean champions through work experience volunteer placements each year.
-              </p>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Beachcombing" />
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG2} height={260} alt="Sleepovers" />
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Canoeing" />
-            </div>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <Blockquote>
-              AquaCamps are the best because we learn all about marine life and how to take care of the ocean. I learned that the sea turtle only eats green food like broccoli, spinach and kale. The camp leaders always have exciting games like sea star tag and camouflage. AquaCamps are a lot of fun!
-              <span>Cole, Age 6 - AquaCamper since 2013</span>
-            </Blockquote>
-          </div>
-          {graphics}
-          {mobileGraphics}
+          {Content}
           <Footer />
         </div>
       </MuiThemeProvider>

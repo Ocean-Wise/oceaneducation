@@ -3,41 +3,21 @@
 cd ChildrenAndYouth
 yarn && yarn bundle-js
 cd ../Curriculum
-<<<<<<< HEAD
-yarn bundle-js
-# cd ../GCSC
-# yarn bundle-js
-cd ../Mobile
-yarn bundle-js
-# cd ../Ocean
-# yarn bundle-js
-=======
-yarn && yarn bundle-js
-cd ../GCSC
 yarn && yarn bundle-js
 cd ../Mobile
 yarn && yarn bundle-js
-cd ../Ocean
-yarn && yarn bundle-js
->>>>>>> 95ca854906ca06233fba489d4f5da1d652ac0558
 cd ../Online
 yarn && yarn bundle-js
 cd ../Public
-<<<<<<< HEAD
-yarn bundle-js
+yarn && yarn bundle-js
 cd ../Service
-yarn bundle-js
-=======
 yarn && yarn bundle-js
 cd ..
->>>>>>> 95ca854906ca06233fba489d4f5da1d652ac0558
 
 #mkdir builds
 cp ChildrenAndYouth/builds/ChildrenAndYouth.min.js builds
 cp Curriculum/builds/Curriculum.min.js builds
-# cp GCSC/builds/GCSC.min.js builds
 cp Mobile/builds/Mobile.min.js builds
-# cp Ocean/builds/Ocean.min.js builds
 cp Online/builds/Online.min.js builds
 cp Public/builds/Public.min.js builds
 cp Service/builds/GCSC.min.js builds

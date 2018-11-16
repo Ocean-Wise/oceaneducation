@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Drawer from 'material-ui/Drawer';
@@ -12,6 +13,16 @@ import Clear from 'material-ui/svg-icons/content/clear';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import grey50 from 'material-ui/styles/colors';
 import ModalVideo from 'react-modal-video';
+
+import { withStyles } from '@material-ui/core/styles';
+import Input from '@material-ui/core/Input';
+import OutlinedInput from '@material-ui/core/OutlinedInput';
+import FilledInput from '@material-ui/core/FilledInput';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItemMUI from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
 import Header from './Header';
 import Footer from '../Footer';
@@ -21,7 +32,7 @@ import Ul from './Ul';
 import Li from './Li';
 import Button from './Button';
 import ButtonLink from './ButtonLink';
-import Input from './Input';
+import InputEmail from './Input';
 import A from './A';
 import IconButton from './IconButton';
 import MenuItem from './MenuItem';
@@ -33,6 +44,8 @@ import Blockquote from './Blockquote';
 import Thumbnail from './Thumbnail';
 import VidButton from './VidButton';
 import playIcon from './play.svg';
+import ItemGrid from '../ItemGrid';
+import Quote from '../Quote';
 
 const TITLE = 'Ocean Bridge';
 const HEROIMG = 'https://ocean.org/wp-content/uploads/OB-00.jpg';
@@ -42,6 +55,22 @@ const IMG3 = 'https://ocean.org/wp-content/uploads/OB-03.jpg';
 // const POSTER = 'https://ocean.org/wp-content/uploads/OB-Poster.jpg';
 
 import '../styles/modal-video.css';
+
+const styles = theme => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    position: 'absolute',
+    right: 10,
+  },
+  formControl: {
+    margin: theme.spacing.unit,
+    minWidth: 120,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing.unit * 2,
+  },
+});
 
 function trans(en = true, val) {
   let out;
@@ -82,7 +111,7 @@ function trans(en = true, val) {
       out = en ? 'Privacy' : 'Politique de Confidentialité';
       break;
     case 'enter':
-      out = en ? 'Enter the Community' : 'Entrer dans la Communauté';
+      out = en ? 'Join the Community' : 'Entrer dans la Communauté';
       break;
     case 'intro':
       out = en ? 'Ocean Bridge connects Canadian youth from coast to coast to coast' : 'Portail Océan rapproche les jeunes canadiens d\'un océan à l\'autre';
@@ -91,7 +120,7 @@ function trans(en = true, val) {
       out = en ? 'empowering them to make a difference towards ocean conservation. Each year a national team of 40 youth (ages 18-30) form a national team engaged in co-creating and delivering service projects for their home communities and two immersive expeditions to address Ocean Health and Ocean Literacy in Canada.' : ' pour les mobiliser à avoir un impact positif sur nos océans. Chaque année, 40 jeunes (de 18 à 30 ans) formeront une équipe nationale qui réalisera des projets de service dans leurs communautés et participeront à deux expéditions immersives axées sur la santé et la connaissance des océans.';
       break;
     case 'para2':
-      out = en ? 'Ocean Bridge is comprised of 3 key elements to support youth as they adopt a culture of service for our oceans:' : 'Portail Océan comprend 3 éléments clés pour encourager les jeunes au services nos océans:';
+      out = en ? 'Ocean Bridge is comprised of three key elements to support youth as they adopt a culture of service for our oceans:' : 'Portail Océan comprend 3 éléments clés pour encourager les jeunes au services nos océans:';
       break;
     case 'community':
       out = en ? 'Community & Capacity Building' : 'Développement des communautés et des compétences';
@@ -139,7 +168,8 @@ class BridgeEl extends React.Component { // eslint-disable-line react/prefer-sta
       open: false,
       vid1Open: false,
       vid2Open: false,
-      en: true,
+      lang: 'en',
+      labelWidth: 0,
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
@@ -147,11 +177,18 @@ class BridgeEl extends React.Component { // eslint-disable-line react/prefer-sta
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
+    this.setState({
+     labelWidth: ReactDOM.findDOMNode(this.InputLabelRef).offsetWidth,
+    });
   }
 
   componentWillUnmount() {
     clearInterval(this.interval);
   }
+
+  handleChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
 
   toggleDrawer = () => {
     this.setState({ open: !this.state.open });
@@ -188,7 +225,11 @@ class BridgeEl extends React.Component { // eslint-disable-line react/prefer-sta
   }
 
   render() {
-    const { mobile, tablet, desk, en } = this.state;
+    const { mobile, tablet, desk, lang } = this.state;
+    const { classes } = this.props;
+
+    let en = true;
+    if (lang !== 'en') en = false;
 
     const source = this.state.mobile ? 'https://ocean.org/wp-content/uploads/af57071c6f37d38d5c97dbd861dffa68.svg' : 'https://ocean.org/wp-content/uploads/5429d577a15cbaa4c286951cd4e772ff.svg';
 
@@ -228,6 +269,81 @@ class BridgeEl extends React.Component { // eslint-disable-line react/prefer-sta
     const flexDir = this.state.mobile ? 'column' : 'row';
     const imageWidth = this.state.mobile ? '100%' : '350px';
 
+    const community = (
+      <span>
+        <img src={IMG3} alt="Community & Capacity Building" />
+        <h3>{trans(en, 'community')}</h3>
+        <p>{trans(en, 'communityPara')}</p>
+      </span>
+    );
+
+    const health = (
+      <span>
+        <img src={IMG2} alt="Ocean Health Extended Service" />
+        <h3>{trans(en, 'oceanHealth')}</h3>
+        <p>{trans(en, 'oceanHealthPara')}</p>
+      </span>
+    );
+
+    const literacy = (
+      <span>
+        <img src={IMG1} alt="Ocean Literacy Extended Service" />
+        <h3>{trans(en, 'oceanLiteracy')}</h3>
+        <p>{trans(en, 'oceanLiteracyPara')}</p>
+      </span>
+    );
+
+    const items = [community, health, literacy];
+
+    const quote = {
+      q: "Visiting Haida Gwaii with Ocean Bridge opened my eyes to a new world of service learning opportunities... I have never met so many individuals in one place with whon I've shored so many interests, and I am so thankful to have their support and be motivated by their passions to persue further education in the environmental field and focus more time on implementing service projects in my community.",
+      attr: "Hannah Kosick, Ocean Bridge 2018"
+    };
+
+    const Content = (
+      <div style={{ flexGrow: 1, margin: '0 auto', fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
+        <form className={classes.root} autoComplete="off">
+          <FormControl variant="outlined" className={classes.formControl}>
+            <InputLabel
+              ref={ref => {
+                this.InputLabelRef = ref;
+              }}
+              htmlFor="outlined-lang-simple"
+            >
+              Lang
+            </InputLabel>
+            <Select
+              value={this.state.lang}
+              onChange={this.handleChange}
+              input={
+                <OutlinedInput
+                  labelWidth={this.state.labelWidth}
+                  name="lang"
+                  id="outlined-lang-simple"
+                />
+              }
+            >
+              <MenuItemMUI value={'en'}>English</MenuItemMUI>
+              <MenuItemMUI value={'fr'}>Français</MenuItemMUI>
+            </Select>
+          </FormControl>
+        </form>
+        <div style={{ maxWidth: 690, padding: '0 30px', margin: '0 auto' }}>
+          <h1 style={{ fontSize: '3em', marginBottom: 0 }}>Ocean Bridge</h1>
+          <p style={{ color: '#535353' }}>{trans(en, 'para1')}</p>
+          <p style={{ color: '#535353' }}>{trans(en, 'para2')}</p>
+        </div>
+        <ItemGrid items={items} width={this.state.width} />
+        <div style={{ height: 1, maxWidth: 1110, backgroundColor: '#D8D8D8', margin: '30px auto' }} />
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', padding: '0 25px' }}>
+          <ButtonLink href="https://education.ocean.org/oceanbridge" target="_blank" style={{ marginRight: 20 }}>{trans(en, 'enter')}</ButtonLink>
+          <ModalVideo channel="youtube" isOpen={this.state.vid2Open} videoId="crCMygsLYps" onClose={this.toggleModal2} />
+          <ButtonLink onClick={this.toggleModal1}>{trans(en, 'leadersWanted')}</ButtonLink>
+        </div>
+        <Quote q={quote.q} attr={quote.attr} bridge />
+      </div>
+    );
+
     return (
       <MuiThemeProvider>
         <div>
@@ -235,9 +351,10 @@ class BridgeEl extends React.Component { // eslint-disable-line react/prefer-sta
             <Img id="hero-image" src={HEROIMG} alt="Ocean wise" />
             <Logo src={source} alt="Logo" />
             {Nav}
-            <Header>
-              <H1 style={{ textShadow: '1px 1px 1px black' }}>{TITLE}</H1>
-            </Header>
+            <ModalVideo channel="youtube" isOpen={this.state.vid1Open} videoId="mVAnUPvWQLs" onClose={this.toggleModal1} />
+            <VidButton onClick={this.toggleModal2}>
+              <img src={playIcon} alt="Play" width={18} style={{ marginLeft: 5 }} />
+            </VidButton>
           </Container>
           <Drawer
             openSecondary
@@ -307,7 +424,7 @@ class BridgeEl extends React.Component { // eslint-disable-line react/prefer-sta
             <MenuHeader>{trans(en, 'newsletter')}</MenuHeader>
             <form action="https://vanaqua.createsend.com/t/r/s/urxdtd/" method="post">
               <label><span>{trans(en, 'enterEmail')}</span>
-              <Input type="email" placeholder={trans(en, 'enterEmail')} name="cm-urxdtd-urxdtd" required="" /></label>
+              <InputEmail type="email" placeholder={trans(en, 'enterEmail')} name="cm-urxdtd-urxdtd" required="" /></label>
               <Button>{trans(en, 'subscribe')}</Button>
             </form>
 
@@ -319,43 +436,7 @@ class BridgeEl extends React.Component { // eslint-disable-line react/prefer-sta
             </Ul>
 
           </Drawer>
-          <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
-            <div>
-              <center>
-                <ButtonLink href="https://education.ocean.org/oceanbridge" target="_blank">{trans(en, 'enter')}</ButtonLink>
-                <ButtonLink onClick={this.toggleLang}>{trans(en, 'trans')}</ButtonLink>
-                <ButtonLink href="https://education.ocean.org/pages/GCSC.html">{trans(en, 'back')}</ButtonLink>
-              </center>
-              <ModalVideo channel="youtube" isOpen={this.state.vid1Open} videoId="mVAnUPvWQLs" onClose={this.toggleModal1} />
-              <p><a onClick={() => this.toggleModal1}>{trans(en, 'intro')}</a> {trans(en, 'para1')}</p>
-              <p>{trans(en, 'para2')}</p>
-              <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>{trans(en, 'community')}</span> | {trans(en, 'communityPara')}
-              </p>
-              <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>{trans(en, 'oceanHealth')}</span> | {trans(en, 'oceanHealthPara')}
-              </p>
-              <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>{trans(en, 'oceanLiteracy')}</span> | {trans(en, 'oceanLiteracyPara')}
-              </p>
-              <p><ButtonLink onClick={this.toggleModal1} noMargin>{trans(en, 'leadersWanted')}</ButtonLink></p>
-              <Blockquote>
-                Visiting Haida Gwaii with Ocean Bridge opened my eyes to a new world of service learning opportunities... I have never met so many individuals in one place with whon I've shored so many interests, and I am so thankful to have their support and be motivated by their passions to persue further education in the environmental field and focus more time on implementing service projects in my community.
-                <span>Hannah Kosick, Ocean Bridge 2018</span>
-              </Blockquote>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <ModalVideo channel="youtube" isOpen={this.state.vid2Open} videoId="crCMygsLYps" onClose={this.toggleModal2} />
-              <Thumbnail onClick={this.toggleModal2}>
-                <img style={{ margin: '5px auto', width: this.state.mobile ? 300 : 350 }} src={IMG3} alt="Cleaning" />
-                <VidButton>
-                  <img src={playIcon} alt="Play" width={18} style={{ marginLeft: 5 }} />
-                </VidButton>
-              </Thumbnail>
-              <img style={{ margin: '5px auto', width: this.state.mobile ? 300 : 350 }} src={IMG2} alt="Working" />
-              <img style={{ margin: '5px auto', width: this.state.mobile ? 300 : 350 }} src={IMG1} alt="Connecting" />
-            </div>
-          </div>
+          {Content}
           <Footer />
         </div>
       </MuiThemeProvider>
@@ -364,6 +445,7 @@ class BridgeEl extends React.Component { // eslint-disable-line react/prefer-sta
 }
 
 BridgeEl.propTypes = {
+  classes: PropTypes.object.isRequired,
 };
 
-export default BridgeEl;
+export default withStyles(styles)(BridgeEl);

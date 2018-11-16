@@ -29,6 +29,9 @@ import Img from './Img';
 import Logo from './Logo';
 import Blockquote from './Blockquote';
 import ButtonLink from './ButtonLink';
+import ItemGrid from '../ItemGrid';
+import Quote from '../Quote';
+import ImpactGraphics from '../ImpactGraphics';
 
 import G1 from './graphics/1.png';
 import G2 from './graphics/2.png';
@@ -37,6 +40,8 @@ import G4 from './graphics/4.png';
 import G5 from './graphics/5.png';
 import G6 from './graphics/6.png';
 import G7 from './graphics/7.png';
+
+const graphics = [G1, G2, G3, G4, G5, G6, G7];
 
 const TITLE = 'Community Education';
 const HEROIMG = 'https://ocean.org/wp-content/uploads/PP-00.jpg';
@@ -132,48 +137,102 @@ class PublicEl extends React.Component { // eslint-disable-line react/prefer-sta
       exitRight = 15;
     }
 
-    const graphics = this.state.mobileGraphics ? '' : (
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G1} alt="Students" style={{ width: '410px', height: '150px', marginTop: 10 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G2} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G3} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G4} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G6} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G7} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-      </div>
-    );
-
-    const mobileGraphics = this.state.mobileGraphics ? (
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G1} alt="Students" style={{ width: '410px', height: '150px', marginTop: 10 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G2} alt="Camps" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G3} alt="Clubs" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G4} alt="Education" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G5} alt="Sleepovers" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <img src={G6} alt="Parties" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-          <img src={G7} alt="Placements" style={{ width: '280px', height: '150px', marginTop: 20 }} />
-        </div>
-      </div>
-    ) : '';
-
     const containerHeight = document.getElementById('hero-image') === null ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500) === 0 ? 500 : this.clamp(document.getElementById('hero-image').height, 0, 500);
 
     const flexDir = this.state.mobile ? 'column' : 'row';
     const imageWidth = this.state.mobile ? '100%' : '350px';
+
+    // <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
+    //   <div style={{ marginRight: window.innerWidth > 768 ? 50 : 0 }}>
+    //     <p>P</p>
+    //     <h4 style={{ textTransform: 'uppercase', color: '#39395a' }}>These include:</h4>
+    //     <p>
+    //       <span style={{ fontWeight: 700, color: '#39395a' }}>Film Forum</span> |
+    //     </p>
+    //     <p>
+    //       <span style={{ fontWeight: 700, color: '#39395a' }}>Monthly Lecture</span> |
+    //     </p>
+    //     <p>
+    //       <span style={{ fontWeight: 700, color: '#39395a' }}></span> |
+    //     </p>
+    //     <p>
+    //       <span style={{ fontWeight: 700, color: '#39395a' }}></span> |
+    //     </p>
+    //     <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+    //       <ButtonLink href="" target="_blank">Contact Us</ButtonLink>
+    //       <ButtonLink href="" target="_blank">Get Involved</ButtonLink>
+    //     </div>
+    //   </div>
+    //   <div style={{ display: 'flex', flexDirection: 'column' }}>
+    //     <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Diving" />
+    //     <img style={{ margin: '5px auto', width: 350 }} src={IMG2} alt="Lecturing" />
+    //     <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Presenting" />
+    //   </div>
+    // </div>
+    // <div style={{ display: 'flex', flexDirection: 'column' }}>
+    //   <Blockquote>
+    //
+    //     <span></span>
+    //   </Blockquote>
+    // </div>
+    // {graphics}
+    // {mobileGraphics}
+
+    const film = (
+      <span>
+        <img src="https://via.placeholder.com/150" alt="Film Forum" />
+        <h3>Film Forum</h3>
+        <p>A Global Initiative: Each public event features an ocean-theme documentary movie, followed by a discussion with experts. These events take place at the Vancouver Aquarium and in partner institutions around the globe.</p>
+      </span>
+    );
+
+    const lecture = (
+      <span>
+        <img src={IMG2} alt="Lecturing" />
+        <h3>Monthly Lecture</h3>
+        <p>This monthly lecture series delivers perspectives on our oceans and climate change. They explore how all facets of modern society are affected by our changing environment.</p>
+      </span>
+    );
+
+    const nature = (
+      <span>
+        <img src={IMG3} alt="Presenting" />
+        <h3>Nature Café</h3>
+        <p>These informal workshops and discussions explore anything and everything to do with our oceans, sustainability and the natural world.</p>
+      </span>
+    );
+
+    const science = (
+      <span>
+        <img src={IMG1} alt="Diving" />
+        <h3>Science Socials</h3>
+        <p>These social occasions are fun, science-themed events such as trivia, discussion groups, or storytelling evenings.</p>
+      </span>
+    );
+
+    const items = [film, lecture, nature, science];
+
+    const quote = {
+      q: "This event was excellent. I enjoyed the diversity of the experts and depth of their knowledge in their particular field of research and work",
+      attr: "Hazel, Student"
+    };
+
+    const Content = (
+      <div style={{ flexGrow: 1, margin: '0 auto', fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
+        <div style={{ maxWidth: 690, padding: '0 30px', margin: '0 auto' }}>
+          <h1>Community Education</h1>
+          <p>Public Programs are gateways to the ocean conservation community. They enable interactive dialog and discovery. We offer individuals opportunities to further their knowledge and explore their curiosity of the ocean and science.</p>
+        </div>
+        <ItemGrid items={items} width={this.state.width} />
+        <div style={{ height: 1, maxWidth: 1110, backgroundColor: '#D8D8D8', margin: '0 auto 30px' }} />
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', padding: '0 25px' }}>
+          <ButtonLink href="https://education.ocean.org/oceanmatters/contact" target="_blank" style={{ marginRight: 20 }}>Contact Us</ButtonLink>
+          <ButtonLink href="https://education.ocean.org/oceanmatters" target="_blank" style={{ marginRight: 20 }}>Get Involved</ButtonLink>
+        </div>
+        <Quote q={quote.q} attr={quote.attr} />
+        <ImpactGraphics graphics={graphics} title={'Community Education'} width={this.state.width} />
+      </div>
+    );
 
     return (
       <MuiThemeProvider>
@@ -181,9 +240,6 @@ class PublicEl extends React.Component { // eslint-disable-line react/prefer-sta
           <Container height={containerHeight} image={HEROIMG}>
             <a href="https://ocean.org/" style={{ position: 'absolute', zIndex: 50, top: 15, left: window.innerWidth > 812 ? 20 : '-27px' }}><Logo src={source} alt="Logo" /></a>
             {Nav}
-            <Header>
-              <H1>{TITLE}</H1>
-            </Header>
           </Container>
           <Drawer
             openSecondary
@@ -265,41 +321,7 @@ class PublicEl extends React.Component { // eslint-disable-line react/prefer-sta
             </Ul>
 
           </Drawer>
-          <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
-            <div style={{ marginRight: window.innerWidth > 768 ? 50 : 0 }}>
-              <p>Public Programs are gateways to the ocean conservation community. They enable interactive dialog and discovery. We offer individuals opportunities to further their knowledge and explore their curiosity of the ocean and science.</p>
-              <h4 style={{ textTransform: 'uppercase', color: '#39395a' }}>These include:</h4>
-              <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Film Forum</span> | A Global Initiative: Each public event features an ocean-theme documentary movie, followed by a discussion with experts. These events take place at the Vancouver Aquarium and in partner institutions around the globe.
-              </p>
-              <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Monthly Lecture</span> | This monthly lecture series delivers perspectives on our oceans and climate change. They explore how all facets of modern society are affected by our changing environment.
-              </p>
-              <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Nature Café</span> | These informal workshops and discussions explore anything and everything to do with our oceans, sustainability and the natural world.
-              </p>
-              <p>
-                <span style={{ fontWeight: 700, color: '#39395a' }}>Science Socials</span> | These social occasions are fun, science-themed events such as trivia, discussion groups, or storytelling evenings.
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-                <ButtonLink href="https://education.ocean.org/oceanmatters/contact" target="_blank">Contact Us</ButtonLink>
-                <ButtonLink href="https://education.ocean.org/oceanmatters" target="_blank">Get Involved</ButtonLink>
-              </div>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG1} alt="Diving" />
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG2} alt="Lecturing" />
-              <img style={{ margin: '5px auto', width: 350 }} src={IMG3} alt="Presenting" />
-            </div>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <Blockquote>
-              This event was excellent. I enjoyed the diversity of the experts and depth of their knowledge in their particular field of research and work
-              <span>Hazel, Student</span>
-            </Blockquote>
-          </div>
-          {graphics}
-          {mobileGraphics}
+          {Content}
           <Footer />
         </div>
       </MuiThemeProvider>

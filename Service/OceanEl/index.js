@@ -148,9 +148,6 @@ class OceanEl extends React.Component { // eslint-disable-line react/prefer-stat
             <Img id="hero-image" src={HEROIMG} alt="Ocean wise" />
             <Logo src={source} alt="Logo" />
             {Nav}
-            <Header>
-              <H1 style={{ textShadow: '1px 1px 1px black' }}>{TITLE}</H1>
-            </Header>
           </Container>
           <Drawer
             openSecondary
@@ -232,17 +229,12 @@ class OceanEl extends React.Component { // eslint-disable-line react/prefer-stat
             </Ul>
 
           </Drawer>
-          <div style={{ fontFamily: '\'Helvetice Neue\', helvetica, arial, sans-serif', padding: '15px 40px', display: 'flex', flexDirection: flexDir }}>
-            <div style={{ margin: '0 auto', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ margin: '0 0 20px 0', maxWidth: 1250, textAlign: 'center' }}>
-                <p>
-                  Service learning provides an experiential pathway for people of all ages to learn about our oceans while becoming an engaged citizen in their community. By tackling real-life ocean and waterway health challenges through hands on service and reflecting on their experiences, participants develop their ocean literacy and make a direct impact on ocean conservation.
-                </p>
-                <p>
-                  Ocean Wise provides service learning opportunities through our Great Canadian Shoreline Cleanup and Ocean Bridge initiatives.
-                </p>
-              </div>
-              <div style={{ margin: '0 auto', display: 'flex', flexWrap: 'wrap' }}>
+          <div style={{ flexGrow: 1, margin: '0 auto', fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
+            <div style={{ maxWidth: 690, padding: '0 30px', margin: '50px auto' }}>
+              <h1 style={{ fontSize: '3em', marginBottom: 0, marginTop: 0 }}>Service Learning</h1>
+              <p>Service learning provides an experiential pathway for people of all ages to learn about our oceans while becoming an engaged citizen in their community. By tackling real-life ocean and waterway health challenges through hands on service and reflecting on their experiences, participants develop their ocean literacy and make a direct impact on ocean conservation.</p>
+              <p>Ocean Wise provides service learning opportunities through our Great Canadian Shoreline Cleanup and Ocean Bridge initiatives.</p>
+              <div>
                 <ButtonLink onClick={() => this.switchRoute('GCSC')}>Shoreline Cleanup</ButtonLink>
                 <ButtonLink onClick={() => this.switchRoute('ocean')}>Ocean Bridge</ButtonLink>
               </div>

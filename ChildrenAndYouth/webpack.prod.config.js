@@ -15,9 +15,13 @@ module.exports = {
   module: {
       loaders: [
           {
-              test:   /\.js/,
-              loader: 'babel',
-              include: __dirname,
+              test: /\.jsx?$/,
+              exclude: /node_modules/,
+              loader: 'babel-loader',
+              query: {
+                  plugins: ['transform-runtime'],
+                  presets: ['es2015', 'react', 'stage-0']
+              }
           },
           {
               test: /\.(eot|svg|otf|ttf|woff|woff2)$/,
